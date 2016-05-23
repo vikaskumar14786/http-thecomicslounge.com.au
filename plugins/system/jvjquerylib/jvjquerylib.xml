@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>System - JV JQuery Libraries </name>
+    <author>JoomlaVi! Project</author>
+    <creationDate>Match 2012</creationDate>
+    <copyright>Copyright (C) JoomlaVi. All rights reserved</copyright>
+    <license>http://www.gnu.org/licenseses/gpl-3.0.html GNU/GPL or later</license>
+    <authorEmail>info@joomlavi.com</authorEmail>
+    <authorUrl>www.joomlavi.com</authorUrl>
+    <version>1.2.0</version>
+    <description>
+    <![CDATA[
+        jQuery, jQuery ui and Customfield for all version Joomla.
+    ]]>
+    </description>
+    <scriptfile>script.php</scriptfile>
+	<files>
+		<filename plugin="jvjquerylib">jvjquerylib.php</filename>
+        <filename plugin="jvjquerylib">jvjquerylib.xml</filename>
+        <filename>index.htm</filename>
+        <filename>script.php</filename>
+		<folder>jvjquerylib</folder>
+	</files>
+	<config>
+        <fields name="params">
+          <fieldset name="basic">
+            <field name="usecustom" type="checkbox" value="true" label="Use custom" />
+            <field name="drops" type="text" value="/jquery.js,/jquery.min" label="Drop other jquery files" />
+            <field name="define" type="jvcustom" xmlpath="plugins/system/jvjquerylib/jvjquerylib.xml"/>
+            <field name="configs" type="jvcustom" xmlpath="plugins/system/jvjquerylib/jvjquerylib.xml"/>
+          </fieldset> 
+        </fields> 
+    </config>
+    <jvcustoms>  
+        <params>
+            <define><![CDATA[
+                {
+                    field: 'multi',
+                    label: 'Define variable',
+                    item: {
+                        field: 'group',
+                        titlefield: 'name',
+                        item: {
+                            'name': {
+                                field:'input',
+                                label: 'Name'
+                            },
+                            value: {
+                                field: 'input',
+                                label: 'value'
+                            }
+                        }
+                    }
+                }
+            ]]></define>
+            <configs><![CDATA[
+                 {
+                    field: 'multi',
+                    checked: true,
+                    loop: 'lib',
+                    label: 'Scrips',
+                    item: {
+                        field: 'group',
+                        titlefield: 'name',
+                        item: {
+                            name: { field: 'input', label: 'Name' },
+                            scripts: { field: 'input', label: 'Scripts' },
+                            styles: { field: 'input', label: 'Style' },
+                            deny: { field: 'input', label: 'Deny at' },
+                            childs: {use: 'lib'}
+                        }
+                    }
+                 }
+            ]]></configs>
+        </params>
+        <datas>
+            <configs><![CDATA[
+			[{"@data":{"name":"jquery","scripts":"{jspath}/jquery.js","styles":"","deny":"a=b&c=d,f=g","childs":[]}},{"@data":{"name":"ui","scripts":"","styles":"","deny":"","childs":[{"@data":{"name":"core","scripts":"jquery,{jspath}/ui/jquery.ui.core.min.js","styles":"{jspath}/ui/themes/base/jquery.ui.core.css","deny":"","childs":[]}},{"@data":{"name":"widget","scripts":"jquery,{jspath}/ui/jquery.ui.widget.min.js","styles":"{jspath}/ui/themes/base/jquery.ui.theme.css","deny":"","childs":[]}},{"@data":{"name":"position","scripts":"jquery,{jspath}/ui/jquery.ui.position.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"mouse","scripts":"ui.core,ui.widget,{jspath}/ui/jquery.ui.mouse.min.js%20","styles":"","deny":"","childs":[]}},{"@data":{"name":"draggable","scripts":"ui.mouse,{jspath}/ui/jquery.ui.draggable.min.js%20","styles":"","deny":"","childs":[]}},{"@data":{"name":"droppable","scripts":"ui.draggable,{jspath}/ui/jquery.ui.droppable.min.js%20","styles":"","deny":"","childs":[]}},{"@data":{"name":"resizable","scripts":"ui.mouse,{jspath}/ui/jquery.ui.resizable.min.js%20","styles":"{jspath}/ui/themes/base/jquery.ui.resizable.css","deny":"","childs":[]}},{"@data":{"name":"sortable","scripts":"ui.mouse,{jspath}/ui/jquery.ui.sortable.min.js%20","styles":"","deny":"","childs":[]}},{"@data":{"name":"accordion","scripts":"ui.core,ui.widget,{jspath}/ui/jquery.ui.accordion.min.js%20","styles":"{jspath}/ui/themes/base/jquery.ui.accordion.css","deny":"","childs":[]}},{"@data":{"name":"autocomplete","scripts":"ui.core,ui.widget,ui.position,{jspath}/ui/jquery.ui.autocomplete.min.js%20","styles":"{jspath}/ui/themes/base/jquery.ui.autocomplete.css","deny":"","childs":[]}},{"@data":{"name":"button","scripts":"ui.core,ui.widget,{jspath}/ui/jquery.ui.button.min.js%20","styles":"{jspath}/ui/themes/base/jquery.ui.button.css","deny":"","childs":[]}},{"@data":{"name":"dialog","scripts":"ui.button,ui.position,ui.draggable,ui.resizable,{jspath}/ui/jquery.ui.dialog.min.js%20","styles":"{jspath}/ui/themes/base/jquery.ui.dialog.css","deny":"","childs":[]}},{"@data":{"name":"slider","scripts":"ui.mouse,{jspath}/ui/jquery.ui.slider.min.js%20","styles":"{jspath}/ui/themes/base/jquery.ui.slider.css","deny":"","childs":[]}},{"@data":{"name":"tabs","scripts":"ui.core,ui.widget,{jspath}/ui/jquery.ui.tabs.min.js","styles":"{jspath}/ui/themes/base/jquery.ui.tabs.css","deny":"","childs":[]}},{"@data":{"name":"datepicker","scripts":"ui.core,{jspath}/ui/jquery.ui.datepicker.min.js","styles":"{jspath}/ui/themes/base/jquery.ui.datepicker.css","deny":"","childs":[]}},{"@data":{"name":"progressbar","scripts":"ui.core,ui.widget,{jspath}/ui/jquery.ui.progressbar.min.js","styles":"{jspath}/ui/themes/base/jquery.ui.progressbar.css","deny":"","childs":[]}},{"@data":{"name":"combobox","scripts":"ui.core,ui.button,ui.autocomplete,{jspath}/ui/jquery.ui.combobox.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"numericbox","scripts":"ui.core,ui.button,ui.autocomplete,ui.slider,{jspath}/ui/jquery.ui.numericbox.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"selectable","scripts":"ui.mouse,{jspath}/ui/jquery.ui.selectable.min.js%20","styles":"","deny":"","childs":[]}}]}},{"@data":{"name":"effects","scripts":"","styles":"","deny":"","childs":[{"@data":{"name":"core","scripts":"jquery,{jspath}/effects/jquery.effects.core.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"blind","scripts":"effects.core,{jspath}/effects/jquery.effects.blind.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"bounce","scripts":"effects.core,{jspath}/effects/jquery.effects.bounce.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"box","scripts":"effects.core,{jspath}/effects/jquery.effects.box.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"clip","scripts":"effects.core,{jspath}/effects/jquery.effects.clip.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"drop","scripts":"effects.core,{jspath}/effects/jquery.effects.drop.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"explode","scripts":"effects.core,{jspath}/effects/jquery.effects.explode.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"fade","scripts":"effects.core,{jspath}/effects/jquery.effects.fade.min.js%20","styles":"","deny":"","childs":[]}},{"@data":{"name":"fold","scripts":"effects.core,{jspath}/effects/jquery.effects.fold.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"highlight","scripts":"effects.core,{jspath}/effects/jquery.effects.highlight.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"pulsate","scripts":"effects.core,{jspath}/effects/jquery.effects.pulsate.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"scale","scripts":"effects.core,{jspath}/effects/jquery.effects.scale.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"shake","scripts":"effects.core,{jspath}/effects/jquery.effects.shake.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"slide","scripts":"effects.core,{jspath}/effects/jquery.effects.slide.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"transfer","scripts":"effects.core,{jspath}/effects/jquery.effects.transfer.min.js","styles":"","deny":"","childs":[]}}]}},{"@data":{"name":"plugins","scripts":"","styles":"","deny":"","childs":[{"@data":{"name":"colorpicker","scripts":"ui.widget,{jspath}/plugins/jquery.colorpicker.js","styles":"{jspath}/plugins/colorpicker/style.css","deny":"","childs":[]}},{"@data":{"name":"customfield","scripts":"ui.button,ui.sortable,ui.tabs,ui.autocomplete,ui.datepicker,ui.combobox,ui.numericbox,plugins.colorpicker,plugins.validate,{jspath}/plugins/customfield.js","styles":"{jspath}/plugins/customfield/style.css","deny":"","childs":[]}},{"@data":{"name":"mousewheel","scripts":"jquery,{jspath}/plugins/jquery.mousewheel.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"transform","scripts":"jquery,{jspath}/plugins/transformjs.1.0.beta.2.min.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"hotkey","scripts":"jquery,{jspath}/plugins/jquery.hotkey.js","styles":"","deny":"","childs":[]}},{"@data":{"name":"validate","scripts":"jquery,{jspath}/plugins/jquery.validate.min.js","styles":"{jspath}/plugins/validate/style.css","deny":"","childs":[]}}]}}]
+            ]]></configs>
+        </datas>
+        <style>
+            .jvcustomfieldpanel{margin-bottom: 10px;}
+        </style>
+    </jvcustoms> 
+</extension>

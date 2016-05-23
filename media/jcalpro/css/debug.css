@@ -1,0 +1,7 @@
+/**
+ * @package		JCalPro
+ * @subpackage	com_jcalpro
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+#jcl_debug pre {min-height: 25px; max-height: 250px; overflow-y: scroll}

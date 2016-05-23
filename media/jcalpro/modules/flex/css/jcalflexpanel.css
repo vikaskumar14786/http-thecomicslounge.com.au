@@ -1,0 +1,36 @@
+/**
+ * @package		JCalPro
+ * @subpackage	mod_jcalpro_flex
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+fieldset.jcalflexpanel_fieldset {
+/*	border: 1px solid !important; */
+	clear: both;
+	float: none;
+}
+
+fieldset.jcalflexpanel_fieldset legend {
+	cursor: move;
+}
+
+#jcalflexpanel_events_0, #jcalflexpanel_calendar_0 {
+	display: none;
+}
+
+#jcalflexpanel_type_select {
+	float: right;
+}
+
+.icon-32-cancel,
+.icon-32-new {
+	display: block;
+	width: 32px;
+	height: 32px;
+	float: right;
+}
+.icon-32-cancel {
+	background: transparent url(../../../images/icon-32-cancel.png) no-repeat scroll top center;
+}
+.icon-32-new {
+	background: transparent url(../../../images/icon-32-cancel.png) no-repeat scroll top center;
+}

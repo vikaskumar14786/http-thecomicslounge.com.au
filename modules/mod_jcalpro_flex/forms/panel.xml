@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset
+		name="jcalpro"
+		label="MOD_JCALPRO_FLEX_PANEL"
+	>
+		<field
+			name="panel_title"
+			type="text"
+			default=""
+			label="MOD_JCALPRO_FLEX_PANEL_TITLE"
+			description="MOD_JCALPRO_FLEX_PANEL_TITLE_DESC"
+		/>
+		<field
+			name="panel_type"
+			type="hidden"
+			label="MOD_JCALPRO_FLEX_PANEL_TYPE"
+		/>
+	</fieldset>
+</form>

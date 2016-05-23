@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/administrator/components/com_jcalpro/models/fields">
+	<!--
+	
+	General settings fieldset - for generic options that don't belong anywhere else
+	
+	-->
+	<fieldset
+		name="general"
+		label="COM_JCALPRO_CONFIG_GENERAL"
+		description="COM_JCALPRO_CONFIG_GENERAL_DESC"
+	>
+		<field
+			name="enable_ajax_features" id="enable_ajax_features"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_ENABLE_AJAX_FEATURES"
+			description="COM_JCALPRO_CONFIG_ENABLE_AJAX_FEATURES_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="enable_feeds" id="enable_feeds"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_ENABLE_FEEDS"
+			description="COM_JCALPRO_CONFIG_ENABLE_FEEDS_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="only_new_feeds" id="only_new_feeds"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_ONLY_NEW_FEEDS"
+			description="COM_JCALPRO_CONFIG_ONLY_NEW_FEEDS_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="enable_ical_export" id="enable_ical_export"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_ENABLE_ICAL_EXPORT"
+			description="COM_JCALPRO_CONFIG_ENABLE_ICAL_EXPORT_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="show_ad_feeds" id="show_ad_feeds"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_SHOW_AD_FEEDS"
+			description="COM_JCALPRO_CONFIG_SHOW_AD_FEEDS_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="editor_buttons" id="editor_buttons"
+			type="jcaleditorbuttons" class="inputbox"
+			label="COM_JCALPRO_CONFIG_EDITOR_BUTTONS"
+			description="COM_JCALPRO_CONFIG_EDITOR_BUTTONS_DESC"
+			default="" exclude="^(pagebreak)$"
+			multiple="multiple" size="6"
+		/>
+		<field
+			name="require_description" id="require_description"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_REQUIRE_DESCRIPTION"
+			description="COM_JCALPRO_CONFIG_REQUIRE_DESCRIPTION_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="jcalpro_author_url"
+			type="hidden"
+			default="http://anything-digital.com"
+			readonly="true"
+		/>
+		<field
+			name="jcalpro_help_url"
+			type="hidden"
+			default="http://anything-digital.com/jcal-pro/learn-more/user-manual-v3.html"
+			readonly="true"
+		/>
+		<field
+			name="jcalpro_product_url"
+			type="hidden"
+			default="http://anything-digital.com/jcal-pro/the-events-calendar-for-joomla.html"
+			readonly="true"
+		/>
+	</fieldset>
+	<!--
+	
+	Display settings - determines how JCalPro displays
+	
+	-->
+	<fieldset
+		name="display"
+		label="COM_JCALPRO_CONFIG_DISPLAY"
+		description="COM_JCALPRO_CONFIG_DISPLAY_DESC"
+	>
+		<field
+			name="default_theme" id="default_theme"
+			type="jcaltheme" class="inputbox"
+			label="COM_JCALPRO_CONFIG_DEFAULT_THEME"
+			description="COM_JCALPRO_CONFIG_DEFAULT_THEME_DESC"
+			default=""
+		/>
+		<field
+			name="category_default_color"
+			type="color"
+			default="#545454"
+			label="COM_JCALPRO_CONFIG_CATEGORY_DEFAULT_COLOR"
+			description="COM_JCALPRO_CONFIG_CATEGORY_DEFAULT_COLOR_DESC"
+		/>
+		<field
+			name="event_format_events"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_EVENT_FORMAT_EVENTS"
+			description="COM_JCALPRO_CONFIG_EVENT_FORMAT_EVENTS_DESC"
+			default="l, F d, Y"
+		/>
+		<field
+			name="title_length" id="title_length"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_TITLE_LENGTH"
+			description="COM_JCALPRO_CONFIG_TITLE_LENGTH_DESC"
+			default="255" size="4"
+		/>
+		<field
+			name="show_top_navigation_bar" id="show_top_navigation_bar"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_SHOW_TOP_NAVIGATION_BAR"
+			description="COM_JCALPRO_CONFIG_SHOW_TOP_NAVIGATION_BAR_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="modal_events" id="modal_events"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_MODAL_EVENTS"
+			description="COM_JCALPRO_CONFIG_MODAL_EVENTS_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="disable_footer" id="disable_footer"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_DISABLE_FOOTER"
+			description="COM_JCALPRO_CONFIG_DISABLE_FOOTER_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<!--
+	
+	Month View settings
+	
+	-->
+	<fieldset
+		name="config_month_view"
+		label="COM_JCALPRO_CONFIG_MONTH_VIEW"
+		description="COM_JCALPRO_CONFIG_MONTH_VIEW_DESC"
+	>
+		<field
+			name="month_view" id="month_view"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_MONTH_VIEW_OPTION"
+			description="COM_JCALPRO_CONFIG_MONTH_VIEW_OPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="month_format_header"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_MONTH_FORMAT_HEADER"
+			description="COM_JCALPRO_CONFIG_MONTH_FORMAT_HEADER_DESC"
+			default="F Y"
+		/>
+		<field
+			name="month_format_navigation"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_MONTH_FORMAT_NAVIGATION"
+			description="COM_JCALPRO_CONFIG_MONTH_FORMAT_NAVIGATION_DESC"
+			default="F Y"
+		/>
+		<field
+			name="show_week" id="show_week"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_SHOW_WEEK"
+			description="COM_JCALPRO_CONFIG_SHOW_WEEK_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="month_show_icons" id="month_show_icons"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_MONTH_SHOW_ICONS"
+			description="COM_JCALPRO_CONFIG_MONTH_SHOW_ICONS_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="month_show_time" id="month_show_time"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_MONTH_SHOW_TIME"
+			description="COM_JCALPRO_CONFIG_MONTH_SHOW_TIME_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="show_only_start_times" id="show_only_start_times"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_SHOW_ONLY_START_TIMES"
+			description="COM_JCALPRO_CONFIG_SHOW_ONLY_START_TIMES_DESC"
+			default=""
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="month_title_limit" id="month_title_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_MONTH_TITLE_LIMIT"
+			description="COM_JCALPRO_CONFIG_MONTH_TITLE_LIMIT_DESC"
+			default="0" size="5"
+		/>
+		<field
+			name="month_description" id="month_description"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_MONTH_DESCRIPTION"
+			description="COM_JCALPRO_CONFIG_MONTH_DESCRIPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="month_description_limit" id="month_description_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_MONTH_DESCRIPTION_LIMIT"
+			description="COM_JCALPRO_CONFIG_MONTH_DESCRIPTION_LIMIT_DESC"
+			default="0" size="5"
+		/>
+	</fieldset>
+	<!--
+	
+	Flat View settings
+	
+	-->
+	<fieldset
+		name="config_flat_view"
+		label="COM_JCALPRO_CONFIG_FLAT_VIEW"
+		description="COM_JCALPRO_CONFIG_FLAT_VIEW_DESC"
+	>
+		<field
+			name="flat_view" id="flat_view"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_FLAT_VIEW_OPTION"
+			description="COM_JCALPRO_CONFIG_FLAT_VIEW_OPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="flat_format_header"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_FLAT_FORMAT_HEADER"
+			description="COM_JCALPRO_CONFIG_FLAT_FORMAT_HEADER_DESC"
+			default="F Y"
+		/>
+		<field
+			name="flat_format_days"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_FLAT_FORMAT_DAYS"
+			description="COM_JCALPRO_CONFIG_FLAT_FORMAT_DAYS_DESC"
+			default="D. j M, Y"
+		/>
+		<field
+			name="flat_format_events"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_FLAT_FORMAT_EVENTS"
+			description="COM_JCALPRO_CONFIG_FLAT_FORMAT_EVENTS_DESC"
+			default="D. j M, Y"
+		/>
+		<field
+			name="flat_format_navigation"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_FLAT_FORMAT_NAVIGATION"
+			description="COM_JCALPRO_CONFIG_FLAT_FORMAT_NAVIGATION_DESC"
+			default="F Y"
+		/>
+		<field
+			name="flat_show_only_start_times" id="flat_show_only_start_times"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_SHOW_ONLY_START_TIMES"
+			description="COM_JCALPRO_CONFIG_SHOW_ONLY_START_TIMES_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="flat_title_limit" id="flat_title_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_FLAT_TITLE_LIMIT"
+			description="COM_JCALPRO_CONFIG_FLAT_TITLE_LIMIT_DESC"
+			default="0" size="5"
+		/>
+		<field
+			name="flat_description" id="flat_description"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_FLAT_DESCRIPTION"
+			description="COM_JCALPRO_CONFIG_FLAT_DESCRIPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="flat_description_limit" id="flat_description_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_FLAT_DESCRIPTION_LIMIT"
+			description="COM_JCALPRO_CONFIG_FLAT_DESCRIPTION_LIMIT_DESC"
+			default="0" size="5"
+		/>
+	</fieldset>
+	<!--
+	
+	Week View settings
+	
+	-->
+	<fieldset
+		name="config_week_view"
+		label="COM_JCALPRO_CONFIG_WEEK_VIEW"
+		description="COM_JCALPRO_CONFIG_WEEK_VIEW_DESC"
+	>
+		<field
+			name="week_view" id="week_view"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_WEEK_VIEW_OPTION"
+			description="COM_JCALPRO_CONFIG_WEEK_VIEW_OPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="week_format_header"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_WEEK_FORMAT_HEADER"
+			description="COM_JCALPRO_CONFIG_WEEK_FORMAT_HEADER_DESC"
+			default="D. j M, Y"
+		/>
+		<field
+			name="week_header_type"
+			type="list" class="inputbox"
+			label="COM_JCALPRO_CONFIG_WEEK_HEADER_TYPE"
+			description="COM_JCALPRO_CONFIG_WEEK_HEADER_TYPE_DESC"
+			default="0"
+		>
+			<option value="0">COM_JCALPRO_CONFIG_WEEK_HEADER_TYPE_OPTION_SPAN</option>
+			<option value="1">COM_JCALPRO_CONFIG_WEEK_HEADER_TYPE_OPTION_WEEK_NUM</option>
+			<option value="2">COM_JCALPRO_CONFIG_WEEK_HEADER_TYPE_OPTION_WEEK_OF</option>
+		</field>
+		<field
+			name="week_format_days"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_WEEK_FORMAT_DAYS"
+			description="COM_JCALPRO_CONFIG_WEEK_FORMAT_DAYS_DESC"
+			default="D. j M, Y"
+		/>
+		<field
+			name="week_format_events"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_WEEK_FORMAT_EVENTS"
+			description="COM_JCALPRO_CONFIG_WEEK_FORMAT_EVENTS_DESC"
+			default="D. j M, Y"
+		/>
+		<field
+			name="week_show_only_start_times" id="week_show_only_start_times"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_SHOW_ONLY_START_TIMES"
+			description="COM_JCALPRO_CONFIG_SHOW_ONLY_START_TIMES_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="week_title_limit" id="week_title_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_WEEK_TITLE_LIMIT"
+			description="COM_JCALPRO_CONFIG_WEEK_TITLE_LIMIT_DESC"
+			default="0" size="5"
+		/>
+		<field
+			name="week_description" id="week_description"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_WEEK_DESCRIPTION"
+			description="COM_JCALPRO_CONFIG_WEEK_DESCRIPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="week_description_limit" id="week_description_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_WEEK_DESCRIPTION_LIMIT"
+			description="COM_JCALPRO_CONFIG_WEEK_DESCRIPTION_LIMIT_DESC"
+			default="0" size="5"
+		/>
+	</fieldset>
+	<!--
+	
+	Day View settings
+	
+	-->
+	<fieldset
+		name="config_day_view"
+		label="COM_JCALPRO_CONFIG_DAY_VIEW"
+		description="COM_JCALPRO_CONFIG_DAY_VIEW_DESC"
+	>
+		<field
+			name="day_view" id="day_view"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_DAY_VIEW_OPTION"
+			description="COM_JCALPRO_CONFIG_DAY_VIEW_OPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="day_format_header"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_DAY_FORMAT_HEADER"
+			description="COM_JCALPRO_CONFIG_DAY_FORMAT_HEADER_DESC"
+			default="l, F d, Y"
+		/>
+		<field
+			name="day_format_events"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_DAY_FORMAT_EVENTS"
+			description="COM_JCALPRO_CONFIG_DAY_FORMAT_EVENTS_DESC"
+			default="D. j M, Y"
+		/>
+		<field
+			name="day_show_only_start_times" id="day_show_only_start_times"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_SHOW_ONLY_START_TIMES"
+			description="COM_JCALPRO_CONFIG_SHOW_ONLY_START_TIMES_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="day_title_limit" id="day_title_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_DAY_TITLE_LIMIT"
+			description="COM_JCALPRO_CONFIG_DAY_TITLE_LIMIT_DESC"
+			default="0" size="5"
+		/>
+		<field
+			name="day_description" id="day_description"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_DAY_DESCRIPTION"
+			description="COM_JCALPRO_CONFIG_DAY_DESCRIPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="day_description_limit" id="day_description_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_DAY_DESCRIPTION_LIMIT"
+			description="COM_JCALPRO_CONFIG_DAY_DESCRIPTION_LIMIT_DESC"
+			default="0" size="5"
+		/>
+	</fieldset>
+	<!--
+	
+	Search View settings
+	
+	-->
+	<fieldset
+		name="config_search_view"
+		label="COM_JCALPRO_CONFIG_SEARCH_VIEW"
+		description="COM_JCALPRO_CONFIG_SEARCH_VIEW_DESC"
+	>
+		<field
+			name="search_view" id="search_view"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_SEARCH_VIEW_OPTION"
+			description="COM_JCALPRO_CONFIG_SEARCH_VIEW_OPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="search_format_events"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_SEARCH_FORMAT_EVENTS"
+			description="COM_JCALPRO_CONFIG_SEARCH_FORMAT_EVENTS_DESC"
+			default="d-M-Y"
+		/>
+		<field
+			name="search_title_limit" id="search_title_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_SEARCH_TITLE_LIMIT"
+			description="COM_JCALPRO_CONFIG_SEARCH_TITLE_LIMIT_DESC"
+			default="0" size="5"
+		/>
+		<field
+			name="search_description" id="search_description"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_SEARCH_DESCRIPTION"
+			description="COM_JCALPRO_CONFIG_SEARCH_DESCRIPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="search_description_limit" id="search_description_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_SEARCH_DESCRIPTION_LIMIT"
+			description="COM_JCALPRO_CONFIG_SEARCH_DESCRIPTION_LIMIT_DESC"
+			default="0" size="5"
+		/>
+	</fieldset>
+	<!--
+	
+	Categories View settings
+	
+	-->
+	<fieldset
+		name="config_categories_view"
+		label="COM_JCALPRO_CONFIG_CATEGORIES_VIEW"
+		description="COM_JCALPRO_CONFIG_CATEGORIES_VIEW_DESC"
+	>
+		<field
+			name="categories_view" id="categories_view"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_CATEGORIES_VIEW_OPTION"
+			description="COM_JCALPRO_CONFIG_CATEGORIES_VIEW_OPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="categories_title_limit" id="categories_title_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_CATEGORIES_TITLE_LIMIT"
+			description="COM_JCALPRO_CONFIG_CATEGORIES_TITLE_LIMIT_DESC"
+			default="0" size="5"
+		/>
+		<field
+			name="categories_description" id="categories_description"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_CATEGORIES_DESCRIPTION"
+			description="COM_JCALPRO_CONFIG_CATEGORIES_DESCRIPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="categories_description_limit" id="categories_description_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_CATEGORIES_DESCRIPTION_LIMIT"
+			description="COM_JCALPRO_CONFIG_CATEGORIES_DESCRIPTION_LIMIT_DESC"
+			default="0" size="5"
+		/>
+	</fieldset>
+	<!--
+	
+	Category View settings
+	
+	-->
+	<fieldset
+		name="config_category_view"
+		label="COM_JCALPRO_CONFIG_CATEGORY_VIEW"
+		description="COM_JCALPRO_CONFIG_CATEGORY_VIEW_DESC"
+	>
+		<field
+			name="category_format_events"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_CATEGORY_FORMAT_EVENTS"
+			description="COM_JCALPRO_CONFIG_CATEGORY_FORMAT_EVENTS_DESC"
+			default="l, F d, Y"
+		/>
+		<field
+			name="category_format_events_repeat"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_CATEGORY_FORMAT_EVENTS_REPEAT"
+			description="COM_JCALPRO_CONFIG_CATEGORY_FORMAT_EVENTS_REPEAT_DESC"
+			default="F d, Y"
+		/>
+		<field
+			name="category_date_range" 
+			type="list"
+			label="COM_JCALPRO_CONFIG_CATEGORY_DATE_RANGE"
+			description="COM_JCALPRO_CONFIG_CATEGORY_DATE_RANGE_DESC"
+			default=""
+		>
+			<option value="">JOPTION_USE_DEFAULT</option>
+			<option value="14">COM_JCALPRO_FILTER_DATE_RANGE_ONGOING</option>
+			<option value="1">COM_JCALPRO_FILTER_DATE_RANGE_PAST_EVENTS</option>
+			<option value="22">COM_JCALPRO_FILTER_DATE_RANGE_PAST_END_EVENTS</option>
+			<option value="2">COM_JCALPRO_FILTER_DATE_RANGE_UPCOMING_EVENTS</option>
+			<option value="23">COM_JCALPRO_FILTER_DATE_RANGE_UPCOMING_END_EVENTS</option>
+			<option value="3">COM_JCALPRO_FILTER_DATE_RANGE_THIS_WEEK</option>
+			<option value="4">COM_JCALPRO_FILTER_DATE_RANGE_LAST_WEEK</option>
+			<option value="5">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_WEEK</option>
+			<option value="15">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_2_WEEKS</option>
+			<option value="16">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_3_WEEKS</option>
+			<option value="6">COM_JCALPRO_FILTER_DATE_RANGE_THIS_MONTH</option>
+			<option value="7">COM_JCALPRO_FILTER_DATE_RANGE_LAST_MONTH</option>
+			<option value="8">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_MONTH</option>
+			<option value="17">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_2_MONTHS</option>
+			<option value="18">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_3_MONTHS</option>
+			<option value="19">COM_JCALPRO_FILTER_DATE_RANGE_THIS_YEAR</option>
+			<option value="20">COM_JCALPRO_FILTER_DATE_RANGE_LAST_YEAR</option>
+			<option value="21">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_YEAR</option>
+			<option value="9">COM_JCALPRO_FILTER_DATE_RANGE_TODAY</option>
+			<option value="10">COM_JCALPRO_FILTER_DATE_RANGE_TOMORROW</option>
+			<option value="11">COM_JCALPRO_FILTER_DATE_RANGE_YESTERDAY</option>
+			<option value="12">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_30</option>
+			<option value="13">COM_JCALPRO_FILTER_DATE_RANGE_LAST_30</option>
+		</field>
+		<field
+			name="category_title_limit" id="category_title_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_CATEGORY_TITLE_LIMIT"
+			description="COM_JCALPRO_CONFIG_CATEGORY_TITLE_LIMIT_DESC"
+			default="0" size="5"
+		/>
+		<field
+			name="category_description" id="category_description"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_CATEGORY_DESCRIPTION"
+			description="COM_JCALPRO_CONFIG_CATEGORY_DESCRIPTION_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="category_description_limit" id="category_description_limit"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_CONFIG_CATEGORY_DESCRIPTION_LIMIT"
+			description="COM_JCALPRO_CONFIG_CATEGORY_DESCRIPTION_LIMIT_DESC"
+			default="0" size="5"
+		/>
+	</fieldset>
+	<!--
+	
+	Location settings
+	
+	-->
+	<fieldset
+		name="location"
+		label="COM_JCALPRO_CONFIG_LOCATION"
+		description="COM_JCALPRO_CONFIG_LOCATION_DESC"
+	>
+		<field
+			name="location_format_events"
+			type="jcaldateformat" class="chzn-custom-value inputbox"
+			label="COM_JCALPRO_CONFIG_LOCATION_FORMAT_EVENTS"
+			description="COM_JCALPRO_CONFIG_LOCATION_FORMAT_EVENTS_DESC"
+			default="D. j M, Y"
+		/>
+		<field
+			name="require_location" id="require_location"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_REQUIRE_LOCATION"
+			description="COM_JCALPRO_CONFIG_REQUIRE_LOCATION_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		
+		<field
+			name="default_zoom" id="default_zoom"
+			type="list" class="inputbox"
+			label="COM_JCALPRO_CONFIG_DEFAULT_ZOOM"
+			description="COM_JCALPRO_CONFIG_DEFAULT_ZOOM_DESC"
+			default="8"
+		>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+		</field>
+	</fieldset>
+	<!--
+	
+	Environment settings
+	
+	-->
+	<fieldset
+		name="environment"
+		label="COM_JCALPRO_CONFIG_ENVIRONMENT"
+		description="COM_JCALPRO_CONFIG_ENVIRONMENT_DESC"
+	>
+		<field
+			name="time_format_24hours" id="time_format_24hours"
+			type="radio" class="btn-group btn-group-yesno btn-group-yesno-alt"
+			label="COM_JCALPRO_CONFIG_TIME_FORMAT_24HOURS"
+			description="COM_JCALPRO_CONFIG_TIME_LABEL_FORMAT_24HOURS_DESC"
+			default="0"
+		>
+			<option value="1">COM_JCALPRO_24HOURS</option>
+			<option value="0">COM_JCALPRO_12HOURS</option>
+		</field>
+		<field
+			name="day_start" id="day_start"
+			type="radio" class="btn-group btn-group-yesno btn-group-yesno-alt"
+			label="COM_JCALPRO_CONFIG_DAY_START"
+			description="COM_JCALPRO_CONFIG_DAY_START_DESC"
+			default="0"
+		>
+			<option value="1">MONDAY</option>
+			<option value="0">SUNDAY</option>
+		</field>
+		<field
+			name="translate_usertime" id="translate_usertime"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_TRANSLATE_USERTIME"
+			description="COM_JCALPRO_CONFIG_TRANSLATE_USERTIME_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="legacy_ical" id="legacy_ical"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_LEGACY_ICAL"
+			description="COM_JCALPRO_CONFIG_LEGACY_ICAL_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="archive" id="archive"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_ARCHIVE"
+			description="COM_JCALPRO_CONFIG_ARCHIVE_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="registration" id="registration"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_REGISTRATION"
+			description="COM_JCALPRO_CONFIG_REGISTRATION_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="captcha"
+			type="plugins"
+			folder="captcha"
+			default=""
+			label="COM_JCALPRO_CONFIG_CAPTCHA"
+			description="COM_CONTACT_CONFIG_CAPTCHA_DESC"
+			filter="cmd"
+		>
+			<option value="">JOPTION_USE_DEFAULT</option>
+			<option value="0">JOPTION_DO_NOT_USE</option>
+		</field>
+		<field
+			name="purifier" id="purifier"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_PURIFIER"
+			description="COM_JCALPRO_CONFIG_PURIFIER_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="logging" id="logging"
+			type="radio" class="btn-group btn-group-yesno"
+			label="COM_JCALPRO_CONFIG_LOGGING"
+			description="COM_JCALPRO_CONFIG_LOGGING_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			id="email_tags" name="email_tags"
+			type="textarea"
+			label="COM_JCALPRO_CONFIG_EMAIL_TAGS_LABEL"
+			description="COM_JCALPRO_CONFIG_EMAIL_TAGS_DESC"
+			class="inputbox"
+			cols="25" rows="3"
+		/>
+<!--		<field
+			name="show_recurrent_events" id="show_recurrent_events"
+			type="list" class="inputbox"
+			label="COM_JCALPRO_CONFIG_SHOW_RECURRENT_EVENTS"
+			description="COM_JCALPRO_CONFIG_SHOW_RECURRENT_EVENTS_DESC"
+			default="1"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="update_detached_with_series" id="update_detached_with_series"
+			type="list" class="inputbox"
+			label="COM_JCALPRO_CONFIG_UPDATE_DETACHED_WITH_SERIES"
+			description="COM_JCALPRO_CONFIG_UPDATE_DETACHED_WITH_SERIES_DESC"
+			default=""
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field> -->
+		
+	</fieldset>
+	<!--
+	
+	Updates
+	
+	-->
+	<fieldset name="updates" label="COM_JCALPRO_CONFIG_UPDATES" description="COM_JCALPRO_CONFIG_UPDATES_DESC">
+		<field
+			name="update_server"
+			type="list"
+			default="http://anything-digital.com/update/jcalpro/standard/list_stable.xml"
+			label="COM_JCALPRO_CONFIG_UPDATE_SERVER"
+			description="COM_JCALPRO_CONFIG_UPDATE_SERVER_DESC"
+		>
+			<option value="http://anything-digital.com/update/jcalpro/standard/list_stable.xml">COM_JCALPRO_CONFIG_UPDATE_SERVER_OPTION_STABLE</option>
+			<option value="http://anything-digital.com/update/jcalpro/standard/list.xml">COM_JCALPRO_CONFIG_UPDATE_SERVER_OPTION_BLEEDING_EDGE</option>
+		</field>
+		<field
+			name="update_credentials_access"
+			type="text" default="" class="input-block-level"
+			label="COM_JCALPRO_CONFIG_UPDATE_CREDENTIALS_ACCESS"
+			description="COM_JCALPRO_CONFIG_UPDATE_CREDENTIALS_ACCESS_DESC"
+		/>
+		<field
+			name="update_credentials_secret"
+			type="text" default="" class="input-block-level"
+			label="COM_JCALPRO_CONFIG_UPDATE_CREDENTIALS_SECRET"
+			description="COM_JCALPRO_CONFIG_UPDATE_CREDENTIALS_SECRET_DESC"
+		/>
+	</fieldset>
+	<!--
+	
+	Permissions
+	
+	-->
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+	>
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="com_jcalpro"
+			section="component"
+		/>
+	</fieldset>
+</config>

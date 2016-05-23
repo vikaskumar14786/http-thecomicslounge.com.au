@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldpath="/administrator/components/com_jcalpro/models/fields">
+	<!-- 
+	
+	Main "field" fieldset
+	
+	-->
+	<fieldset
+		name="field"
+		label="COM_JCALPRO_FIELD"
+	>
+		<field
+			id="name" name="name"
+			type="text"
+			label="COM_JCALPRO_FIELD_NAME_LABEL"
+			description="COM_JCALPRO_FIELD_NAME_DESC"
+			class="inputbox"
+			size="30"
+			required="true"
+		/>
+		<field
+			id="title" name="title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="JFIELD_TITLE_DESC"
+			class="inputbox"
+			size="30"
+			required="true"
+		/>
+		<field
+			id="description" name="description"
+			type="textarea"
+			label="COM_JCALPRO_FIELD_DESCRIPTION_LABEL"
+			description="COM_JCALPRO_FIELD_DESCRIPTION_DESC"
+			class="inputbox"
+		/>
+		<field
+			id="default" name="default"
+			type="text"
+			label="COM_JCALPRO_FIELD_DEFAULT_LABEL"
+			description="COM_JCALPRO_FIELD_DEFAULT_DESC"
+			class="inputbox"
+		/>
+		<field
+			id="type" name="type"
+			type="jcalfieldtype"
+			label="COM_JCALPRO_FIELD_TYPE_LABEL"
+			description="COM_JCALPRO_FIELD_TYPE_DESC"
+			class="inputbox"
+			ignoredfields="accesslevel,cachehandler,calendar,category,combo,componentlayout,contentlanguage,databaseconnection,editor,editors,file,filelist,folderlist,imagelist,groupedlist,helpsite,language,menu,menuitem,modulelayout,note,password,plugins,predefinedlist,rules,sessionhandler,spacer,sql,templatestyle,timezone,user,usergroup"
+		/>
+		<field
+			id="formtype" name="formtype"
+			type="jcalformtype"
+			label="COM_JCALPRO_FIELD_FORMTYPE_LABEL"
+			description="COM_JCALPRO_FIELD_FORMTYPE_DESC"
+			class="inputbox"
+			allvalue="-1"
+			alltext="COM_JCALPRO_FIELD_FORMTYPE_ANY"
+		/>
+	</fieldset>
+	<!-- 
+	
+	Field details
+	
+	-->
+	<fieldset
+		name="details"
+		label="COM_JCALPRO_FORM_DETAILS"
+	>
+		<field
+			id="published" name="published"
+			type="jcalpublished"
+			label="COM_JCALPRO_PUBLISHED"
+			description="COM_JCALPRO_PUBLISHED_DESC"
+			class="inputbox"
+		/>
+		<field
+			id="event_display" name="event_display"
+			type="list"
+			label="COM_JCALPRO_FIELD_EVENT_DISPLAY_LABEL"
+			description="COM_JCALPRO_FIELD_EVENT_DISPLAY_DESC"
+			class="inputbox"
+			default="1"
+		>
+			<option value="0">COM_JCALPRO_FIELD_EVENT_DISPLAY_OPTION_HIDDEN</option>
+			<option value="1">COM_JCALPRO_FIELD_EVENT_DISPLAY_OPTION_HEADER</option>
+			<option value="2">COM_JCALPRO_FIELD_EVENT_DISPLAY_OPTION_TOP_LIST</option>
+			<option value="3">COM_JCALPRO_FIELD_EVENT_DISPLAY_OPTION_BOTTOM_LIST</option>
+			<option value="4">COM_JCALPRO_FIELD_EVENT_DISPLAY_OPTION_SIDE_LIST</option>
+		</field>
+	</fieldset>
+	<!-- 
+	
+	Rules fieldset
+	
+	-->
+	<fieldset name="rules">
+		<field
+			name="rules" type="rules" label="JFIELD_RULES_LABEL"
+			translate_label="false" class="inputbox"
+			component="com_jcalpro" section="field"
+		/>
+	</fieldset>
+	<!-- 
+	
+	Hidden options fieldset
+	
+	-->
+	<fieldset
+		name="hidden"
+		label="COM_JCALPRO_HIDDEN"
+	>
+		<field
+			id="id" name="id"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_ID_LABEL"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			name="asset_id"
+			type="hidden"
+			filter="unset"
+		/>
+		<field
+			id="created" name="created"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_CREATED_LABEL"
+			default=""
+			readonly="true"
+		/>
+		<field
+			id="created_by" name="created_by"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_CREATED_BY_LABEL"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="modified" name="modified"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_MODIFIED_LABEL"
+			default=""
+			readonly="true"
+		/>
+		<field
+			id="modified_by" name="modified_by"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_MODIFIED_BY_LABEL"
+			default="0"
+			readonly="true"
+		/>
+	</fieldset>
+	<!--
+	
+	Parameters fields for "field"
+	
+	-->
+	<fields name="params">
+		<fieldset
+			name="attributes"
+			label="COM_JCALPRO_FIELD_ATTRIBUTES"
+		>
+			<field
+				name="classname"
+				type="text"
+				default="inputbox"
+				label="COM_JCALPRO_FIELD_PARAMS_CLASSNAME_LABEL"
+				description="COM_JCALPRO_FIELD_PARAMS_CLASSNAME_DESC"
+			/>
+			<field
+				name="opts"
+				type="jcalkeyval"
+				default=""
+				label="COM_JCALPRO_FIELD_PARAMS_OPTIONS_LABEL"
+				description="COM_JCALPRO_FIELD_PARAMS_OPTIONS_DESC"
+				keylabel="COM_JCALPRO_FIELD_PARAMS_OPTIONS_KEYLABEL"
+				valuelabel="COM_JCALPRO_FIELD_PARAMS_OPTIONS_VALUELABEL"
+				ordering="true"
+			/>
+			<field
+				name="attrs"
+				type="jcalkeyval"
+				default=""
+				label="COM_JCALPRO_FIELD_PARAMS_ATTRIBUTES_LABEL"
+				description="COM_JCALPRO_FIELD_PARAMS_ATTRIBUTES_DESC"
+				keylabel="COM_JCALPRO_FIELD_PARAMS_ATTRIBUTES_KEYLABEL"
+				valuelabel="COM_JCALPRO_FIELD_PARAMS_ATTRIBUTES_VALUELABEL"
+			/>
+		</fieldset>
+	</fields>
+</form>

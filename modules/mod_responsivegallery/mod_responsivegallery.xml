@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>	
+
+<extension type="module" version="3.0" client="site" method="upgrade">	
+
+<name>Responsive Photo Gallery</name>	
+
+<creationDate>February 2012</creationDate>	
+
+<version>2.9.4</version>	
+
+<author>GraphicAholic</author>	
+
+<copyright>Copyright 2014-2015 - graphicaholic.com</copyright>	
+
+<license>http://www.gnu.org/copyleft/lgpl.html</license>	
+
+<authorEmail>support@graphicaholic.com</authorEmail>	
+
+<authorUrl>http://www.graphicaholic.com/demos</authorUrl>	
+
+	<description><![CDATA[<img src="../modules/mod_responsivegallery/images/ResponsivePhotoGallery.jpg" alt="Responsive Photo Gallery" /><p><strong>Responsive Photo Gallery (c) 2012-2015</strong> is a GPL Joomla! module from <strong><a href="http://www.graphicaholic.com" target="_blank" >GraphicAholic</a></strong></p><p>Responsive Photo Gallery is a full featured and easy to use 'responsive' photo gallery for Joomla 3.x.</p><p><strong><u>USAGE</u> :</strong> <p>"Photos from a Joomla Folder"<br />Your first step is to make a new folder inside your Joomla '/images' directory and upload your photos into this newly created directory. Now, adjust the module options on the left to your needs, select your module position, publish the module, assign it to your menus, save and DONE!</p><p>"Photos from a Flickr Photoset"<br />Click onto the 'Photos from a Flickr Photosets' frame to the right, add your Flickr API, the Photoset ID# you wish to render and select the thumbnail size you wish to use in the carousel. Select your module position, publish the module, assign it to your menus, save and DONE!</p><p>"Joomla Picture Gallery 1 thru 30"</p><p>Select individual photos within your '/image' folders and add a custom title and description to each photo you are showing. By not selecting a photo, the code will by-pass it and move onto the next available photo selection. Now, adjust the module options on the left to your needs, select your module position, publish the module, assign it to your menus, save and DONE!</p><p>"Photos from a Picasa Album"<br />Click onto the 'Photos from a Picasa Album' frame to the right, add your Picasa User Name/Number, the Album Number you wish to render. Select what photo size you wish to render for the Main photo area and lightbox, select how you want to render the Thumbnail size for the carousel, choose what Main photo data you wish to use and the last option, Extra global data is optional. Select your module position, publish the module, assign it to your menus, save and DONE!</p><p>The power is in the code... With only a few options to set, you'll have your very own Responsive Photo Gallery up and running in no time.</p><p>Like all extensions, there are a few key rules to follow.</p><ol><li>If your using more then one Responsive Photo Gallery on a single page you'll need to assign each one with a unique 'Gallery Number' (Ranges are 1 to 50).</li><li>If your using more then one Responsive Photo Gallery on a single page, they must all use the same 'Carousel Position'.</li></ol><li><u>PLEASE NOTE</u>: If you do not follow these basic rules above, Responsive Photo Gallery will not work to your satisfaction.</li><li>Supported Browsers: IE8+, FireFox, Safari, Chrome, Smartphone & Touch Pad browsers.</li><li><strong>Change Log:</strong></li><li>Version 2.9.4: Fixed main image display issue within some Firefox & Safari browser versions.</li><li>Version 2.9.3: Fixed thumbnail ratio issue within Joomla Folder Plus and Joomla Picture Gallery options. Fixed lightbox path within Joomla Picture Gallery from relative to absolute.</li><li>Version 2.9.2: Bug fixes within Flickr, Picasa & Picture Gallery options. <b>SORRY!</b></li><li>Version 2.9.1: Now you can create your own global <b>CUSTOM</b> styles, independently position the Thumbnail Carousel, choose to display the Thumbnail Carousel or not plus general code housekeeping.</li><li>Version 2.9.0: Added a new module option called Joomla Folder Plus. This new feature will allow you to load a gallery from a Joomla folder and add/delete/edit/sort all of your photos directly within this module option.</li><li>Version 2.8.1: Added a 'Load lightbox script' option that will allow you to turn off loading the Fancybox lightbox script to avoid conflicts with other Fancybox lightbox extensions.</li><li>Version 2.8.0: Added a 'Build you Own Gallery' option that supports up to 30 individual pictures, titles & descriptions. Picasa Photo Albums are now supported.</li><li>Version 2.7.0: Added Max Height & Width settings to control size of gallery regardless of original photo size. Added the responsive Fancybox2 Lightbox feature to the main gallery photo. Re-coded the 'Auto Play' scrolling code and added 'Play' & 'Pause' icons when 'Auto Play' is being used.</li><li>Version 2.6.2: Minor bug fixes. Upgrade recommended.</li><li>Version 2.6.0: Added auto photo scrolling and timer feature. Added show/hide Joomla or Flickr titles.</li><li>Version 2.5.0: Bug fixes for servers using PHP 5.4.+.</li><li>Version 2.4.0a: Coded for Joomla 3.x, Cleaned up code & minor bug fixes.</li><li>Version 2.2.0: Added additional Flickr options and added an option that fixes the loadposition tag issue.</li><li>Version 2.1.0: Added Flickr Photoset integration</li><li>Version 2.0.0: Initial Release</li></p><p>For additional documentations and useful tips, head over to <a href="http://www.graphicaholic.com" target="_blank" >GraphicAholic's</a> website.</p><p>Responsive Photo Gallery is based on Mary Lou's Responsive Image Gallery over at <a href="http://tympanus.net/codrops/2011/09/20/responsive-image-gallery/" target="_blank" >Codrops</a>.</p>]]>	
+
+</description>
+
+	<files>
+
+		<filename module="mod_responsivegallery">mod_responsivegallery.php</filename>
+
+        <folder>js</folder>
+
+        <folder>css</folder>
+
+        <folder>images</folder>
+
+        <folder>elements</folder>
+
+		<folder>assets</folder>
+
+        <folder>tmpl</folder>
+
+		<folder>helpers</folder>
+
+		<filename>class.rgThumbnail.php</filename>
+
+		<filename>helper.php</filename>
+
+		<filename>index.html</filename>
+
+		<filename>mod_responsivegallery.xml</filename>
+
+	</files>
+
+	<params addpath="">
+
+		</params>
+
+	<config>    
+
+	<fields name="params" addfieldpath="/modules/mod_responsivegallery/elements">
+
+	<!-- General Settings -->
+
+	<fieldset name="basic" label="General Settings">
+
+	<field name="imageFeed" type="list" class="btn-group" default="5" label="Render Photos from" description="Select how to render photos. If you select 'from Joomla Folder', FTP upload your photos to a folder within your 'images' directory and adjust options in the 'Render photos from a Joomla Folder' frame. If you select 'from Flickr Photoset', adjust options in the 'Render photos from a Flickr Photoset' frame.">
+
+			<option value="5">Joomla Folder Plus</option>
+
+			<option value="3">Joomla Picture Gallery</option>
+
+			<option value="2">Flickr Photoset</option>
+
+			<option value="4">Picasa Gallery</option>
+
+	</field>
+
+		<field name="displayThumbs" type="jselist" class="btn-group" default="carousel" label="Display thumbnails" description="Select to display the Thumbnail/Carousel box.">
+
+			<option value="fullview" sub_fields="">No</option>
+
+			<option value="carousel" sub_fields="esPosition">Yes</option>				
+
+	</field>
+
+	<field name="esPosition" type="list" class="btn-group" default="above" label="Thumbnail position" description="Choose where you want the Thumbnail/Carousel box position.">
+
+			<option value="above">Above main photo</option>	
+
+			<option value="below">Below main photo</option>
+
+	</field>
+
+	<field name="containerMargin" type="text" default="0px" label="Top Margin" description="If you are using this module via the Joomla 'loadposition' tag you may need to add additional top margin spacing. Adding a pixel value here will push RPG downward." />
+
+	<field name="info1" type="info" default="The settings below are 'Global' to a page. If you are going to have two or more galleries on the same page, each gallery MUST have the same setting below. This does not effect a single gallery on a single page." />
+
+	<field name="styles" type="jselist" class="btn-group" default="1" label="Theme" description="Select what theme you wish to use.">
+
+			<option value="dark" sub_fields="">Dark Style</option>	
+
+			<option value="light" sub_fields="">Light Style</option>
+
+			<option value="custom" sub_fields="backgroundSkin,textColor,borderRadius">Custom</option>			
+
+	</field>
+
+	<field name="backgroundSkin" type="colorgrid" default="#000000" label="Background color" description="Background color." />
+
+	<field name="textColor" type="colorgrid" default="#FFFFFF" label="Font color" description="Color for title/description font." />
+
+	<field name="borderRadius" type="text" default="0px" label="Border radius" description="Border radius. Increase pixel value to meet your needs." />
+
+	<field name="lightboxEffect" type="radio" class="btn-group" size="200" default="1" label="Lightbox effect" description="Lightbox effect.">
+
+			<option value="1">Yes</option>	
+
+			<option value="0">No</option>
+
+	</field>
+
+	<field name="lightboxScript" type="radio" class="btn-group" default="1" label="Load lightbox script?" description="If you are using another extension that uses the Fancybox lightbox, you may need to set this option to No.">
+
+			<option value="1">Yes</option>
+
+			<option value="0">No</option>	
+
+	</field>
+
+	<field name="autoPlay" type="jselist" class="btn-group" default="autoplayYes" label="Auto Play Gallery?" description="Select Yes if you want Responsive Photo Gallery to 'auto scroll' through your photos.">
+
+			<option value="autoplayNo" sub_fields="">No</option>
+
+			<option value="autoplayYes" sub_fields="infiniteLoop">Yes</option>	
+
+	</field>
+
+	<field name="infiniteLoop" type="text" default="3000" label="Auto Play Speed" description="Adjust setting in milliseconds to meet your specific needs." />
+
+	<field name="maxHeight" type="text" default="" label="Main image max height" description="Use a pixel value to restrict the main photo container's overall height (EXAMPLE: 100px). Leave blank for auto." />
+
+	<field name="maxWidth" type="text" default="" label="Main image max width" description="Use a pixel value to restrict the main photo container's overall width (EXAMPLE: 100px). Leave blank for auto." />
+
+	</fieldset>	
+
+	<!-- Joomla Folder Plus Settings -->
+
+	<fieldset name="jfolderplus" group="jfolderplus" label="Joomla Folder Plus Settings">
+
+	<field name="categorySetting" type="gaspacer" label="Joomla Folder Plus Settings" style="title" />
+
+	<field name="thumbnail_mode" type="jseradio" default="none" class="btn-group" label="Resize image?" description="Resize image?">			
+
+			<option value="none" sub_fields="">Active</option>			
+
+	</field>
+
+	<field name="heightRatio" type="text" default="48px" label="Thumbnail height/width ratio" description="Thumbnail height/width ratio" />						
+
+	<field name="data_source" type="gaimagefolder" directory="images" label="Image path folder" description="Relative to Joomla images folder. Default relative path is 'YOUR/JOOMLA/SITE/PATH/IMAGES'." />			
+
+	</fieldset>		
+
+
+
+	<!-- Flickr - Picasa Settings -->
+
+	<fieldset name="gallerysettings" group="gallerysettings" label="Flickr - Picasa Settings">
+
+	<field name="flickrSetting" type="gaspacer" label="Flickr Photoset Settings" style="title" />	
+
+	<field name="flickrAPI" type="text" default="6cb7449543a9595800bc0c365223a4e8" label="Flickr API" description="Required setting. I have provided a working Flickr API with this release of RPG. I make no guarantee that it will work forever! It's easy, FREE and advisable to obtain your own Flickr API." />
+
+	<field name="flickrCache" type="radio" class="btn-group" default="0" label="Use Flickr Cache?" description="Select to use Flickr cache. RECOMMENDED! ">	
+			<option value="0">No</option>	
+			<option value="1">Yes</option>
+	</field>
+
+	<field name="flickrSet" type="text" default="" label="Flickr Photoset ID#" description="Required setting. This ID# should be the last set of numbers in your Flickr Photoset URL (17 numbers)." />
+
+	<field name="flickrNumber" type="text" default="10" label="Number of photos to show" description="Number of photos to show from your Flickr photoset." />
+
+	<field name="flickrNumber" type="text" default="10" label="Number of photos to show" description="Number of photos to show from your Flickr photoset." />
+
+	<field name="flickrThumb" type="list" class="btn-group" default="1" label="Flickr Thumbnail Size" description="Select the Flickr thumbnail size you wish to use in the carousel.">
+
+			<option value="1">Small 75x75 Pixel Square</option>	
+
+			<option value="2">Small 84x84 Pixel Square</option>
+
+			<option value="3">Small Thumbnail Ratio</option>
+
+	</field>
+
+	<field name="flickrCaption" type="list" class="btn-group" default="2" label="Main Photo Caption" description="Select what caption data you wish to display below your main photo.">
+
+			<option value="1">Flickr Title Only?</option>	
+
+			<option value="2">Flickr Description Only?</option>
+
+			<option value="3">Both Flickr Title - Description?</option>
+
+			<option value="0">None</option>
+
+	</field>
+
+	<field name="flickr" type="info" default="Optional Flickr Settings. Set the options below ONLY if you want to show a PRIVATE PHOTOSET from your Flickr account." />
+
+	<field name="flickrPrivate" type="jselist" class="btn-group" default="privatephotosetNo" label="Access Private Photoset" description="Access Private Photoset">			
+
+			<option value="privatephotosetNo" sub_fields="">No</option>
+
+			<option value="privatephotosetYes" sub_fields="flickrSecret,flickrToken">Yes</option>
+
+	</field>
+
+	<field name="flickrSecret" type="text" default="" label="Flickr Secret Code" description="Flickr Secret Code." />
+
+	<field name="flickrToken" type="text" default="" label="Flickr Token Code" description="Flickr Token Code." />
+
+	<field name="picasaSetting" type="gaspacer" label="Picasa Photoset Settings" style="title" />	
+
+	<field name="picasaUser" type="text" default="" label="Picasa User Name/Number" description="Enter your Picasa User Name or User ID number" />
+
+	<field name="user_albumid" type="text" default="" label="Picasa Album Number" description="Enter the Picasa Album Number you wish to display" />
+
+	<field name="albumTitle" type="text" default="" label="Picasa Album Title" description="Enter your Picasa Album title. This option is strickly a housekeeping feature to help you remember what Picasa Album you are using." />
+
+	<field name="photoSize" type="list" default="640" label="Main photo size" description="This setting is global to the photo you display and the photo that shows in the lightbox. Set this large enough but not to large!">
+
+			<option value="94">94 pixels</option>
+
+			<option value="110">110 pixels</option>
+
+			<option value="128">128 pixels</option>
+
+			<option value="200">200 pixels</option>
+
+			<option value="220">220 pixels</option>
+
+			<option value="288">288 pixels</option>
+
+			<option value="320">320 pixels</option>
+
+			<option value="400">400 pixels</option>
+
+			<option value="512">512 pixels</option>
+
+			<option value="576">576 pixels</option>
+
+			<option value="640">640 pixels</option>
+
+			<option value="720">720 pixels</option>
+
+			<option value="800">800 pixels</option>
+
+			<option value="912">912 pixels</option>
+
+			<option value="1024">1024 pixels</option>
+
+			<option value="1152">1152 pixels</option>
+
+			<option value="1280">1280 pixels</option>
+
+			<option value="1440">1440 pixels</option>
+
+			<option value="1600">1600 pixels</option>
+
+	</field>
+
+	<field name="picasaPhoto" type="list" default="c" label="Thumbnail size" description="Select how you wish to display your thumbnails.">	
+
+			<option value="c">Cropped</option>
+
+			<option value="u">Ratio</option>
+
+	</field>
+
+	<field name="picasaTitle" type="list" class="btn-group" default="1" label="Main photo data" description="Select what caption data you wish to display below your main photo.">	
+
+			<option value="0">No Titles or Captions</option>	
+
+			<option value="1">Titles Only</option>
+
+			<option value="2">Titles and Captions</option>
+
+	</field>
+
+	<field name="picasaTag" type="text" filter="raw" default="" label="Extra global data" description="This data will show after the title or after the caption. Supports basic HTML tags." />
+
+	</fieldset>
+
+	<!-- Custon Gallery 1-15 Settings -->
+
+	<fieldset name="firstphotos" group="firstphotos" label="Joomla Picture Gallery 1 thru 15">
+
+	<field name="galThumbratio" type="text" default="64px" label="Thumbnail height/width ratio" description="Gallery thumbnail height/width ratio." />
+
+	<field name="filteringspacer05" type="spacer" hr="true" />
+
+	<field name="img1url" type="media" path="images/" default="" label="1st Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img1title" type="text" filter="raw" default=" " label="1st Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img2url" type="media" path="images/" default="" label="2nd Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img2title" type="text" filter="raw" default=" " label="2nd Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img3url" type="media" path="images/" default="" label="3rd Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img3title" type="text" filter="raw" default=" " label="3rd Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img4url" type="media" path="images/" default="" label="4th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img4title" type="text" filter="raw" default=" " label="4th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img5url" type="media" path="images/" default="" label="5th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img5title" type="text" filter="raw" default=" " label="5th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img6url" type="media" path="images/" default="" label="6th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img6title" type="text" filter="raw" default=" " label="6th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img7url" type="media" path="images/" default="" label="7th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img7title" type="text" filter="raw" default=" " label="7th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img8url" type="media" path="images/" default="" label="8th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img8title" type="text" filter="raw" default=" " label="8th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img9url" type="media" path="images/" default="" label="9th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img9title" type="text" filter="raw" default=" " label="9th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img10url" type="media" path="images/" default="" label="10th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img10title" type="text" filter="raw" default=" " label="10th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img11url" type="media" path="images/" default="" label="11th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img11title" type="text" filter="raw" default=" " label="11th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img12url" type="media" path="images/" default="" label="12th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img12title" type="text" filter="raw" default=" " label="12th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img13url" type="media" path="images/" default="" label="13th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img13title" type="text" filter="raw" default=" " label="13th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img14url" type="media" path="images/" default="" label="14th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img14title" type="text" filter="raw" default=" " label="14th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img15url" type="media" path="images/" default="" label="15th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img15title" type="text" filter="raw" default=" " label="15th Title and Description" description="Basic HTML code is allowed" />
+
+	</fieldset>
+
+	<!-- Custon Gallery 16-30 Settings -->
+
+	<fieldset name="secondphotos" group="secondphotos" label="Joomla Picture Gallery 16 thru 30">
+
+	<field name="img16url" type="media" path="images/" default="" label="16th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img16title" type="text" filter="raw" default=" " label="16th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img17url" type="media" path="images/" default="" label="17th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img17title" type="text" filter="raw" default=" " label="17th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img18url" type="media" path="images/" default="" label="18th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img18title" type="text" filter="raw" default=" " label="18th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img19url" type="media" path="images/" default="" label="19th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img19title" type="text" filter="raw" default=" " label="19th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img20url" type="media" path="images/" default="" label="20th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img20title" type="text" filter="raw" default=" " label="20th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img21url" type="media" path="images/" default="" label="21st Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img21title" type="text" filter="raw" default=" " label="21st Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img22url" type="media" path="images/" default="" label="22nd Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img22title" type="text" filter="raw" default=" " label="22nd Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img23url" type="media" path="images/" default="" label="23rd Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img23title" type="text" filter="raw" default=" " label="23rd Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img24url" type="media" path="images/" default="" label="24th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img24title" type="text" filter="raw" default=" " label="24th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img25url" type="media" path="images/" default="" label="25th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img25title" type="text" filter="raw" default=" " label="25th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img26url" type="media" path="images/" default="" label="26th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img26title" type="text" filter="raw" default=" " label="26th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img27url" type="media" path="images/" default="" label="27th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img27title" type="text" filter="raw" default=" " label="27th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img28url" type="media" path="images/" default="" label="28th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img28title" type="text" filter="raw" default=" " label="28th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img29url" type="media" path="images/" default="" label="29th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img29title" type="text" filter="raw" default=" " label="29th Title and Description" description="Basic HTML code is allowed" />
+
+	<field name="img30url" type="media" path="images/" default="" label="30th Photo" description="Select the location and photo you wish to use." />
+
+	<field name="img30title" type="text" filter="raw" default=" " label="30th Title and Description" description="Basic HTML code is allowed" />
+
+	</fieldset>
+
+	<fieldset name="advanced" group="advanced">
+
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />
+
+				<field name="cache" type="radio" class="btn-group" default="1" label="Caching" description="Select whether to cache the content of this module">
+
+					<option value="1">Use global</option>
+
+					<option value="0">No caching</option>
+
+				</field>
+
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+
+				<field name="documentation" type="docs" default="900" label="" description="" />
+
+</fieldset>
+
+</fields>
+
+</config>
+
+</extension>

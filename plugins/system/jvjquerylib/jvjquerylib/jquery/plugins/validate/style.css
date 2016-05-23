@@ -1,0 +1,8 @@
+.validate-errors{z-index: 2000;}
+.validate-errors > div{border: none; border-bottom: 1px solid #AAA; padding: 4px;}
+.validate-errors > ul {margin: 5px 10px; padding: 0;}
+.validate-errors > ul > li {margin: 0 ; margin-left: 10px; list-style: none;}
+.validate-close{position: absolute; top: 2px; right: 2px; width: 16px; height: 16px; }
+.validate-success{width: 0; height: 0;}
+.validate-success>span{top: -8px; position: absolute;}
+.validate-close .ui-button-icon-primary{left: 50%; margin-left: -8px;}

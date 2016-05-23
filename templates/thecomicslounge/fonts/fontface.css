@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'ITCFranklinGothicBkCompressed';
+    src: url('itcfranklingothicstd-bkcp-webfont.eot');
+    src: url('itcfranklingothicstd-bkcp-webfont.eot?#iefix') format('embedded-opentype'),
+         url('itcfranklingothicstd-bkcp-webfont.woff') format('woff'),
+         url('itcfranklingothicstd-bkcp-webfont.ttf') format('truetype'),
+         url('itcfranklingothicstd-bkcp-webfont.svg#ITCFranklinGothicBkCompressed') format('svg');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'GillSansStdUltraBold';
+    src: url('gillsansstd-ultrabold-webfont.eot');
+    src: url('gillsansstd-ultrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('gillsansstd-ultrabold-webfont.woff') format('woff'),
+         url('gillsansstd-ultrabold-webfont.ttf') format('truetype'),
+         url('gillsansstd-ultrabold-webfont.svg#GillSansStdUltraBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CuprumRegular';
+    src: url('cuprum-webfont.eot');
+    src: url('cuprum-webfont.eot?#iefix') format('embedded-opentype'),
+         url('cuprum-webfont.woff') format('woff'),
+         url('cuprum-webfont.ttf') format('truetype'),
+         url('cuprum-webfont.svg#CuprumRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaStdXBdCnOb';
+    src: url('futurastd-condextraboldobl-webfont.eot');
+    src: url('futurastd-condextraboldobl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('futurastd-condextraboldobl-webfont.woff') format('woff'),
+         url('futurastd-condextraboldobl-webfont.ttf') format('truetype'),
+         url('futurastd-condextraboldobl-webfont.svg#FuturaStdXBdCnOb') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

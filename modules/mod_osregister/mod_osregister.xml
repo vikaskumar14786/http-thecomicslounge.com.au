@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="module" method="upgrade">
+	<name>OSRegister</name>
+	<version>1.0.1</version>
+	<creationDate>2014</creationDate>
+	<author>www.ostraining.com</author>
+	<authorEmail>support@ostraining.com</authorEmail>
+	<authorUrl>http://www.ostraining.com</authorUrl>
+	<copyright>Open Source Training LLC</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html</license>
+	<description>A module to allow user registration on any page of your site. It's easily configured to 'hide' itself from users who are already registered.</description>
+	<files>
+		<filename module="mod_osregister">mod_osregister.php</filename>
+		<filename>mod_osregister.xml</filename>
+		<filename>index.html</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/mod_osregister.css</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_osregister.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="Module Class Suffix"
+					description="fieldMODULECLASSSUFFIX"
+					default=""
+				/>
+				<field
+					name="guest_only"
+					type="radio"
+					label="GUESTS"
+					description="When set to yes, the module will be hidden when a user is already logged in. It's recommended to set 'Show Title' to No if this is enabled." default="1">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+		 		</field>
+				<field
+					name="introtext"
+					type="textarea"
+					label="Intro Text"
+					description="Introduction text to module. Can be used to show a title when module is displayed to 'Guests Only' along with a call-to-action to register, if desired. As a reminder, module titles are enclosed in 'h3' tags."
+					default=""
+					rows="7"
+					cols="25"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+	
+    <updateservers>
+        <server type="extension" priority="1" name="OSRegister">http://updates.ostraining.com/osregister.xml</server>
+    </updateservers>
+</extension>

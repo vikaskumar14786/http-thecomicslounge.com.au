@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>MEDIABOXCK_NAME</name>
+	<author>Cédric KEIFLIN</author>
+	<creationDate>Décembre 2010</creationDate>
+	<copyright>Cédric KEIFLIN</copyright>
+	<license>http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>ced1870@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlack.fr</authorUrl>
+	<version>2.0.1</version>
+	<description>MEDIABOXCK_PLUG_DESC</description>
+	
+	<files>
+		<filename plugin="mediabox_ck">mediabox_ck.php</filename>
+		<folder>mediabox_ck</folder>
+		<folder>language</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_mediabox_ck.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_mediabox_ck.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.plg_system_mediabox_ck.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.plg_system_mediabox_ck.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="pageselect" type="text" default="0" label="MEDIABOXCK_PAGESELECT" description="MEDIABOXCK_PAGESELECT_DESC" />
+				<field name="attribtype" type="radio" default="rel" label="MEDIABOXCK_ATTRIBTYPE" description="MEDIABOXCK_ATTRIBTYPE_DESC" class="btn-group">
+					<option value="className">CLASSNAME</option>
+					<option value="rel">REL</option>
+				</field>
+				<field name="attribname" type="text" default="lightbox" label="MEDIABOXCK_ATTRIBNAME" description="MEDIABOXCK_ATTRIBNAME_DESC" />
+				<field name="spacer1" type="spacer" label="MEDIABOXCK_SPACER_STYLES" />
+				<field name="cornerradius" type="text" default="10" label="MEDIABOXCK_CORNERRADIUS" description="MEDIABOXCK_CORNERRADIUS_DESC" />
+				<field name="shadowoffset" type="text" default="5" label="MEDIABOXCK_SHADOWOFFSET" description="MEDIABOXCK_SHADOWOFFSET_DESC" />
+				<field name="overlayopacity" type="text" default="0.7" label="MEDIABOXCK_OVERLAYOPACITY" description="MEDIABOXCK_OVERLAYOPACITY_DESC" />
+				<field name="bgcolor" type="text" default="#1a1a1a" label="MEDIABOXCK_BGCOLOR" description="MEDIABOXCK_BGCOLOR_DESC" />
+				<field name="overlaycolor" type="text" default="#000" label="MEDIABOXCK_OVERLAYCOLOR" description="MEDIABOXCK_OVERLAYCOLOR_DESC" />
+				<field name="text1color" type="text" default="#999" label="MEDIABOXCK_TEXT1COLOR" description="MEDIABOXCK_TEXT1COLOR_DESC" />
+				<field name="text2color" type="text" default="#fff" label="MEDIABOXCK_TEXT2COLOR" description="MEDIABOXCK_TEXT2COLOR_DESC" />
+				<field name="spacer2" type="spacer" label="MEDIABOXCK_SPACER_RESIZE" />
+				<field name="resizeopening" type="radio" default="1" label="MEDIABOXCK_RESIZEOPENING" description="MEDIABOXCK_RESIZEOPENING_DESC" class="btn-group" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="resizeduration" type="text" default="240" label="MEDIABOXCK_RESIZEDURATION" description="MEDIABOXCK_RESIZEDURATION_DESC" />
+				<field name="initialwidth" type="text" default="320" label="MEDIABOXCK_INITIALWIDTH" description="MEDIABOXCK_INITIALWIDTH_DESC" />
+				<field name="initialheight" type="text" default="180" label="MEDIABOXCK_INITIALHEIGHT" description="MEDIABOXCK_INITIALHEIGHT_DESC" />
+				<field name="spacer3" type="spacer" label="MEDIABOXCK_SPACER_DISPLAY" />
+				<field name="defaultwidth" type="text" default="640" label="MEDIABOXCK_DEFAULTWIDTH" description="MEDIABOXCK_DEFAULTWIDTH_DESC" />
+				<field name="defaultheight" type="text" default="360" label="MEDIABOXCK_DEFAULTHEIGHT" description="MEDIABOXCK_DEFAULTHEIGHT_DESC" />
+				<field name="showcaption" type="radio" default="1" label="MEDIABOXCK_SHOWCAPTION" description="MEDIABOXCK_SHOWCAPTION_DESC" class="btn-group" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="showcounter" type="radio" default="1" label="MEDIABOXCK_SHOWCOUNTER" description="MEDIABOXCK_SHOWCOUNTER_DESC" class="btn-group" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

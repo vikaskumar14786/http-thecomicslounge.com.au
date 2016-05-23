@@ -1,0 +1,53 @@
+/**
+ * @package		JCalPro
+ * @subpackage	mod_jcalpro_calendar
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+.jcalpro_calendar_table {
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+}
+.jcalpro_calendar_table td {
+  vertical-align: top;
+}
+.jcalpro_calendar_month {
+	text-align: center;
+	font-weight: bold;
+}
+/* horizontal */
+.jcalpro_calendar_horizontal .jcalpro_calendar_list li {
+	float: left;
+	display: block;
+	width: 20px;
+	text-align: center;
+}
+.jcalpro_calendar_horizontal .jcalpro_calendar_list a,
+.jcalpro_calendar_horizontal .jcalpro_calendar_list a:link,
+.jcalpro_calendar_horizontal .jcalpro_calendar_list a:visited,
+.jcalpro_calendar_horizontal .jcalpro_calendar_list a:hover,
+.jcalpro_calendar_horizontal .jcalpro_calendar_list a:active {
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+}
+.jcalpro_calendar_horizontal .jcalpro_calendar_month {
+	float: right;
+	display: block;
+}
+.jcalpro_calendar_nav_prev {
+	float: left;
+}
+.jcalpro_calendar_nav_next {
+	float: right;
+}
+.jcalpro_calendar {
+	position: relative;
+}
+.jcalpro_calendar .jcalpro_calendar_loader {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}

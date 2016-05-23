@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_IMAGEGALLERYCATEGORY_FORM_LBL_GALLERYCATEGORY_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_IMAGEGALLERYCATEGORY_FORM_LBL_GALLERYCATEGORY_CREATED_BY"
+            description="COM_IMAGEGALLERYCATEGORY_FORM_DESC_GALLERYCATEGORY_CREATED_BY"  /> 
+
+       <field name="modified_by" type="modifiedby" default="" 
+            label="COM_IMAGEGALLERYCATEGORY_FORM_LBL_GALLERYCATEGORY_MODIFIED_BY"
+            description="COM_IMAGEGALLERYCATEGORY_FORM_DESC_GALLERYCATEGORY_MODIFIED_BY"  /> 
+
+       <field name="gallery_name" type="text"
+                
+            label="COM_IMAGEGALLERYCATEGORY_FORM_LBL_GALLERYCATEGORY_GALLERY_NAME"
+            description="COM_IMAGEGALLERYCATEGORY_FORM_DESC_GALLERYCATEGORY_GALLERY_NAME" 
+                
+                
+                 required="true"  /> 
+
+       <field name="coverphoto" type="media"
+                
+            label="COM_IMAGEGALLERYCATEGORY_FORM_LBL_GALLERYCATEGORY_COVERPHOTO"
+            description="COM_IMAGEGALLERYCATEGORY_FORM_DESC_GALLERYCATEGORY_COVERPHOTO" 
+                
+                
+                 required="true" 
+            directory="/images/gallery/thumbs" /> 
+
+       <field name="home" type="checkbox"
+                
+            label="COM_IMAGEGALLERYCATEGORY_FORM_LBL_GALLERYCATEGORY_HOME"
+            description="COM_IMAGEGALLERYCATEGORY_FORM_DESC_GALLERYCATEGORY_HOME" 
+                 default="1" 
+                
+                 /> 
+
+       <field name="published" type="checkbox"
+                
+            label="COM_IMAGEGALLERYCATEGORY_FORM_LBL_GALLERYCATEGORY_PUBLISHED"
+            description="COM_IMAGEGALLERYCATEGORY_FORM_DESC_GALLERYCATEGORY_PUBLISHED" 
+                 default="1" 
+                
+                 /> 
+
+ 
+		<field name="version_note"
+			type="text"
+			label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
+			class="inputbox" size="45"
+			labelclass="control-label"
+		/> 
+
+ 
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

@@ -1,0 +1,243 @@
+/**
+ * @package		JCalPro
+ * @subpackage	com_jcalpro
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+/**
+ * styles for the structural elements of the event edit form
+ * 
+ */
+
+/* recurrence button containers */
+#jcl_component .recurrence_button,
+#jcl_component .registration_button {
+	float: right
+}
+
+/* recurrence button images */
+#jcl_component .recurrence_button img,
+#jcl_component .registration_button img {
+	border: 0px;
+	cursor: pointer;
+}
+
+/* canonical category input */
+.fltlft, .button2-left {
+	float: left;
+}
+/* no more styles for this in 3.0 */
+.jcl_bootstrap .button2-left {
+	float: left;
+	padding: 4px 4px 4px 8px;
+}
+
+/* fix secondary categories in 3.0 */
+.jcl_bootstrap #jform_cat ul {
+	list-style-type: none;
+	margin: 0;
+}
+.jcl_bootstrap #jform_cat label {
+	display: inline;
+	padding: 0 0 0 4px;
+}
+
+#jform_canonical_modal,
+#jform_location_modal,
+#jcl_component .jcl_form_element .button2-left .blank a {
+	margin: 0px !important;
+}
+
+#jform_cat {
+	margin: 0px;
+	padding: 0px;
+}
+
+#main #jcl_component #jform_cat ul,
+#jform_cat ul {
+	list-style-type: none;
+	padding: 0px;
+}
+
+#jform_cat input {
+	margin-top: 2px;
+	margin-right: 4px;
+}
+
+#jform_title {
+	width: 100%;
+	font-size: 1.1em;
+	line-height: 1.2em;
+}
+
+#jcl_component .jcl_form_element fieldset {
+	border-width: 0px;
+}
+
+#jcl_component .jcl_form_subelement {
+	padding: 6px 11px;
+}
+
+#jform_duration_type {
+	line-height: 20px;
+	vertical-align: middle;
+	padding: 0px;
+}
+
+#jform_duration_type0,
+#jform_duration_type1,
+#jform_duration_type2,
+#jform_duration_type3,
+#jform_duration_type4,
+#jform_duration_type5 {
+	margin-top: 2px;
+	margin-right: 4px;
+}
+
+#jform_recur_type {
+	padding-left: 6px;
+}
+
+#jform_recur_end_type {
+	padding-left: 12px;
+	margin: 0px;
+}
+
+#jform_recur_type input,
+#jform_recur_end_type .radio,
+#jform_registration input,
+#jform_recur_end_type0,
+#jform_recur_end_type1 {
+	margin-right: 5px;
+}
+
+#jform_rec_yearly_type label,
+#jform_registration_until_event input,
+#jform_end_days,
+#jform_end_hours,
+#jform_end_minutes,
+#jform_rec_weekly_on_sunday,
+#jform_rec_weekly_on_monday,
+#jform_rec_weekly_on_tuesday,
+#jform_rec_weekly_on_wednesday,
+#jform_rec_weekly_on_thursday,
+#jform_rec_weekly_on_friday,
+#jform_rec_weekly_on_saturday {
+	margin: 0px 4px;
+}
+
+#jform_rec_monthly_type0,
+#jform_rec_monthly_type1,
+#jform_rec_yearly_type0,
+#jform_rec_yearly_type1,
+#jform_recur_end_type0,
+#jform_recur_end_type1,
+#jform_recur_end_type label {
+	margin-top: 5px;
+}
+
+#jform_recur_end_until {
+	margin-left: 3px;
+}
+
+#jform_rec_daily_period,
+#jform_rec_weekly_period,
+#jform_rec_monthly_period,
+#jform_rec_yearly_period,
+#jform_rec_monthly_day_number,
+#jform_rec_yearly_day_number,
+#jform_recur_end_count {
+	margin: 0px 3px 0px 3px;
+	width: 90px;
+}
+
+#jform_canonical_name,
+#jform_location_name {
+	padding: 2px;
+}
+
+#recurrence_close input,
+#jform_end_days,
+#jform_end_hours,
+#jform_end_minutes {
+	width: auto;
+	width: auto !important;
+}
+#jcl_component select {
+	height: auto;
+	height: auto !important;
+}
+#jcl_component input {
+	margin-left: auto;
+	margin-left: auto !important;
+}
+#jcl_rec_weekly_options br {
+	clear: both;
+}
+#jcl_rec_weekly_options label,
+#jcl_rec_weekly_options input {
+	float: left;
+}
+#jform_recur_end_until_img {
+	float: left;
+}
+
+#jcl_rec_daily_options ul,
+#jcl_rec_weekly_options ul,
+#jcl_rec_monthly_options ul,
+#jcl_rec_yearly_options ul {
+	list-style-type: none;
+}
+
+@media (max-width: 481px) {
+	#jform_end_days, #jform_end_hours, #jform_end_minutes {
+		clear: left;
+		float: left;
+		display: block;
+	}
+	#jform_end_days-lbl, #jform_end_hours-lbl, #jform_end_minutes-lbl {
+		float: left;
+		display: block;
+	}
+	#jform_duration_type .jcl_block {
+		clear: left;
+		display: block;
+	}
+	#jform_rec_daily_period,
+	#jform_rec_weekly_period,
+	#jform_rec_monthly_period,
+	#jform_rec_yearly_period {
+		float: none !important;
+		clear: both;
+	}
+	#jform_recur_end_until {
+		width: 140px;
+	}
+}
+
+@media (max-width: 768px) {
+	#jform_rec_weekly_on_sunday,
+	#jform_rec_weekly_on_monday,
+	#jform_rec_weekly_on_tuesday,
+	#jform_rec_weekly_on_wednesday,
+	#jform_rec_weekly_on_thursday,
+	#jform_rec_weekly_on_friday,
+	#jform_rec_weekly_on_saturday {
+		clear: left;
+	}
+}
+
+/* bugfix - datetime select boxes and adjustable widths don't work, apparently */
+#jcl_component .jcaldatetime-select-hour-24,
+#jcl_component .jcaldatetime-select-minute,
+#jcl_component .jcaldatetime-select-day {
+	width: 4em;
+}
+#jcl_component #jform_timezone,
+#jcl_component .jcaldatetime-select-hour-12,
+#jcl_component .jcaldatetime-select-month {
+	width: 10em;
+}
+#jcl_component .jcaldatetime-select-year {
+	width: 5em;
+}

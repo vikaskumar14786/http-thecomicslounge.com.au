@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldpath="/administrator/components/com_jcalpro/models/fields">
+	<fieldset
+		name="email"
+		label="COM_JCALPRO_EMAIL"
+	>
+		<field
+			id="subject" name="subject"
+			type="text"
+			label="COM_JCALPRO_EMAIL_SUBJECT"
+			description="COM_JCALPRO_EMAIL_SUBJECT_DESC"
+			class="inputbox input-block-level"
+			size="30"
+			required="true"
+		/>
+		<field
+			id="body" name="body"
+			type="editor"
+			label="COM_JCALPRO_EMAIL_BODY"
+			description="COM_JCALPRO_EMAIL_BODY_DESC"
+			filter="safehtml"
+			asset_id="com_jcalpro"
+			cols="40" rows="10"
+		/>
+		<field
+			name="language"
+			type="language"
+			label="JFIELD_LANGUAGE_LABEL"
+			description="JFIELD_LANGUAGE_DESC"
+			class="inputbox input-xlarge"
+		>
+			<option value="*">JALL</option>
+		</field>
+		<field
+			id="context" name="context"
+			type="jcalemailcontext"
+			label="COM_JCALPRO_EMAIL_CONTEXT"
+			description="COM_JCALPRO_EMAIL_CONTEXT_DESC"
+			class="inputbox input-xlarge"
+			required="true"
+		/>
+		<field
+			id="id" name="id"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_ID"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="created" name="created"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_CREATED"
+			default=""
+			readonly="true"
+		/>
+		<field
+			id="created_by" name="created_by"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_CREATED_BY"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="modified" name="modified"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_MODIFIED"
+			default=""
+			readonly="true"
+		/>
+		<field
+			id="modified_by" name="modified_by"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_MODIFIED_BY"
+			default="0"
+			readonly="true"
+		/>
+	</fieldset>
+</form>

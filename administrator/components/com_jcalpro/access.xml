@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<access component="com_jcalpro">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.create.private" title="COM_JCALPRO_ACTION_CREATE_PRIVATE" description="COM_JCALPRO_ACTION_CREATE_PRIVATE_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+		<action name="core.edit.autopublish" title="COM_JCALPRO_ACTION_EDIT_AUTOPUBLISH" description="COM_JCALPRO_ACTION_EDIT_AUTOPUBLISH_DESC" />
+		<action name="core.moderate" title="COM_JCALPRO_ACTION_MODERATE" description="COM_JCALPRO_ACTION_MODERATE_DESC" />
+		<action name="core.moderate.autoapprove" title="COM_JCALPRO_ACTION_MODERATE_AUTOAPPROVE" description="COM_JCALPRO_ACTION_MODERATE_AUTOAPPROVE_DESC" />
+		<action name="field.data.create" title="COM_JCALPRO_ACTION_FIELD_DATA_CREATE" description="COM_JCALPRO_ACTION_FIELD_DATA_CREATE_DESC" />
+		<action name="field.data.edit" title="COM_JCALPRO_ACTION_FIELD_DATA_EDIT" description="COM_JCALPRO_ACTION_FIELD_DATA_EDIT_DESC" />
+	</section>
+	<section name="category">
+		<action name="core.create" title="JACTION_CREATE" description="COM_CATEGORIES_ACCESS_CREATE_DESC" />
+		<action name="core.create.private" title="COM_JCALPRO_ACTION_CREATE_PRIVATE" description="COM_JCALPRO_ACTION_CREATE_PRIVATE_CATEGORY_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="COM_CATEGORIES_ACCESS_DELETE_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="COM_CATEGORIES_ACCESS_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_CATEGORIES_ACCESS_EDITSTATE_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="COM_CATEGORIES_ACCESS_EDITOWN_DESC" />
+		<action name="core.edit.autopublish" title="COM_JCALPRO_ACTION_EDIT_AUTOPUBLISH" description="COM_JCALPRO_ACTION_EDIT_AUTOPUBLISH_CATEGORY_DESC" />
+		<action name="core.moderate" title="COM_JCALPRO_ACTION_MODERATE" description="COM_JCALPRO_ACTION_MODERATE_CATEGORY_DESC" />
+		<action name="core.moderate.autoapprove" title="COM_JCALPRO_ACTION_MODERATE_AUTOAPPROVE" description="COM_JCALPRO_ACTION_MODERATE_AUTOAPPROVE_CATEGORY_DESC" />
+	</section>
+	<section name="locations">
+		<action name="core.create" title="JACTION_CREATE" description="COM_JCALPRO_LOCATIONS_ACCESS_CREATE_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="COM_JCALPRO_LOCATIONS_ACCESS_DELETE_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="COM_JCALPRO_LOCATIONS_ACCESS_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_JCALPRO_LOCATIONS_ACCESS_EDITSTATE_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="COM_JCALPRO_LOCATIONS_ACCESS_EDITOWN_DESC" />
+	</section>
+	<section name="registrations">
+		<action name="core.create" title="JACTION_CREATE" description="COM_JCALPRO_REGISTRATIONS_ACCESS_CREATE_DESC" />
+	</section>
+	<section name="emails">
+		<action name="core.create" title="JACTION_CREATE" description="COM_JCALPRO_EMAILS_ACCESS_CREATE_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="COM_JCALPRO_EMAILS_ACCESS_DELETE_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="COM_JCALPRO_EMAILS_ACCESS_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_JCALPRO_EMAILS_ACCESS_EDITSTATE_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="COM_JCALPRO_EMAILS_ACCESS_EDITOWN_DESC" />
+	</section>
+	<section name="forms">
+		<action name="core.create" title="JACTION_CREATE" description="COM_JCALPRO_FORMS_ACCESS_CREATE_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="COM_JCALPRO_FORMS_ACCESS_DELETE_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="COM_JCALPRO_FORMS_ACCESS_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_JCALPRO_FORMS_ACCESS_EDITSTATE_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="COM_JCALPRO_FORMS_ACCESS_EDITOWN_DESC" />
+	</section>
+	<section name="fields">
+		<action name="core.create" title="JACTION_CREATE" description="COM_JCALPRO_FIELDS_ACCESS_CREATE_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="COM_JCALPRO_FIELDS_ACCESS_DELETE_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="COM_JCALPRO_FIELDS_ACCESS_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="COM_JCALPRO_FIELDS_ACCESS_EDITSTATE_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="COM_JCALPRO_FIELDS_ACCESS_EDITOWN_DESC" />
+		<action name="field.data.create" title="COM_JCALPRO_ACTION_FIELD_DATA_CREATE" description="COM_JCALPRO_ACTION_FIELD_DATA_CREATE_DESC" />
+		<action name="field.data.edit" title="COM_JCALPRO_ACTION_FIELD_DATA_EDIT" description="COM_JCALPRO_ACTION_FIELD_DATA_EDIT_DESC" />
+	</section>
+	<section name="field">
+		<action name="field.data.create" title="COM_JCALPRO_ACTION_FIELD_DATA_CREATE" description="COM_JCALPRO_ACTION_FIELD_DATA_CREATE_DESC" />
+		<action name="field.data.edit" title="COM_JCALPRO_ACTION_FIELD_DATA_EDIT" description="COM_JCALPRO_ACTION_FIELD_DATA_EDIT_DESC" />
+	</section>
+</access>

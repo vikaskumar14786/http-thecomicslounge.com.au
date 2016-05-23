@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="2.5" type="plugin" group="editors-xtd" method="upgrade">
+	<name>plg_editors-xtd_jcalpro</name>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>2015-04-21</creationDate>
+	<author>Anything Digital</author>
+	<authorEmail>admin@anything-digital.com</authorEmail>
+	<authorUrl>http://anything-digital.com</authorUrl>
+	<copyright>Copyright (c) 2006-2012 Anything-Digital.com</copyright>
+	<license>GNU/GPL</license>
+	<version>3.2.19.4081</version>
+	<description>PLG_EDITORS-XTD_JCALPRO_XML_DESCRIPTION</description>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_editors-xtd_jcalpro.sys.ini</language>
+	</languages>
+	<files>
+		<filename plugin="jcalpro">jcalpro.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<media destination="jcalpro/plugins/editors-xtd/jcalpro" folder="media">
+		<folder>images</folder>
+		<filename>index.html</filename>
+	</media>
+	<compatibility>
+		<version>2</version>
+		<version>3</version>
+	</compatibility>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="title" id="title"
+					type="radio"
+					label="PLG_EDITORS-XTD_JCALPRO_TITLE"
+					description="PLG_EDITORS-XTD_JCALPRO_TITLE_DESC"
+					filter="integer"
+					default="1"
+					class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="start_date" id="start_date"
+					type="radio"
+					label="PLG_EDITORS-XTD_JCALPRO_START_DATE"
+					description="PLG_EDITORS-XTD_JCALPRO_START_DATE_DESC"
+					filter="integer"
+					default="0"
+					class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="end_date" id="end_date"
+					type="radio"
+					label="PLG_EDITORS-XTD_JCALPRO_END_DATE"
+					description="PLG_EDITORS-XTD_JCALPRO_END_DATE_DESC"
+					filter="integer"
+					default="0"
+					class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="description" id="description"
+					type="radio"
+					label="PLG_EDITORS-XTD_JCALPRO_DESCRIPTION"
+					description="PLG_EDITORS-XTD_JCALPRO_DESCRIPTION_DESC"
+					filter="integer"
+					default="0"
+					class="btn-group btn-group-yesno"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="itemid" id="itemid"
+					type="text" size="5"
+					label="PLG_EDITORS-XTD_JCALPRO_ITEMID"
+					description="PLG_EDITORS-XTD_JCALPRO_ITEMID_DESC"
+					filter="integer"
+					default="0"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

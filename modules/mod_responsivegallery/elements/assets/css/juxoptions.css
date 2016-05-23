@@ -1,0 +1,74 @@
+/**
+ * @version		$Id$
+ * @author		NooTheme
+ * @package		Joomla.Site
+ * @subpackage	mod_noo_gallery
+ * @copyright	Copyright (C) 2013 NooTheme. All rights reserved.
+ * @license		License GNU General Public License version 2 or later; see LICENSE.txt, see LICENSE.php
+ */
+ 
+
+.sub_menu_title {
+    margin-left: 100px;
+}
+.jux_option_toggler {
+    background: url("../images/body.jpg") repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px;
+}
+.jux_option_toggler-close {
+    background: url("../images/body_close.jpg") repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px;
+}
+.jux_option_toggler .block-setting {
+    background: url("../images/dot.png") no-repeat scroll left center transparent;
+    padding-left: 15px;
+}
+.jux_option_toggler-close .block-setting {
+    background: url("../images/dot.png") no-repeat scroll left center transparent;
+    padding-left: 15px;
+}
+.jux_option_toggler .control-icon {
+    background: url("../images/arrow_up.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: -2px;
+    width: 20px;
+}
+.jux_option_toggler-close .control-icon {
+    background: url("../images/arrow_down.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: -2px;
+    width: 20px;
+}
+.jux_toggler-bound {
+    max-width: 480px;
+    width: 500px;
+}
+.jux_option_element {
+}
+.jux_option_element-active {
+    overflow: visible !important;
+}
+.jux_option_toggler_remove {
+    background: url("../images/remove.png") no-repeat scroll 0 center #FEFEFE;
+    border: 1px solid #CCCCCC;
+    float: right;
+    padding: 5px 4px 5px 24px;
+}
+.jux_toggler {
+    float: left;
+    width: 80%;
+}

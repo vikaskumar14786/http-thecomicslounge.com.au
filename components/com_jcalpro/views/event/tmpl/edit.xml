@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JCALPRO_EVENT_EDIT_VIEW">
+		<message>
+			<![CDATA[COM_JCALPRO_EVENT_EDIT_VIEW_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JCALPRO_EVENT_EDIT_VIEW_LABEL</name>
+		<description>COM_JCALPRO_EVENT_EDIT_VIEW_DESCRIPTION</description>
+		<url />
+		<fields />
+	</state>
+</metadata>

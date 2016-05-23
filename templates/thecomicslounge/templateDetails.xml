@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 3//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site">
+	<name>thecomicslounge</name>
+	<version>1.0</version>
+	<creationDate>26-1-2016</creationDate>
+	<author>Troy</author>
+	<authorEmail>vikaskumar14786@gmail.com</authorEmail>
+	<copyright>The Comics Lounge</copyright>
+	<description>The Comics Lounge Template Joomla 3</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>js</folder>
+	</files>
+	<positions>
+		<position>top-bar-content</position>		
+		<position>breadcrumbs</position>
+		<position>content1</position>
+		<position>content2</position>
+		<position>banner</position>
+		<position>newsBox</position>
+		<position>slideShow</position>
+		<position>feature1</position>
+		<position>feature2</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>content3</position>		
+		<position>footer</position>
+		<position>messageIE</position>	
+		<position>debug</position>
+	</positions>
+</extension>

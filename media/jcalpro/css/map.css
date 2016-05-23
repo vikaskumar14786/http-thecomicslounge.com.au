@@ -1,0 +1,44 @@
+/**
+ * @package		JCalPro
+ * @subpackage	com_jcalpro
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+#jcl_component #map_canvas_container {
+	min-width: 200px;
+	width: 100%;
+	height: 300px;
+	position: relative;
+	display: block;
+}
+
+#jcl_component #map_canvas {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 300px;
+}
+
+fieldset.adminform textarea {
+	width: auto !important;
+}
+
+.jcl_location_buttons {
+	margin-right: 6px;
+}
+
+#jcl_location_directions .jcl_location_buttons,
+#jcl_location_directions .jcl_location_search {
+	margin-top: 12px;
+}
+
+/**
+ * fix gmaps styles
+ * 
+ */
+.gm-style img {
+	max-width: none;
+}
+.gm-style label {
+	width: auto; display: inline;
+}

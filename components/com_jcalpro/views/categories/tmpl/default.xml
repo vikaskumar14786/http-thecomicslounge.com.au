@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JCALPRO_CATEGORIES_VIEW" option="COM_JCALPRO_CATEGORIES_VIEW">
+		<message>
+			<![CDATA[COM_JCALPRO_CATEGORIES_VIEW_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JCALPRO_CATEGORIES_VIEW_LABEL</name>
+		<description>COM_JCALPRO_CATEGORIES_VIEW_DESCRIPTION</description>
+		<url />
+		<fields name="params">
+			<fieldset name="jcalpro">
+				<field
+					name="categories_title_limit" id="categories_title_limit"
+					type="text" class="inputbox"
+					label="COM_JCALPRO_CONFIG_CATEGORIES_TITLE_LIMIT"
+					description="COM_JCALPRO_CONFIG_CATEGORIES_TITLE_LIMIT_DESC"
+					default="0" size="5"
+				/>
+				<field
+					name="categories_description" id="categories_description"
+					type="list" class="inputbox"
+					label="COM_JCALPRO_CONFIG_CATEGORIES_DESCRIPTION"
+					description="COM_JCALPRO_CONFIG_CATEGORIES_DESCRIPTION_DESC"
+					default="1"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="categories_description_limit" id="categories_description_limit"
+					type="text" class="inputbox"
+					label="COM_JCALPRO_CONFIG_CATEGORIES_DESCRIPTION_LIMIT"
+					description="COM_JCALPRO_CONFIG_CATEGORIES_DESCRIPTION_LIMIT_DESC"
+					default="0" size="5"
+				/>
+			</fieldset>
+		</fields>
+	</state>
+</metadata>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="jevents" method="upgrade">
+	<name>JEvents - Custom Fields</name>
+	<author>Geraint Edwards</author>
+	<creationDate>March 2015</creationDate>
+	<copyright>(C) 2009-2015 GWE Systems Ltd. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl>www.gwesystems.com</authorUrl>
+	<version>3.1.23</version>
+	<description></description>
+	<scriptfile>install.php</scriptfile>
+	<files>
+		<filename plugin="jevcustomfields">jevcustomfields.php</filename>
+		<filename>filters/Customfield.php</filename>		
+		<folder>customfields</folder>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_jevents_jevcustomfields.ini</language>
+		<language tag="en-GB">en-GB.plg_jevents_jevcustomfields.sys.ini</language>
+   	</languages>	
+	<config>
+		<fields name="params">
+			<!-- empty fieldset in order to add 2 field paths! //-->
+			<fieldset name="basic"   addfieldpath="/administrator/components/com_jevents/fields/" >
+			</fieldset>
+			<fieldset name="basic"   addfieldpath="/plugins/jevents/jevcustomfields/customfields/" >
+
+				<field name="template" type="jevtemplate" default="0" label="JEV_FIELD_TEMPLATE" description="JEV_FIELD_TEMPLATE_DESC" />
+				<field name="outputhtml" type="jevboolean" class="btn-group" default="1" label="JEV_OUTPUT_HTML" description="JEV_OUTPUT_HTML_DESC" />
+				<field name="inlists" type="jevboolean" class="btn-group" default="0" label="JEV_AVAILABLE_IN_LISTS" description="JEV_AVAILABLE_IN_LISTS_DESC" />
+				<field name="templatetop" type="text" filter="raw" default="&lt;table border='0'&gt;" label="JEV_TEMPLATE_TOP_LABEL" description="JEV_TEMPLATE_TOP_DESC" />
+				<field name="templatebody" type="textarea" filter="raw" default="&lt;tr&gt;&lt;td class='label'&gt;{LABEL}&lt;/td&gt;&lt;td&gt;{VALUE}&lt;/td&gt;&lt;/tr&gt;" cols="40" rows="8" label="JEV_TEMPLATE_BODY_LABEL" description="JEV_TEMPLATE_BODY_DESC" />
+				<field name="templatebottom" type="text" filter="raw" default="&lt;/table&gt;" label="JEV_TEMPLATE_BOTTOM_LABEL" description="JEV_TEMPLATE_BOTTOM_DESC" />
+				<field name="" type="spacer" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

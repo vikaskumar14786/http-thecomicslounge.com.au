@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JCALPRO_CATEGORY_VIEW" option="COM_JCALPRO_CATEGORY_VIEW">
+		<message>
+			<![CDATA[COM_JCALPRO_CATEGORY_VIEW_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JCALPRO_CATEGORY_VIEW_LABEL</name>
+		<description>COM_JCALPRO_CATEGORY_VIEW_DESCRIPTION</description>
+		<url />
+		<fields name="request">
+			<fieldset
+				name="request"
+			>
+				<field name="id" type="category"
+					default="0"
+					description="COM_JCALPRO_FIELD_SELECT_CATEGORY_DESC"
+					extension="com_jcalpro"
+					label="COM_JCALPRO_FIELD_SELECT_CATEGORY_LABEL"
+					required="true"
+				/>
+			</fieldset>
+		</fields>
+		<fields name="params">
+			<fieldset name="jcalpro">
+				<field
+					name="category_date_range" 
+					type="list"
+					label="COM_JCALPRO_CONFIG_CATEGORY_DATE_RANGE"
+					description="COM_JCALPRO_CONFIG_CATEGORY_DATE_RANGE_DESC"
+					default=""
+				>
+					<option value="">JOPTION_USE_DEFAULT</option>
+					<option value="14">COM_JCALPRO_FILTER_DATE_RANGE_ONGOING</option>
+					<option value="1">COM_JCALPRO_FILTER_DATE_RANGE_PAST_EVENTS</option>
+					<option value="22">COM_JCALPRO_FILTER_DATE_RANGE_PAST_END_EVENTS</option>
+					<option value="2">COM_JCALPRO_FILTER_DATE_RANGE_UPCOMING_EVENTS</option>
+					<option value="23">COM_JCALPRO_FILTER_DATE_RANGE_UPCOMING_END_EVENTS</option>
+					<option value="3">COM_JCALPRO_FILTER_DATE_RANGE_THIS_WEEK</option>
+					<option value="4">COM_JCALPRO_FILTER_DATE_RANGE_LAST_WEEK</option>
+					<option value="5">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_WEEK</option>
+					<option value="15">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_2_WEEKS</option>
+					<option value="16">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_3_WEEKS</option>
+					<option value="6">COM_JCALPRO_FILTER_DATE_RANGE_THIS_MONTH</option>
+					<option value="7">COM_JCALPRO_FILTER_DATE_RANGE_LAST_MONTH</option>
+					<option value="8">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_MONTH</option>
+					<option value="17">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_2_MONTHS</option>
+					<option value="18">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_3_MONTHS</option>
+					<option value="19">COM_JCALPRO_FILTER_DATE_RANGE_THIS_YEAR</option>
+					<option value="20">COM_JCALPRO_FILTER_DATE_RANGE_LAST_YEAR</option>
+					<option value="21">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_YEAR</option>
+					<option value="9">COM_JCALPRO_FILTER_DATE_RANGE_TODAY</option>
+					<option value="10">COM_JCALPRO_FILTER_DATE_RANGE_TOMORROW</option>
+					<option value="11">COM_JCALPRO_FILTER_DATE_RANGE_YESTERDAY</option>
+					<option value="12">COM_JCALPRO_FILTER_DATE_RANGE_NEXT_30</option>
+					<option value="13">COM_JCALPRO_FILTER_DATE_RANGE_LAST_30</option>
+				</field>
+			</fieldset>
+		</fields>
+	</state>
+</metadata>

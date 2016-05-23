@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields>
+		<!-- fieldset attributes 
+		addfieldpath="/plugins/jevents/jevcustomfields/customfields/" - an optional path to the definitions of custom fields 
+		name =  the label on the tab your custom fields will appear on.  Leave blank if the fields appear on a separate tab
+		description = descriptive/instruction text that appears at the top of this tab
+		-->
+		<fieldset  name="Extra Tab" description="An Extra tab for event editing">	
+		<!-- Gobal field information	
+		
+		Access Levels:
+		access="" 1 = Public, 2 = Registered, 3 = Special etc. 
+
+		Readaccess - 1 = Public, 2 = Registered, 3 = Special etc.
+		readaccess=""	Set the access allowed to read the selection, i.e. shown in the front end.
+		
+		Required:
+		required="0"	0 = Not Required, 1 = Required.
+		requiredmesage=""	Fill with the text you want to display to the user when they have not filled in a required field.
+
+		Name:
+		name=""		This is the unique fieldname which must be set for the field to be defined, an easy way is field1, field 2 etc etc.
+		NOTE: You CANNOT use any spaces of full stops in the Name field. 
+
+		Label:
+		label=""	This is the label which is shown before the field, i.e. Name:
+		
+		Default:
+		default=""	This is relative to the type of field, but in a boolean field setting the default to 0 would mean the field would be No initially. 
+
+
+		Hide Value e.g. hiddenvalue="email address"
+		This is the value that will be hidden in the output.
+		
+		Allow Override:
+		allowoverride=""	0 = Overrides are not allowed. 1 = Overrides ARE allowed.  In other words that when you edit a single repeat in a series of events that you can change the custom field value for that specific repeat.
+
+		Filter:
+		filter=""	0 = Does not appear in filters and is not to be used for filtering, 1 = Appears and is allowed in filters.
+		NOTE:- When using this field you must set filterdefault="" 
+		
+		FilterDefault
+		filterdefault="" - Sets what the default filter should be. 
+		
+		Filtermenusandmodules:
+		filtermenusandmodules=""		1 =  Allow filtering by menu items and modules, 0 = Do NOT allow filtering by menu items and modules.
+		
+		Filtersize
+		filtersize=""	Sets the size of the filter, when included in modules etc.
+
+		Multifilter
+		multifilter=""	Sets whether this is a multiple select field or single in the Filter module.
+
+		Searchable
+		searchable="1" if you want to include a field in the JEvents search fields
+		Note that fullsearch="1" will allow any part of the custom field value to be matched and not just the start
+
+		description=""  Type the text you want to display for the description, i.e. tooltip.
+
+		Size:
+		size=""		Allows setting the size of an input box, i.e. 60. Only applicable to input fields.
+
+		Maxlength:
+		maxlength=""	Sets the maximum number of characters allowed to be input. i.e. 100. 
+
+		AllowMultiple - Set whether Select List fields are multi or single select:
+		allowmultiple=""	1 = Multiple select enabled, 2 = Multiple select disabled.
+
+		Category Restrictions
+		categoryrestrictions=""   Enter the category id's seperated with a , to restrict the categories this field will be shown in. i.e. : categoryrestrictions="81,92"
+
+		Hide Filter Based on Category
+		hidefilterbasedoncategory="1" This will hide and disable this filter UNLESS one or more of the specified categories are already actively filtered
+
+		Matching Events - determines if Matching events plugin uses this field to match events to output in event detail
+		matchevents="1" 
+		
+		Buttons - If you have an editor field enabled and do not want to show the editors buttons use:
+		buttons="0"
+
+		//-->	
+
+		<!-- Boolean - Yes or No Field //-->
+			<field name="field1" label="Boolean" type="jevcfboolean" default="0" required="0" requiredmessage="The field (Boolean) is required"
+				   description="Boolean tooltip"  allowoverride="0"  filter="1"  access="1"/>
+		<!-- End of Boolean Field //-->
+
+	
+		<!-- Calendar Field - Is a date selection calendar field 
+		 Shows a text box, with a calendar icon to the right. Clicking the calendar icon shows a pop-up mini calendar to allow date selection.
+                 use default="NOW" for a default value of today
+		  //-->
+			<field name="field2" label="Calendar" type="jevcfcalendar" default="20/01/2013" format="%d/%m/%Y"   description="Calendar Field" allowoverride="0"
+				   filter="1" access="1" required="0" />
+		<!-- end of Calendar Field //-->
+
+		<!-- Community Builder Field - Allows population of a community builder profile field 
+		Here we have told the field to get the email which resides in the Community builder Field cb_bccemail.
+		//-->
+		<!-- Disabled for users without Community Builder 
+			<field name="field3" label="CB Field - BCC Email" type="jevcfcbfield" fieldname="cb_bccemail" size="60" maxlength="255"
+		   description="Community Builder Populated Field" allowoverride="0" filter="1" access="1" required="0" />
+		!-->
+		<!-- end of Community Builder Field //-->
+
+		<!-- Check Box Field - Adds checkbox functionality 
+		 for checkboxes default values 1 = checked, 0 = unchecked //-->
+			<field name="field4" type="jevcfcheckbox" label="Checkbox List" required="0" description="Checkboxes tooltip" filter="0"
+				   allowoverride="1" access="1" allowmultiple="1">
+		<!-- multiple checkboxe option MUST have POSITIVE  numeric values and ALL must be greater than zero //-->
+				<option value="-1" default="0" archive="1">Old value</option>
+				<option value="1" default="0" >No</option>
+				<option value="2" default="0" >Yes</option>
+				<option value="3" default="1" >Maybe</option>
+				<option value="4" default="1" >Possibly</option>
+			</field>
+		<!-- End of Check box field //-->
+
+		<!-- Email 
+		We use this special field instead of the Text Field so the Joomla! email cloak is applied.
+		Note: Future plan to add email address verification.		//-->
+			<field name="field5" type="jevcfemail" default="email@address.com" hiddenvalue="email address" size="50" maxlength="100"
+				   label="Email Address" description="Text field tooltip"  />
+		<!-- End of Email field //-->
+
+		<!-- Event Flag
+		This field is used to flag an event, to create an Event Planner. If the user flags the event when viewing they can then view their flagged events via the JEvents Modules
+		When you filter based on this field.
+
+ 		If you want each separate repeat to be 'planned separately' then use the attribute
+				   separaterepeats="1"
+				   //-->
+			<field name="field6" type="jevcfeventflag" default="0" required="0"  label="In your planner" buttonlabel="Add to planner"  
+			   description="Logged in users can add this event to their event planner" 
+			   listlength="5" updatedmessage="Planner Updated" allowoverride="0"  separaterepeats="1"
+			   activeimage="/plugins/jevents/jevcustomfields/customfields/images/favourite.png" 
+			   addimage ="/plugins/jevents/jevcustomfields/customfields/images/addasfavourite.png" 
+			   inactiveimage="/plugins/jevents/jevcustomfields/customfields/images/notfavourite.png" 
+			   removeimage="/plugins/jevents/jevcustomfields/customfields/images/removeasfavourite.png" 
+			   hovermessage="Click to add to or remove from planner"
+			   filtermenusandmodules="1"
+			   filter="1" />
+		<!-- End of Event Flag //-->
+		
+		<!-- File Field
+		This field allows uploading files, to be used in conjunction with the JEvents Standard Images and File Uploads Plugin
+		This should only be used in the custom people and locations addon - for images and files added to events you should use the standard images/files addon directly
+		//-->
+			<field name="field7" type="jevcffile" default="" required="0" requiredmessage="" label="Custom file 1"
+				   description="Upload your file here"  allowoverride="0"  filter="0" />
+		<!-- End of File Field //-->
+		
+		<!-- HTML Field
+		Allows event creators to insert custom html code	
+				   You can disable the display of the editor buttons using buttons="0" 
+				   If you want to display specific buttons then add them in a comma separated list e.g. buttons="article,image"
+				   allowhtml="1" allows safe HTML through the filter
+				   allowraw="1" does not filter the input so use with extreme caution
+				   //-->
+			<field name="field7" type="jevcfhtml" default="" required="0" requiredmessage="" label="Custom HTML"
+				   description="Alolows inserting custom HTML" cols="40" rows="5" allowoverride="0"  filter="0"   allowhtml="1" />
+		<!-- End of HTML Field //-->
+			
+		<!-- Image Field
+		This allows the uploading of Images, to be used in conjuction with the JEvents Standard Images and File Uploads Plugin
+		This should only be used in the custom people and locations addon - for images and files added to events you should use the standard images/files addon directly
+				   //-->
+			<field name="field8" type="jevcfimage" default="" required="0" requiredmessage="" label="Custom Image 1"
+				   description="Upload your image here"  allowoverride="0"  filter="0" />
+		<!-- End of Image Field //-->
+		
+		<!-- Instructions Field
+		Allows putting instructions into the Event Editing page, plain text to help improve the Users Experience noting important information. Fill out the label with all instructions//-->
+			<field name="field9" type="jevcfinstruction" default="Information for the user/edit" label="Information Text"
+				   description="No input required from the event editor" filter="0" access="1" hiddenvalue="Information for the user/edit" />
+		<!-- End of Instructions Field //-->
+		
+		<!-- List Field
+		Allows creating a single list drop down //-->
+			<field name="field10" type="jevcflist" default="-1" label="Select List" required="0" description="Select List tool tip" allowoverride="1"
+				   filter="1" multifilter="1"  filtersize="3" access="1" requiredmessage="The field (Select List) is required" readaccess="1">
+		<!-- select lists  MUST have numeric values//-->
+				<option value="-1">Select One</option>
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<optgroup label="My Group 1">
+					<option value="2">Maybe</option>
+					<option value="3">Possibly</option>
+				</optgroup>
+				<option value="4" archive="1">Probably</option>
+			</field>
+		<!-- End of Single List Field //-->
+		
+		<!-- Multi-List Field
+		Creates a Multiple Select list field //-->
+			<field name="field11" type="jevcfmultilist" default="-1" label="Multi Select List" size="4" multifilter="1"  filtersize="3" required="0"
+				   description="Select List tool tip" allowoverride="1" filter="1"  access="1"  requiredmessage="The field (Multi Select List) is required" >
+		<!-- multiple select lists MUST have numeric values//-->
+				<option value="-1">Select One or more</option>
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="2">Maybe</option>
+				<option value="3">Possibly</option>
+			</field>	
+		<!-- End of Multi-Select Field //-->
+		
+		<!-- Notes Field 
+		Provides the ability to leave administration notes about the event.
+		Visible ONLY to users listed in the userid attribute
+		//-->
+			<field name="field12" type="jevcfnotes" default="" label="Notes" description="Notes for Event Creator." 
+			 userid="42,56"
+				   filter="0" required="0" requiredmessage="" />
+		<!-- End of Notes Field //-->
+		
+    `	<!-- Person Field for the Person Selection to be used in conjunction with the Managed People and Resources Addon -->
+
+		<!--Disabled incase people do not have the Managed People Addon installed.
+		<field name="field13" type="jevcfperson" label="Person" description="Allows you to select a person or resource for the event." require="0" />	  	
+		End of DISABLE Person Field //-->
+
+	    <!--End of Person Field //-->
+		
+		<!-- Radio Field
+		Radio Selector Field //-->
+			<field name="field14" type="jevcfradio" label="Radio Selector" description="Allows a single multiple radio display selector." required="0">
+				<option value="0">Option 0</option>
+				<option value="1">Option 1</option>
+				<option value="2">Option 2</option>
+				<option value="3">Option 3</option>
+			</field>	
+		<!-- End of Radio Field //-->
+		
+		<!-- Text Field
+		A Text Input field
+		the placeholder allows you to use the HTML input placeholder functionality for text fields
+		 placeholder="This is the displayed default value"
+			//-->
+			<field name="field16" type="jevcftext" label="Text Input Field" description="Allows you to input any text into this field" size="80"   placeholder="This is the start" />
+		<!-- End of Text Field //-->
+
+		<!-- Text Area Field
+		A Text Area Input Field //-->
+			<field name="field17" type="jevcftextarea" label="TextArea Input Field" description="Allows you to input any text into a text area field" cols="10" rows="6" />
+		<!-- End of TextArea Field //-->
+
+		<!-- URL Field 
+		Covenverts a simple url to an active live url field 
+		You can use the HTML Target atribute below, (_blank, _self, _parent, _top) 		//-->
+			<field name="field18" type="jevcfurl" label="Website URL" description="Input a url for example: http://www.jevents.net"
+				   default="http://www.jevents.net" linktext="Click Here to view the event creators website." target="_blank" size="80" />
+		<!-- End of URL Field //-->
+		
+		<!-- User
+		Allows the selection of users
+				   usergroups="2,6" will pick up users only from groups 2 & 6.  Do not add this attribute to select from all user groups 
+				   contact="1" will use the Joomla contact component value for a selected user if it exists
+				   profilefield="PROFILE_GROUP" Will show the profile fields of the group PROFILE_GROUP (for Joomla! default profile plugin the group is called profile)
+				   //-->
+			<field name="field19" type="jevcfuser" label="User Select" description="Allows the selection of a user" access="3" readaccess="3" usergroups="2,6" contact="1" profilefield="profile" />
+		<!-- End of User Field //-->
+		
+		<!-- Youtube 
+		Allows entering a YouTube ID, to embed the video in the event
+		Also allows entering Vimeo Id to.	 //-->
+			<field name="field20" type="jevcfyoutube" label="YouTube Video" description="" />
+		<!-- Updatable Field
+		This field allows event editors and creators to input a stream of comments into an event, via the details page. This is a special field, text is only show
+		to Event Editors and Creators.!-->
+			<field name="field20" type="jevcfupdatable" label="Updatable field"  buttonlabel="Update Field"
+				   updatedmessage="Field Updated"
+				   description="Notes that can up updated from the frontend of the site by event editors"    />
+		<!-- End of Updatable Field !-->
+
+		<!-- Specialist field to access data values from the database directly //-->
+		<!--
+		In this example fetch user id from Joomla users database
+		//-->
+		<field name="jevcfdblist" label="Select DB entry" type="jevcfdblist" tablename="#__users" valuefield="id" labelfield="username" default="0" filter="0" />
+
+		</fieldset>
+
+		<!-- fields in the 'default' fieldset will normally appear in the first/common tab of the event editing page //-->
+		<fieldset name="default">
+			<field name="selectlist1" type="jevcflist" default="-1" label="Select List" description="Select List tool tip" allowoverride="1" filter="0"
+				   filtermenusandmodules="0" multifilter="1" filtersize="3" access="1" required="1" requiredmessage="The field (Select List) is required"
+				   readaccess="1" attendeesonly="0" filterdefault="0">
+				<option value="-1">Select One</option>
+				<option value="0">No</option>
+				<option value="1">Yes</option>
+				<option value="2">Maybe</option>
+				<option value="3">Possibly</option>
+				<option value="4" archive="1">Probably</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

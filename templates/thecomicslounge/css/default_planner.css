@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.maindiv{
+width:100%;
+float:left;
+			}
+div.maindiv form#com_form_login div.loginemail{
+width:41;
+float:left;
+				
+			}
+div.maindiv form#com_form_login div.loginemail div.logInBoxForm label{
+				
+width:10%;
+float:left;
+			}
+div.maindiv form#com_form_login div.loginemail div.logInMTop input{
+/*width:20%;*/
+float:left;
+			}
+.loginBtn{
+float:left;
+padding-top: 34px;
+width: 12%;
+			}
+			
+div.maindiv form#com_form_login div.loginemail div.logInBoxForm label{
+	width:80px;
+	float:left;
+	text-transform:uppercase;
+	font-size:18px;
+	letter-spacing:1px;
+	*letter-spacing:1px;
+	line-height:23px;
+	}
+
+div.maindiv form#com_form_login div.loginemail div.logInBoxForm label.pw{
+	width:110px;
+	float:left;
+	text-transform:uppercase;
+	font-size:18px;
+	letter-spacing:1px;
+	*letter-spacing:1px;
+	line-height:23px;
+	}		
+
+div.maindiv form#com_form_login div.loginemail div.logInBoxForm{
+	margin-bottom:10px;
+/*	width:350px;*/
+	text-shadow:0 2px 2px #000000;
+	}	
+
+div.maindiv form#com_form_login div.loginemail div.logInBoxForm input.button[type="submit"], input.button[type="button"], a.button{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 7px;
+	box-shadow:#000 0px 1px 8px ;
+	-webkit-box-shadow: #000 0px 1px 8px ;
+	behavior: url(PIE.htc);
+	text-shadow:0 2px 2px #000000;
+	font-family: 'CuprumRegular';
+	background:#a90065 url(../images/moreDetailsBg.png) repeat-x left top;
+	float:left;
+	padding:2px 20px;
+	*padding:0px 10px;
+	border:none;
+	color:#FFF;
+	font-size:18px;
+	text-transform:uppercase;
+	cursor:pointer;
+	}
+	
+div.myAcBoxRgt_Txt div.myAcInfo_MainBox div.myAcInfo_LftBox div.myAcInfo_Head{
+	border-bottom:2px solid #f66846;
+	position:relative;
+	text-transform:uppercase;
+	color:#ffcf01;
+	margin-bottom: 10px;
+    padding-bottom: 10px;
+	text-shadow:0 2px 2px #2d2d2d;
+	}
+
+/*div.myAcBoxRgt_Txt div.myAcInfo_MainBox div.myAcInfo_LftBox{
+width:100%;
+margin:0px;
+}*/
+
+div.myAcBoxRgt_Txt div.myAcInfo_MainBox div.myAcInfo_LftBox #all_event #form_event_hall select{
+margin-top:30px;
+background:#ec008c;
+color:#fff;
+border:1px solid #fff;
+}
+
+
+div.myAcBoxRgt_Txt div.myAcInfo_MainBox div.myAcInfo_LftBox #all_event #form_event_hall input.eventInfo{
+   background: url("../images/moreDetailsBg.png") repeat-x scroll left top #A90065;
+    border: medium none;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 1px 8px #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: 'CuprumRegular';
+    font-size: 14px !important;
+    margin: 30px 0 10px 30px;
+    padding: 3px 10px 3px 13px;
+    text-shadow: 0 2px 2px #000000;
+    text-transform: uppercase;
+}
+
+div.myAcBoxRgt_Txt div.myAcInfo_MainBox div.myAcInfo_LftBox #tonight_event #form_event_hall select{
+margin-top:30px;
+background:#ec008c;
+color:#fff;
+border:1px solid #fff;
+width:20%;
+}
+div.myAcBoxRgt_Txt div.myAcInfo_MainBox div.myAcInfo_LftBox #tonight_event #form_event_hall input.eventInfo{
+   background: url("../images/moreDetailsBg.png") repeat-x scroll left top #A90065;
+    border: medium none;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 1px 8px #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font-family: 'CuprumRegular';
+    font-size: 14px !important;
+    margin: 30px 0 10px 30px;
+    padding: 3px 10px 3px 13px;
+    text-shadow: 0 2px 2px #000000;
+    text-transform: uppercase;
+}

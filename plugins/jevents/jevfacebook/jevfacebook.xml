@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id$ -->
+<extension version="2.5" type="plugin" group="jevents" method="upgrade">
+	<name>JEvents - Enables Facebook Like Button for Event Descriptions</name>
+	<author>Geraint Edwards</author>
+	<creationDate>November 2013</creationDate>
+	<copyright>(C) 2011-2013 GWE Systems Ltd. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl>www.gwesystems.com</authorUrl>
+	<version>3.0.5</version>
+	<description>Enable  Facebook Like Button for Event Descriptions</description>
+	<files>
+		<filename plugin="jevfacebook">jevfacebook.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_jevents_jevfacebook.ini</language>
+	</languages>	
+	<config>
+		<fields name="params">
+
+			<fieldset  name="basic"   addfieldpath="/administrator/components/com_jevents/fields/" >
+			
+				<field 
+					name="like" 
+					type="jevboolean"  
+					class="btn-group"
+					default="1" 
+					label="PLG_JEVENTS_JEVFACEBOOK_OFFER_LIKE_LABEL"  
+					description="PLG_JEVENTS_JEVFACEBOOK_OFFER_LIKE_DESC"
+				/>
+				<field name="comments" type="jevboolean"  
+					   class="btn-group"
+					   default="0" label="PLG_JEVENTS_JEVFACEBOOK_OFFER_COMMENTS_LABEL" description="PLG_JEVENTS_JEVFACEBOOK_OFFER_COMMENTS_DESC" />
+				<field name="commentslang" type="text"  default="en_US" label="PLG_JEVENTS_JEVFACEBOOK_COMMENTS_LANGUAGE_LABEL" description="PLG_JEVENTS_JEVFACEBOOK_COMMENTS_LANGUAGE_DESC" />
+			
+				<field 
+					name="share" 
+					type="jevboolean"  
+					class="btn-group"
+					default="0" 
+					label="PLG_JEVENTS_JEVFACEBOOK_OFFER_SHARE_LABEL" 
+					description="PLG_JEVENTS_JEVFACEBOOK_OFFER_SHARE_DESC"
+				/>
+				
+				<field 
+					name="sharecounter" 
+					type="jevboolean"   
+					class="btn-group"
+					default="1" 
+					label="PLG_JEVENTS_JEVFACEBOOK_SHOW_SHARE_COUNTER_LABEL"  
+					description="PLG_JEVENTS_JEVFACEBOOK_SHOW_SHARE_COUNTER_DESC"
+				/>
+				
+				<field 
+					name="layoutstyle" 
+					type="list"  
+					default="standard" 
+					label="PLG_JEVENTS_JEVFACEBOOK_LAYOUT_STYLE_LABEL"  
+					description="PLG_JEVENTS_JEVFACEBOOK_LAYOUT_STYLE_DESC"
+				>
+					<option value="standard">PLG_JEVENTS_JEVFACEBOOK_LAYOUT_STYLE_STD_VALUE</option>
+					<option value="button_count">PLG_JEVENTS_JEVFACEBOOK_LAYOUT_STYLE_BTN_VALUE</option>
+					<option value="box_count">PLG_JEVENTS_JEVFACEBOOK_LAYOUT_STYLE_BOX_VALUE</option>
+				</field>
+				
+				<field 
+					name="verb" 
+					type="list"  
+					default="like" 
+					label="PLG_JEVENTS_JEVFACEBOOK_VERB_LABEL"  
+					description="PLG_JEVENTS_JEVFACEBOOK_VERB_DESC"
+				>
+					<option value="like">PLG_JEVENTS_JEVFACEBOOK_VERB_LIKE_VALUE</option>
+					<option value="recommend">PLG_JEVENTS_JEVFACEBOOK_VERB_REC_VALUE</option>
+				</field>
+				
+				<field 
+					name="colourscheme" 
+					type="list"  
+					default="light" 
+					label="PLG_JEVENTS_JEVFACEBOOK_COLOR_LABEL"  
+					description="PLG_JEVENTS_JEVFACEBOOK_COLOR_DESC"
+				>
+					<option value="light">PLG_JEVENTS_JEVFACEBOOK_COLOR_LIGHT_VALUE</option>
+					<option value="dark">PLG_JEVENTS_JEVFACEBOOK_COLOR_DARK_VALUE</option>
+				</field>
+				
+				<field 
+					name="width" 
+					type="text"  
+					default="450" 
+					label="PLG_JEVENTS_JEVFACEBOOK_WIDTH_LABEL"  
+					description="PLG_JEVENTS_JEVFACEBOOK_WIDTH_DESC"
+				/>
+				
+				<field 
+					name="height" 
+					type="text"  
+					default="40" 
+					label="PLG_JEVENTS_JEVFACEBOOK_HEIGHT_LABEL"  
+					description="PLG_JEVENTS_JEVFACEBOOK_HEIGHT_DESC"
+				/>
+				
+				<field 
+					name="showfaces" 
+					type="jevboolean"  
+					class="btn-group"
+					default="1" 
+					label="PLG_JEVENTS_JEVFACEBOOK_SHOW_FACES_LABEL" 
+					description="PLG_JEVENTS_JEVFACEBOOK_SHOW_FACES" 
+				/>
+				<field 
+					name="https" 
+					type="jevboolean"  
+					class="btn-group"
+					default="0" 
+					label="PLG_JEVENTS_JEVFACEBOOK_USE_HTTPS"  
+					description="PLG_JEVENTS_JEVFACEBOOK_USE_HTTPS_DESC"
+				/>
+			</fieldset>
+		</fields>
+	</config>		
+</extension>

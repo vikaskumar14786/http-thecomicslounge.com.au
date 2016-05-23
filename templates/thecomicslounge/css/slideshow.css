@@ -1,0 +1,203 @@
+/* 
+	Resets defualt browser settings
+	reset.css
+*/
+
+
+#container {
+	width:567px;
+	margin:0 auto;
+	position:relative;
+	z-index:0;
+}
+
+#example {
+	width:567px;
+	height:314px;
+	position:relative;
+}
+
+#ribbon {
+	position:absolute;
+	top:-3px;
+	left:-15px;
+	z-index:500;
+}
+
+#frame {
+	position:absolute;
+	z-index:0;
+	width:739px;
+	height:341px;
+	top:-3px;
+	left:-80px;
+}
+
+/*
+	Slideshow
+*/
+
+#slides {
+	position:relative;
+	top:0px;
+	left:0px;
+	z-index:100;
+}
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+
+.slides_container {
+	width:567px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+.slides_container div.slide {
+	width:570px;
+	height:270px;
+	display:block;
+}
+
+
+/*
+	Next/prev buttons
+*/
+
+#slides .next,#slides .prev {
+	position:absolute;
+	top:107px;
+	left:15px;
+	width:24px;
+	height:43px;
+	display:block;
+	z-index:101;
+}
+#slidesphoto a.prev{
+	position:absolute;
+	left:0px;
+	top:100px;
+	z-index:10;
+	}
+#slidesphoto a.next{
+	position:absolute;
+	right:0px;
+	top:100px;
+	z-index:10;
+	}	
+#slides .next {
+	left:537px;
+}
+
+/*
+	Pagination
+*/
+.featureBox ul.featureList li ul.pagination{
+	display:none;
+	}
+.featureBox ul.featureList li #slidesphoto .slides_container{
+	width:289px;
+	}
+#example #slides .pagination {
+	background: url("../images/sprite.png") no-repeat scroll left -15px transparent;
+    height: 11px;
+    margin: 26px auto 0;
+    padding: 3px 10px;
+    position: absolute;
+    right: 0;
+    top: -61px;
+	*top: -62px;
+    width: 85px;
+}
+
+#example #slides .pagination li {
+	float:left;
+	margin:0 0px 0px 6px;
+	list-style:none;
+	border:none !important;
+}
+#example #slides .pagination li:first-child{
+	margin-left:0px;
+	}
+
+#example #slides .pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px !important;
+	background-image:url(../images/sprite.png);
+	background-position:-242px -55px;
+	float:left;
+	overflow:hidden;
+	padding:0px;
+}
+
+#example #slides .pagination li.current a {
+	background-position:-242px -68px;
+}
+
+/*
+	Caption
+*/
+
+.caption {
+	z-index:500;
+	position:absolute;
+	bottom:-35px;
+	left:0;
+	height:30px;
+	padding:5px 12px 0 12px;
+/*	background:#000;*/
+/*	background:rgba(0,0,0,.3);*/
+	width:540px;
+	font-size:1.3em;
+	line-height:1.33;
+	color:#fff;
+/*	border-top:1px solid #000;*/
+	text-shadow:none;
+}
+
+/*
+	Footer
+*/
+/*
+#footer {
+	text-align:center;
+	width:580px;
+	margin-top:9px;
+	padding:4.5px 0 18px;
+	border-top:1px solid #dfdfdf;
+}
+
+#footer p {
+	margin:4.5px 0;
+	font-size:1.0em;
+}*/
+
+/*
+	Anchors
+*/
+
+a:link,a:visited {
+	color:#599100;
+	text-decoration:none;
+}
+
+a:hover,a:active {
+	color:#599100;
+	text-decoration:none;
+}
+a, input.button[type="submit"], input.button[type="button"], input[type="submit"], input[type="button"], button[type="button"] { outline-style: none; }

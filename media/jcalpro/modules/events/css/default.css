@@ -1,0 +1,25 @@
+/**
+ * @package		JCalPro
+ * @subpackage	mod_jcalpro_events
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+/* these elements need to be block - we don't use default block elements inside the list though */
+.jcalpro_events_date,
+.jcalpro_events_description,
+.jcalpro_events_category,
+.jcalpro_events_custom_field,
+.jcalpro_events_location {
+	display: block;
+}
+/* category links should not be as prominent */
+.jcalpro_events_category a,
+.jcalpro_events_category a:link,
+.jcalpro_events_category a:visited,
+.jcalpro_events_category a:hover,
+.jcalpro_events_category a:active {
+	font-size: x-small;
+}
+/* pad the description */
+.jcalpro_events_description {
+	padding: 10px 5px 15px;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="jcalpro">
+		<fieldset
+			name="jcalpro"
+			label="PLG_USER_JCALPRO_SLIDER_LABEL"
+		>
+			<field
+				name="jcalpro_send_mail"
+				id="jcalpro_send_mail"
+				type="radio"
+				default="1"
+				filter="intval"
+				label="PLG_USER_JCALPRO_SEND_MAIL"
+				description="PLG_USER_JCALPRO_SEND_MAIL_DESC"
+				class="btn-group btn-group-yesno"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

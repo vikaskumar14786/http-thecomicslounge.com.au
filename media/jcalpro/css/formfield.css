@@ -1,0 +1,62 @@
+/**
+ * @package		JCalPro
+ * @subpackage	com_jcalpro
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+/* in the interest of keeping this element fully self-contained, add our own clearing element here */
+.jcalformfieldsclear {
+	clear: both;
+}
+/* the main container for our drag & drop section */
+.jcalformfields {
+	width: 500px;
+	padding: 4px;
+	border: 1px solid inherit;
+	min-height: 250px;
+}
+/* list containers */
+.jcalformfieldslist {
+	float: left;
+}
+.jcalformfieldslist h4 {
+	text-align: center;
+}
+.jcalformfieldsdesc {
+	max-width: 238px;
+}
+/* our main repository elements share a lot of the same styles */
+.jcalformfieldssortable {
+	width: 240px;
+	border: 1px solid #ccc;
+	padding: 2px;
+	min-height: 250px;
+	background: #F8F8F8;
+}
+/* main repository for available fields */
+.jcalformfieldsavailable {
+	margin-right: 2px;
+	margin-left: 0px;
+}
+/* main repository for assigned fields */
+.jcalformfieldsassigned {
+	margin-left: 2px;
+}
+/* a formfield element */
+.jcalformfield {
+	border: 1px solid black;
+	line-height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	height: 22px;
+	padding: 2px;
+	text-indent: 28px;
+	background: #FAFAFA;
+	width: 236px;
+	cursor: move;
+	margin-bottom: 2px;
+	/* default 1.7 template kills this */
+	margin-bottom: 2px !important;
+	/* long labels look like crap */
+	overflow: hidden;
+}

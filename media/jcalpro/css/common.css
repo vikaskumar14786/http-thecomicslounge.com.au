@@ -1,0 +1,364 @@
+/**
+ * @package		JCalPro
+ * @subpackage	com_jcalpro
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+/* generic reset styles, as we should handle our own borders in the themes */
+#jcl_component table, #jcl_component tr, #jcl_component td {
+	border: 0 none;
+}
+
+/* ajax loader */
+#jcl_ajax_loader {
+	background: #FFFFFF url(../images/ajax-loader.gif) no-repeat scroll center center;
+}
+
+/* common positioning styles */
+#jcl_component .jcl_left {float: left}
+#jcl_component .jcl_right {float: right}
+#jcl_component .jcl_clear {clear: both}
+#jcl_component .jcl_block {
+	display: block;
+	min-height: 1px;
+	min-width: 1px;
+}
+
+/* no padding on these elements */
+#jcl_component .jcl_month_week_number,
+#jcl_component .jcl_month_row,
+#jcl_component .jcl_month_inner_row {
+	padding: 0px;
+	margin: 0px;
+}
+
+/* common sizes */
+#jcl_component .jcl_month_week_number {
+	width: 18px;
+}
+#jcl_component .jcl_weekday {width: 14%}
+#jcl_component .jcl_month_cell {height: 50px}
+#jcl_component .jcl_nav {width:33%}
+
+#jcl_component .jcl_month_table {clear: both}
+#jcl_component .jcl_month_row {
+	width: 100%;
+}
+
+#jcl_component .jcl_month_inner_row {
+	width: 100%;
+	table-layout: fixed;
+	border: 0px solid white !important;
+}
+
+#jcl_component .jcl_event_body {
+	border-width: 0 0 0 6px;
+	border-style:solid;
+	padding-top: 6px;
+	padding-right: 11px;
+	padding-bottom: 15px;
+	padding-left: 11px;
+	line-height: 16px;
+	text-align: left;
+}
+
+#jcl_component .jcl_event_left {
+	max-width: 60%;
+}
+
+#jcl_component .jcl_event_right {
+	max-width: 40%;
+}
+
+#jcl_component .jcl_event_categories {
+	padding-top: 2px;
+	padding-bottom: 3px;
+	list-style-type: none;
+}
+
+#jcl_component .jcl_event_categories li {
+	padding: 0px;
+	margin: 0px;
+	display: inline;
+}
+
+#jcl_component .jcl_event_categories li span {
+	white-space: nowrap;
+}
+
+#jcl_component .jcl_event_categories .jcl_event_categories_canonical {
+	font-weight: bold;
+}
+
+#jcl_component .jcl_nooverflow {
+	overflow-x: hidden;
+}
+
+#jcl_component .jcl_month_cell_number {
+	font-weight: bold;
+	padding-top: 2px;
+	text-align: right;
+	width: 1.5em;
+}
+
+#jcl_component .jcl_month_add {
+	padding-top: 2px;
+	padding-right: 2px;
+}
+
+/* Toolbar */
+#jcl_component .jcl_toolbar {
+	text-align: center;
+	display: block;
+}
+
+/* Toolbar Buttons */
+#jcl_component .jcl_toolbar_buttons {
+	display: inline;
+	margin: 0 auto;
+}
+
+/* base tables */
+.jcl_basetable {
+	width: 100%;
+}
+
+/* category legend */
+#jcl_component .jcal_category {
+	float: left;
+	width: 49%;
+	margin-bottom: 4px;
+}
+
+#jcl_component .jcal_category .jcal_category_color {
+	float: left;
+	width: 20px;
+	height: 18px;
+	border: 1px solid #FFFFFF;
+	margin-right: 4px;
+}
+
+#jcl_component .jcal_category .jcal_category_title {
+	float: left;
+	line-height: 18px;
+}
+
+/* messages */
+#jcl_component .jcl_message {
+	text-align: center;
+	font-weight: bold;
+	padding: 15px 20px 20px;
+}
+
+#jcl_component .jcl_nocolor {
+	border: 0px !important;
+}
+
+#jcl_component .inline {
+	display: inline;
+}
+
+#jcl_component .jcalradio {
+	float: left;
+}
+
+#jcl_component input.jcalradio {
+	clear: left;
+}
+
+#jcl_component .sundaytopclr, #jcl_component .weekdaytopclr {
+	text-align: center;
+}
+
+#jcl_component .jcl_center {
+  text-align: center;
+}
+
+#jcl_component #jform_recur_type label,
+#jcl_component #jform_registration label,
+#jcl_component #jform_rec_yearly_type label {
+	display: block;
+}
+
+#jcl_component #jform_registration input,
+#jcl_component #jform_recur_type input {
+	float: left;
+	clear: left;
+}
+
+#jcl_component #jform_recur_end_type input,
+#jcl_component #jform_recur_end_type label,
+#jcl_component #jform_recur_end_until,
+#jcl_component #jform_recur_end_type img,
+#jcl_component #jform_recur_end_type .input-append {
+	float: left;
+}
+#jcl_component #jform_recur_end_type1 {
+	clear: left;
+}
+
+#jcl_component .jcal_category {
+	float: left;
+	width: 49%;
+	margin-bottom: 4px;
+}
+
+#jcl_component .eventdescright {
+	float: right;
+	display: block;
+	padding-left: 5px;
+	padding-bottom: 3px;
+	margin-right: 3px;
+	margin-bottom: 2px;
+}
+
+/* ajax loader */
+#jcl_ajax_loader {
+	position: absolute;
+	top: 0px;
+	width: 0px;
+	background: #FFFFFF url(../images/ajax-loader.gif) no-repeat scroll center center;
+}
+
+/* forms */
+#jcl_component div.jcl_form_label {
+	clear: left;
+	display: block;
+}
+#jcl_component div.jcl_form_element {
+	display: block;
+}
+
+/* categories */
+#jcl_component .jcal_categories h3 {
+	text-align: left;
+	margin: 0px;
+	font-size: 0.9em;
+}
+/* search form */
+#jcl_component .jcl_search_form_search .inputbox {
+	height: 20px;
+	padding: 4px 6px;
+	margin-bottom: 9px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#jcl_component .jcl_search_form_search .button {
+	height: 32px;
+	padding: 4px 6px;
+	margin-bottom: 9px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+
+#jform_duration_type label.jcalradio,
+#jform_duration_type label {
+	min-width: 1px;
+	display: block;
+	/* IE Hack */
+	/*float: none\9*/
+}
+#jform_rec_monthly_type label.jcalradio,
+#jform_rec_monthly_type label,
+#jform_rec_yearly_type label.jcalradio,
+#jform_rec_yearly_type label,
+#jcl_component #jform_recur_end_type label.jcalradio,
+#jcl_component #jform_recur_end_type label,
+#jcl_component #jform_recur_type label.jcalradio,
+#jcl_component #jform_recur_type label {
+	display: block;
+	padding-bottom: 8px;
+	/* IE Hack */
+	/*float: none\9*/
+}
+
+#jform_end_days,
+#jform_end_hours,
+#jform_end_minutes,
+#jform_duration_type label.hasTip,
+#jform_duration_type label.hasTooltip {
+	float: left;
+}
+
+#jcl_component #jcl_event_map {
+	width: 240px;
+	height: 180px;
+	display: block;
+}
+
+#jcl_component #jcl_event_map img {
+	max-width: none !important;
+}
+
+/* inline style removed from admin view */
+#jcl_component .jcl_event_admin_row_left {
+	width: 90%;
+}
+/* compat */
+/* fix table columns for responsive layouts in 3.0 */
+
+/* desktop */
+@media only screen and (min-width: 801px) {
+	#jcl_component .hidden-desktop {display: none;}
+	#jcl_component td.hidden-tablet,
+	#jcl_component td.hidden-phone,
+	#jcl_component th.hidden-tablet,
+	#jcl_component th.hidden-phone {display: table-cell !important;}
+}
+
+/* tablet */
+@media only screen and (max-width: 800px) {
+	#jcl_component .hidden-tablet {display: none;}
+	#jcl_component td.hidden-desktop,
+	#jcl_component th.hidden-desktop {display: table-cell !important;}
+}
+
+/* phone */
+@media only screen and (max-width: 640px) {
+	#jcl_component .hidden-phone {display: none;}
+	#jcl_component td.hidden-desktop
+	#jcl_component th.hidden-desktop {display: table-cell !important;}
+}
+
+/* tinymce fix */
+@media (max-width: 801px) {
+	/* force the widths of the main elements to 100% */
+	table.mceLayout, textarea.tinyMCE {
+		width: 100% !important;
+	}
+	/* force the toolbar to be smaller */
+	table.mceToolbar td {
+		display: inline;
+		float: left;
+	}
+}
+/* location buttons */
+.jcl_legacy button .icon-home {
+	display: inline-block;
+	background-image: url(../images/icon-16-locations.png);
+	width: 16px;
+	height: 16px;
+	padding: 0px;
+}
+.jcl_legacy button .icon-share-alt {
+	display: inline-block;
+	background-image: url(../images/icon-16-links.png);
+	width: 16px;
+	height: 16px;
+	padding: 0px;
+}
+.jcl_legacy button .icon-search {
+	display: inline-block;
+	background-image: url(../images/icon-16-search.png);
+	width: 16px;
+	height: 16px;
+	padding: 0px;
+}
+/* some spacing for directions */
+#jcl_location_directions {
+	margin-bottom: 24px;
+}
+

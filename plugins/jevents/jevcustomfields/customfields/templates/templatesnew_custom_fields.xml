@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields>
+		<fieldset  name="Comics Options" description="Comics Lounge event options.">
+
+			<field name="eventStart" type="jevcftext" default="DINNER FROM 6 :30 PM! SHOW STARTS AT 8 PM!" size="50" maxlength="100"
+			required="0" searchable="0" label="Event Start Details" description="Event and dinner start time."
+			/>
+			
+			<field name="dinnerStart" type="jevcftext" default="6:30 PM" size="20" maxlength="20"
+			required="0" searchable="0" label="Event Dinner Start Details" description="Event dinner start time."
+			/>
+			
+			<field name="showStart" type="jevcftext" default="8:00 PM" size="20" maxlength="20"
+			required="0" searchable="0" label="Event Show Start Details" description="Event dinner start time."
+			/>
+						
+			<field name="eventSupport" type="jevcftext" default="" size="50" maxlength="100"
+			 searchable="1" label="Event Support" description="Enter any support acts here."	/>
+			 
+			<field name="showPrice" type="jevcftext" default="" size="50" maxlength="50"
+			  label="Show Price" description="Enter show only price here, format: $15.00." />
+
+			<field name="dinnerPrice" type="jevcftext" default="" size="50" maxlength="50"
+			  label="Dinner Price" description="Enter show only price here, format: $15.00." />
+			  
+			<field name="voucher1" type="jevcfboolean" default="1" label="Vouchers"  description="Vouchers Allowed"  />
+			
+			<field name="youTube1" type="jevcfyoutube" label="YouTube Video 1" description="Enter YouTube Video URL" />
+			
+			<field name="youTube2" type="jevcfyoutube" label="YouTube Video 2" description="Enter YouTube Video URL" />
+			
+			<field name="youTube3" type="jevcfyoutube" label="YouTube Video 3" description="Enter YouTube Video URL" />
+		</fieldset>
+		<fieldset  name="Comics Instructions" description="COMICS LOUNGE EVENT CREATION INSTRUCTIONS">
+			<field name="instructTitleC0" type="jevcftext" default="A Show Event Must Be Created For Each Price Of The Show" size="300" maxlength="300" searchable="1" label="" description=""	/>
+			
+			<field name="instructTitleC01" type="jevcftext" default="Different price for show click Copy/New-change date/price" size="300" maxlength="300" searchable="1" label="" description=""	/>
+		
+			<field name="instructTitle" type="jevcftext" default="COMMON PAGE OPTION USAGE INSTRUCTIONS" size="250" maxlength="300" searchable="1" label="" description=""	/>
+						
+			<field name="instructTitle1" type="jevcftext"  default="Comedy- Is standard a show." size="250" maxlength="2500"  searchable="1" label="Categories" description=""	/>
+			 
+			<field name="instructTitle2" type="jevcftext"  default="Enter show description here." size="250" maxlength="250"  searchable="1" label="Description" description=""	/>
+		
+			<field name="instructTitle3" type="jevcftext"  default="Add any extra info here i.e. No Vouchers." size="250" maxlength="250"  searchable="1" label="Extra Info" description=""	/>
+			
+			<field name="instructTitle4" type="jevcftext"  default="Add performer tab image here." size="250" maxlength="250"  searchable="1" label="Standard Image 1" description="" />
+			
+			<field name="instructTitle5" type="jevcftext"  default="Add performer banner image here." size="250" maxlength="250"  searchable="1" label="Standard Image 2" description="" />
+			
+			<field name="instructTitleC" type="jevcftext" default="CALENDAR PAGE OPTION USAGE INSTRUCTIONS" size="250" maxlength="300" searchable="1" label="" description=""	/>	
+			
+			<field name="instructTitleC1" type="jevcftext" default="Enter start date of a the show." size="250" maxlength="300" searchable="1" label="Start Date" description=""	/>
+			
+			<field name="instructTitleC2" type="jevcftext" default="Enter same date as above (start date)." size="250" maxlength="300" searchable="1" label="End Date" description=""	/>
+			
+			<field name="instructTitleC3" type="jevcftext" default="Set To Yes" size="250" maxlength="300" searchable="1" label="Multi Day Event Treatment" description=""	/>
+			
+			<field name="instructTitleC4" type="jevcftext" default="No Repeat- for 1 day shows; Daily- for multiday shows." size="250" maxlength="300" searchable="1" label="Repeat Type" description=""	/>
+			
+			<field name="instructTitleC7" type="jevcftext" default="Select date button." size="250" maxlength="300" searchable="1" label="Repeat Until" description=""	/>
+			
+			<field name="instructTitleC8" type="jevcftext" default="Select date in calendar untill show/price finishes." size="250" maxlength="300" searchable="1" label="Repeat Until" description=""	/>
+			
+			<field name="instructTitleA" type="jevcftext" default="ATTENDANCE OPTIONS PAGE USAGE INSTRUCTIONS" size="250" maxlength="300" searchable="1" label="" description=""	/>
+			
+			<field name="instructTitleA1" type="jevcftext" default="Select YES." size="250" maxlength="300" searchable="1" label="Allow attendance registration?" description=""	/>
+			
+			<field name="instructTitleA2" type="jevcftext" default="Choose the template that matches show price ie. 15-30" size="250" maxlength="300" searchable="1" label="Custom Fields: Select template." description=""	/>
+			
+			<field name="instructTitleA3" type="jevcftext" default="Choose Each event repeat separately {red}" size="250" maxlength="300" searchable="1" label="Record Attendance For?" description=""	/>
+			
+			<field name="instructTitleCL" type="jevcftext" default="COMIC'S OPTIONS PAGE USAGE INSTRUCTIONS" size="250" maxlength="300" searchable="1" label="" description=""	/>
+			
+			<field name="instructTitleCL1" type="jevcftext" default="Set to a default value, ONLY CHANGE VALUE IF NEEDED" size="250" maxlength="300" searchable="1" label="Event Start Details" description=""	/>
+			
+			<field name="instructTitleCLd1" type="jevcftext" default="Set to a default value, ONLY CHANGE IF NEEDED i.e: 6:30pm" size="250" maxlength="300" searchable="1" label="Event Dinner Start Details " description=""	/>
+			
+			<field name="instructTitleCLd2" type="jevcftext" default="Set to a default value, ONLY CHANGE IF NEEDED i.e:8:00pm" size="250" maxlength="300" searchable="1" label="Event Show Start Details " description=""	/>
+			
+			<field name="instructTitleCL2" type="jevcftext" default="Enter Event Support details here." size="250" maxlength="300" searchable="1" label="Event Support" description=""	/>
+			
+			<field name="instructTitleCLP1" type="jevcftext" default="Enter Event Show prices here i.e:$15.00." size="250" maxlength="300" searchable="1" label="Event Show Prices" description="" />
+			
+			
+			<field name="instructTitleCLV1" type="jevcftext" default="Select Yes or No for Vouchers." size="250" maxlength="300" searchable="1" label="Event Vouchers" description=""	/>
+			
+			<field name="instructTitleCL3" type="jevcftext" default="Enter YouTube code here ie. 6xDYFwmrHeI" size="250" maxlength="300" searchable="1" label="YouTube Video 1-3" description=""	/>
+			
+		</fieldset>
+	</fields>
+</form>

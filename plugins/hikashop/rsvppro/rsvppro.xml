@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="plugin" version="2.5" method="upgrade" group="hikashop">
+    <name>RSVP Pro Payment Trigger - Hikashop Plugin</name>
+    <creationDate>November 2015</creationDate>
+    <author>Geraint Edwards</author>
+    <authorUrl>http://www.jevents.net</authorUrl>
+    <copyright>Copyright (C) 2013-2015 GWE Systems Lts. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>3.4.2</version>
+    <description>Plugin to trigger payment status updates in RSVP Pro</description>
+
+    <files>
+	<filename plugin="rsvppro">rsvppro.php</filename>
+    </files>
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.plg_hikashop_rsvppro.ini</language>
+	</languages>
+
+</extension>

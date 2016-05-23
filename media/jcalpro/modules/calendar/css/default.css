@@ -1,0 +1,78 @@
+/**
+ * @package		JCalPro
+ * @subpackage	mod_jcalpro_calendar
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+.jcalpro_calendar .jcalpro_calendar_navbar {
+	background-color: #142849;
+	color: #FFFFFF;
+}
+
+.jcalpro_calendar th.jcalpro_calendar_weekday {
+	background-color: #1A3867;
+	border-left: 1px solid #1A96EE;
+	border-right: 0 solid #1A96EE;
+	color: #FFFFFF;
+}
+
+.jcalpro_calendar .jcalpro_calendar_sunday,
+.jcalpro_calendar td.jcalpro_calendar_weekday,
+.jcalpro_calendar .jcalpro_calendar_empty {
+	border-left: 1px solid #FFFFFF;
+	color: #A29D9E;
+}
+
+.jcalpro_calendar .jcalpro_calendar_sunday {
+	background-color: #EDEDED;
+}
+
+.jcalpro_calendar td.jcalpro_calendar_weekday {
+	background-color: #F9F9F9;
+}
+
+.jcalpro_calendar td.jcalpro_calendar_today {
+	background-color: #FEED6F;
+	color: #A29D9E;
+}
+
+.jcalpro_calendar .jcalpro_calendar_empty {
+	background-color: #E0E0E0;
+}
+
+.jcalpro_calendar .jcalpro_calendar_nav_prev,
+.jcalpro_calendar .jcalpro_calendar_nav_prev:link,
+.jcalpro_calendar .jcalpro_calendar_nav_prev:visited,
+.jcalpro_calendar .jcalpro_calendar_nav_prev:hover,
+.jcalpro_calendar .jcalpro_calendar_nav_prev:active {
+	background: url(../../../images/mini_arrowleft.gif) no-repeat scroll right center transparent;
+	padding-left: 8px;
+}
+
+.jcalpro_calendar .jcalpro_calendar_nav_next,
+.jcalpro_calendar .jcalpro_calendar_nav_next:link,
+.jcalpro_calendar .jcalpro_calendar_nav_next:visited,
+.jcalpro_calendar .jcalpro_calendar_nav_next:hover,
+.jcalpro_calendar .jcalpro_calendar_nav_next:active {
+	background: url(../../../images/mini_arrowright.gif) no-repeat scroll left center transparent;
+	padding-right: 8px;
+}
+
+.jcalpro_calendar .jcalpro_calendar_nav_button,
+.jcalpro_calendar .jcalpro_calendar_nav_button:link,
+.jcalpro_calendar .jcalpro_calendar_nav_button:visited,
+.jcalpro_calendar .jcalpro_calendar_nav_button:hover,
+.jcalpro_calendar .jcalpro_calendar_nav_button:active {
+	color: #FFFFFF;
+	text-decoration: none;
+	text-indent: -999px;
+	overflow: hidden;
+}
+
+.jcalpro_calendar .jcalpro_calendar_nav_button a:hover {
+	color: #FFFFFF;
+}
+.jcalpro_calendar .jcalpro_calendar_loader {
+	background: #FFFFFF url(../../../images/ajax-loader.gif) no-repeat center center;
+	opacity: 0.5;
+}

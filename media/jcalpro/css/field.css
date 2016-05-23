@@ -1,0 +1,53 @@
+/**
+ * @package		JCalPro
+ * @subpackage	com_jcalpro
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+.jcalfields ul.jcalfieldsavailable {
+	list-style-type: none;
+	min-width: 240px;
+	margin: 0px;
+}
+.jcalfields ul.jcalfieldsavailable li {
+	display: block;
+	float: none !important;
+	clear: both;
+	border: 1px solid black;
+	line-height: 20px;
+	font-size: 14px;
+	font-weight: bold;
+	height: 22px;
+	padding: 2px 2px 2px 22px;
+	background: #FAFAFA;
+	margin-bottom: 2px;
+	/* default 1.7 template kills this */
+	margin-bottom: 2px !important;
+}
+.jcalfields ul.jcalfieldsavailable li label {
+	float: left;
+}
+.jcalfields ul.jcalfieldsavailable li .jcalfields_dirs {
+	float: right;
+}
+.jcalfields ul.jcalfieldsavailable li .jcalfields_dir {
+	display: inline;
+}
+.jcalfields ul.jcalfieldsavailable li label input {
+	float: left;
+	margin-right: 5px;
+}
+.jcalfields ul.jcalfieldsavailable li label span {
+	display: inline-block;
+	width: 120px;
+	height: 24px;
+	overflow: hidden;
+	float: right;
+}
+.jcalfields .jcalfields_dir:disabled,
+.jcalfields .jcalfields_dir {
+	width: 22px;
+	height: 22px;
+	font-weight: bold;
+	text-align: center;
+}

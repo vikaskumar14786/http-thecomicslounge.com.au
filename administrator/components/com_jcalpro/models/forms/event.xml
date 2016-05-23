@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldpath="/administrator/components/com_jcalpro/models/fields">
+	<!-- 
+	
+	Main event fieldset - standard fields, user editable fields
+	
+	-->
+	<fieldset
+		name="event"
+		label="COM_JCALPRO_EVENT"
+	>
+		<field
+			id="title" name="title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="JFIELD_TITLE_DESC"
+			class="inputbox input-xlarge"
+			size="30"
+			required="true"
+		/>
+		<field
+			id="alias" name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			class="inputbox input-xlarge"
+		/>
+		<field
+			name="description"
+			type="editor"
+			buttons="0"
+			label="COM_JCALPRO_EVENT_DESCRIPTION_LABEL"
+			description="COM_JCALPRO_EVENT_DESCRIPTION_DESC"
+			class="inputbox"
+			filter="JComponentHelper::filterText"
+			asset_id="com_jcalpro"
+			cols="60" rows="12"
+		/>
+		<field
+			name="location"
+			type="modal_jcallocation"
+			label="COM_JCALPRO_LOCATION"
+			description="COM_JCALPRO_LOCATION_DESC"
+			class="inputbox"
+		/>
+		<field
+			name="canonical"
+			type="modal_jcalcategory"
+			extension="com_jcalpro"
+			label="COM_JCALPRO_PRIMARY_CATEGORY"
+			description="JFIELD_CATEGORY_DESC"
+			class="inputbox"
+			required="true"
+		/>
+		<field
+			name="cat"
+			type="jcalmulticat"
+			extension="com_jcalpro"
+			label="COM_JCALPRO_SECONDARY_CATEGORIES"
+			description="COM_JCALPRO_SECONDARY_CATEGORIES_DESC"
+			class="inputbox input-xlarge"
+			multiple="multiple"
+			size="8"
+		/>
+		<field
+			name="language"
+			type="language"
+			label="JFIELD_LANGUAGE_LABEL"
+			description="JFIELD_LANGUAGE_DESC"
+			class="inputbox input-block-level"
+		>
+			<option value="*">JALL</option>
+		</field>
+		<field
+			id="private" name="private"
+			type="list"
+			label="COM_JCALPRO_PRIVATE"
+			description="COM_JCALPRO_PRIVATE_DESC"
+			class="inputbox input-block-level"
+		>
+			<option value="0" class="jcalradio">COM_JCALPRO_PRIVATE_OPTION_PUBLIC</option>
+			<option value="1" class="jcalradio">COM_JCALPRO_PRIVATE_OPTION_PRIVATE</option>
+		</field>
+	</fieldset>
+	<!-- 
+	
+	Start Date fieldset
+	
+	-->
+	<fieldset
+		name="startdate"
+		label="COM_JCALPRO_STARTDATE"
+	>
+		<field
+			id="start_date_array" name="start_date_array"
+			type="jcaldatetime"
+			label="COM_JCALPRO_START_DATE"
+			description="COM_JCALPRO_START_DATE_DESC"
+			class="inputbox"
+		/>
+		<field
+			id="timezone" name="timezone"
+			type="jcaltimezone"
+			label="COM_JCALPRO_TIMEZONE"
+			description="COM_JCALPRO_TIMEZONE"
+			class="inputbox"
+			default=""
+		>
+			<option value="UTC">JLIB_FORM_VALUE_TIMEZONE_UTC</option>
+		</field>
+	</fieldset>
+	<!-- 
+	
+	Duration fieldset
+	
+	-->
+	<fieldset
+		name="duration"
+		label="COM_JCALPRO_DURATION"
+	>
+		<field
+			id="duration_type" name="duration_type"
+			type="radio"
+			label="COM_JCALPRO_DURATION_TYPE_LABEL"
+			description="COM_JCALPRO_DURATION_TYPE_DESC"
+			class="inputbox"
+			default="1"
+			filter="intval"
+		>
+			<option value="3" class="jcalradio">COM_JCALPRO_DURATION_TYPE_OPTION_TIME</option>
+			<option value="1" class="jcalradio">COM_JCALPRO_DURATION_TYPE_OPTION_AMOUNT</option>
+			<option value="2" class="jcalradio">COM_JCALPRO_DURATION_TYPE_OPTION_ALL_DAY</option>
+			<option value="0" class="jcalradio">COM_JCALPRO_DURATION_TYPE_OPTION_NO_END_DATE</option>
+		</field>
+		<field
+			id="end_date_array" name="end_date_array"
+			type="jcaldatetime"
+			label="COM_JCALPRO_END_DATE"
+			description="COM_JCALPRO_END_DATE"
+			class="inputbox"
+		/>
+		<field
+			id="end_days" name="end_days"
+			type="text"
+			label="COM_JCALPRO_DURATION_END_DAYS_LABEL"
+			description="COM_JCALPRO_DURATION_END_DAYS_DESC"
+			class="inputbox"
+			size="3"
+			default="0"
+			filter="intval"
+		/>
+		<field
+			id="end_hours" name="end_hours"
+			type="text"
+			label="COM_JCALPRO_DURATION_END_HOURS_LABEL"
+			description="COM_JCALPRO_DURATION_END_HOURS_DESC"
+			class="inputbox"
+			size="3"
+			default="1"
+			filter="intval"
+		/>
+		<field
+			id="end_minutes" name="end_minutes"
+			type="text"
+			label="COM_JCALPRO_DURATION_END_MINUTES_LABEL"
+			description="COM_JCALPRO_DURATION_END_MINUTES_DESC"
+			class="inputbox"
+			size="3"
+			default="0"
+			filter="intval"
+		/>
+	</fieldset>
+	<!-- 
+	
+	Event Repeat options fieldset
+	
+	-->
+	<fieldset
+		name="repeat"
+		label="COM_JCALPRO_REPEAT"
+	>
+		<field
+			id="recur_type" name="recur_type"
+			type="radio"
+			label="COM_JCALPRO_RECUR_TYPE_LABEL"
+			description="COM_JCALPRO_RECUR_TYPE_DESC"
+			class="inputbox"
+			default="0"
+			filter="intval"
+		>
+			<option value="0" onclick="jclShowRecOptions(this);">COM_JCALPRO_RECUR_TYPE_OPTION_DONT_REPEAT_THIS_EVENT</option>
+			<option value="1" onclick="jclShowRecOptions(this);">COM_JCALPRO_RECUR_TYPE_OPTION_REPEAT_DAILY</option>
+			<option value="2" onclick="jclShowRecOptions(this);">COM_JCALPRO_RECUR_TYPE_OPTION_REPEAT_WEEKLY</option>
+			<option value="3" onclick="jclShowRecOptions(this);">COM_JCALPRO_RECUR_TYPE_OPTION_REPEAT_MONTHLY</option>
+			<option value="4" onclick="jclShowRecOptions(this);">COM_JCALPRO_RECUR_TYPE_OPTION_REPEAT_YEARLY</option>
+		</field>
+		<field
+			id="rec_daily_period" name="rec_daily_period"
+			type="text"
+			label="COM_JCALPRO_REC_DAILY_PERIOD_LABEL"
+			description="COM_JCALPRO_REC_DAILY_PERIOD_DESC"
+			class="inputbox"
+			size="3"
+			default="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_weekly_period" name="rec_weekly_period"
+			type="text"
+			label="COM_JCALPRO_REC_WEEKLY_PERIOD_LABEL"
+			description="COM_JCALPRO_REC_WEEKLY_PERIOD_DESC"
+			class="inputbox"
+			size="3"
+			default="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_monthly_period" name="rec_monthly_period"
+			type="text"
+			label="COM_JCALPRO_REC_MONTHLY_PERIOD_LABEL"
+			description="COM_JCALPRO_REC_MONTHLY_PERIOD_DESC"
+			class="inputbox"
+			size="3"
+			default="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_yearly_period" name="rec_yearly_period"
+			type="text"
+			label="COM_JCALPRO_REC_YEARLY_PERIOD_LABEL"
+			description="COM_JCALPRO_REC_YEARLY_PERIOD_DESC"
+			class="inputbox"
+			size="3"
+			default="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_weekly_on_sunday" name="rec_weekly_on_sunday"
+			type="checkbox"
+			label="SUNDAY"
+			class="inputbox"
+			value="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_weekly_on_monday" name="rec_weekly_on_monday"
+			type="checkbox"
+			label="MONDAY"
+			class="inputbox"
+			value="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_weekly_on_tuesday" name="rec_weekly_on_tuesday"
+			type="checkbox"
+			label="TUESDAY"
+			class="inputbox"
+			value="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_weekly_on_wednesday" name="rec_weekly_on_wednesday"
+			type="checkbox"
+			label="WEDNESDAY"
+			class="inputbox"
+			value="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_weekly_on_thursday" name="rec_weekly_on_thursday"
+			type="checkbox"
+			label="THURSDAY"
+			class="inputbox"
+			value="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_weekly_on_friday" name="rec_weekly_on_friday"
+			type="checkbox"
+			label="FRIDAY"
+			class="inputbox"
+			value="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_weekly_on_saturday" name="rec_weekly_on_saturday"
+			type="checkbox"
+			label="SATURDAY"
+			class="inputbox"
+			value="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_monthly_day_number" name="rec_monthly_day_number"
+			type="text"
+			label="COM_JCALPRO_REC_MONTHLY_DAY_NUMBER_LABEL"
+			description="COM_JCALPRO_REC_MONTHLY_DAY_NUMBER_DESC"
+			class="inputbox jcl_left"
+			size="3"
+			default="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_monthly_type" name="rec_monthly_type"
+			type="radio"
+			label="COM_JCALPRO_REC_MONTHLY_TYPE_LABEL"
+			description="COM_JCALPRO_REC_MONTHLY_TYPE_DESC"
+			class="inputbox"
+			default=""
+		>
+			<option value="0" class="jcalradio">COM_JCALPRO_REC_MONTHLY_TYPE_OPTION_0</option>
+			<option value="1" class="jcalradio">COM_JCALPRO_REC_MONTHLY_TYPE_OPTION_1</option>
+		</field>
+		<field
+			id="rec_monthly_day_order" name="rec_monthly_day_order"
+			type="list"
+			label="COM_JCALPRO_REC_MONTHLY_DAY_ORDER_LABEL"
+			description="COM_JCALPRO_REC_MONTHLY_DAY_ORDER_DESC"
+			class="inputbox jcl_left"
+			default=""
+		>
+			<option value="1">COM_JCALPRO_REC_MONTHLY_DAY_ORDER_OPTION_FIRST</option>
+			<option value="2">COM_JCALPRO_REC_MONTHLY_DAY_ORDER_OPTION_SECOND</option>
+			<option value="3">COM_JCALPRO_REC_MONTHLY_DAY_ORDER_OPTION_THIRD</option>
+			<option value="4">COM_JCALPRO_REC_MONTHLY_DAY_ORDER_OPTION_FOURTH</option>
+			<option value="5">COM_JCALPRO_REC_MONTHLY_DAY_ORDER_OPTION_LAST</option>
+		</field>
+		<field
+			id="rec_monthly_day_type" name="rec_monthly_day_type"
+			type="list"
+			label="COM_JCALPRO_REC_MONTHLY_DAY_TYPE_LABEL"
+			description="COM_JCALPRO_REC_MONTHLY_DAY_TYPE_DESC"
+			class="inputbox jcl_left"
+			default=""
+		>
+			<option value="0">COM_JCALPRO_DAY</option>
+			<option value="1">SUNDAY</option>
+			<option value="2">MONDAY</option>
+			<option value="3">TUESDAY</option>
+			<option value="4">WEDNESDAY</option>
+			<option value="5">THURSDAY</option>
+			<option value="6">FRIDAY</option>
+			<option value="7">SATURDAY</option>
+		</field>
+		<field
+			id="rec_yearly_on_month" name="rec_yearly_on_month"
+			type="list"
+			label="COM_JCALPRO_REC_YEARLY_ON_MONTH_LABEL"
+			description="COM_JCALPRO_YEARLY_ON_MONTH_DESC"
+			class="inputbox"
+			size="1"
+		>
+			<option value="1">JANUARY</option>
+			<option value="2">FEBRUARY</option>
+			<option value="3">MARCH</option>
+			<option value="4">APRIL</option>
+			<option value="5">MAY</option>
+			<option value="6">JUNE</option>
+			<option value="7">JULY</option>
+			<option value="8">AUGUST</option>
+			<option value="9">SEPTEMBER</option>
+			<option value="10">OCTOBER</option>
+			<option value="11">NOVEMBER</option>
+			<option value="12">DECEMBER</option>
+		</field>
+		<field
+			id="rec_yearly_day_number" name="rec_yearly_day_number"
+			type="text"
+			label="COM_JCALPRO_REC_YEARLY_DAY_NUMBER_LABEL"
+			description="COM_JCALPRO_REC_YEARLY_DAY_NUMBER_DESC"
+			class="inputbox jcl_left"
+			size="3"
+			default="1"
+			filter="intval"
+		/>
+		<field
+			id="rec_yearly_type" name="rec_yearly_type"
+			type="radio"
+			label="COM_JCALPRO_REC_YEARLY_TYPE_LABEL"
+			description="COM_JCALPRO_REC_YEARLY_TYPE_DESC"
+			class="inputbox"
+			default=""
+		>
+			<option value="0" class="jcalradio">COM_JCALPRO_REC_YEARLY_TYPE_OPTION_0</option>
+			<option value="1" class="jcalradio">COM_JCALPRO_REC_YEARLY_TYPE_OPTION_1</option>
+		</field>
+		<field
+			id="rec_yearly_day_order" name="rec_yearly_day_order"
+			type="list"
+			label="COM_JCALPRO_REC_YEARLY_DAY_ORDER_LABEL"
+			description="COM_JCALPRO_REC_YEARLY_DAY_ORDER_DESC"
+			class="inputbox jcl_left"
+			default=""
+		>
+			<option value="1">COM_JCALPRO_REC_YEARLY_DAY_ORDER_OPTION_FIRST</option>
+			<option value="2">COM_JCALPRO_REC_YEARLY_DAY_ORDER_OPTION_SECOND</option>
+			<option value="3">COM_JCALPRO_REC_YEARLY_DAY_ORDER_OPTION_THIRD</option>
+			<option value="4">COM_JCALPRO_REC_YEARLY_DAY_ORDER_OPTION_FOURTH</option>
+			<option value="5">COM_JCALPRO_REC_YEARLY_DAY_ORDER_OPTION_LAST</option>
+		</field>
+		<field
+			id="rec_yearly_day_type" name="rec_yearly_day_type"
+			type="list"
+			label="COM_JCALPRO_REC_YEARLY_DAY_TYPE_LABEL"
+			description="COM_JCALPRO_REC_YEARLY_DAY_TYPE_DESC"
+			class="inputbox jcl_left"
+			default=""
+		>
+			<option value="0">COM_JCALPRO_DAY</option>
+			<option value="1">SUNDAY</option>
+			<option value="2">MONDAY</option>
+			<option value="3">TUESDAY</option>
+			<option value="4">WEDNESDAY</option>
+			<option value="5">THURSDAY</option>
+			<option value="6">FRIDAY</option>
+			<option value="7">SATURDAY</option>
+		</field>
+		<field
+			id="recur_end_type" name="recur_end_type"
+			type="radio"
+			label="COM_JCALPRO_RECUR_END_TYPE_LABEL"
+			description="COM_JCALPRO_RECUR_END_TYPE_DESC"
+			class="inputbox"
+			default="1"
+		>
+			<option value="1">COM_JCALPRO_RECUR_END_TYPE_OPTION_END_AFTER</option>
+			<option value="2" class="jcalradio">COM_JCALPRO_RECUR_END_TYPE_OPTION_REPEAT_UNTIL</option>
+		</field>
+		<field
+			id="recur_end_count" name="recur_end_count"
+			type="text"
+			label="COM_JCALPRO_RECUR_END_COUNT_LABEL"
+			description="COM_JCALPRO_RECUR_END_COUNT_DESC"
+			class="inputbox"
+			size="5"
+			default="2"
+			filter="intval"
+		/>
+		<field
+			id="recur_end_until" name="recur_end_until"
+			type="calendar"
+			label="COM_JCALPRO_RECUR_END_UNTIL_LABEL"
+			description="COM_JCALPRO_RECUR_END_UNTIL_DESC"
+			class="inputbox"
+			filter="JCAL"
+		/>
+	</fieldset>
+	<!--
+	
+	Registration options
+	
+	-->
+	<fieldset
+		name="registration"
+		label="COM_JCALPRO_EVENT_REGISTRATION"
+	>
+		<field
+			name="registration" id="registration"
+			type="radio" class="inputbox"
+			label="COM_JCALPRO_REGISTRATION"
+			description="COM_JCALPRO_REGISTRATION_DESC"
+			default="0"
+			filter="intval"
+		>
+			<option value="1" onclick="jclShowRegOptions(this);">JYES</option>
+			<option value="0" onclick="jclShowRegOptions(this);">JNO</option>
+		</field>
+		<field
+			name="registration_capacity"
+			id="registration_capacity"
+			type="text" class="inputbox"
+			label="COM_JCALPRO_REGISTRATION_CAPACITY"
+			description="COM_JCALPRO_REGISTRATION_CAPACITY_DESC"
+			default="0" size="5"
+			filter="intval"
+		/>
+		<field
+			id="registration_start_date_array" name="registration_start_date_array"
+			type="jcaldatetime"
+			label="COM_JCALPRO_REGISTRATION_START_DATE"
+			description="COM_JCALPRO_REGISTRATION_START_DATE_DESC"
+			class="inputbox"
+		/>
+		<field
+			name="registration_until_event" id="registration_until_event"
+			type="radio" class="inputbox"
+			label="COM_JCALPRO_REGISTRATION_UNTIL_EVENT"
+			description="COM_JCALPRO_REGISTRATION_UNTIL_EVENT_DESC"
+			default="1"
+			filter="intval"
+		>
+			<option value="1" onclick="jclToggleRegEnd(false);">JYES</option>
+			<option value="0" onclick="jclToggleRegEnd(true);">JNO</option>
+		</field>
+		<field
+			id="registration_end_date_array" name="registration_end_date_array"
+			type="jcaldatetime"
+			label="COM_JCALPRO_REGISTRATION_END_DATE"
+			description="COM_JCALPRO_REGISTRATION_END_DATE_DESC"
+			class="inputbox"
+		/>
+	</fieldset>
+	<!--
+	
+	Admin options (published, approved, etc)
+	
+	-->
+	<fieldset
+		name="admin"
+		label="COM_JCALPRO_ADMIN_OPTIONS"
+	>
+		<field
+			id="published" name="published"
+			type="jcalpublished"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox input-block-level"
+			filter="intval"
+			size="1"
+			default="1"
+		/>
+		<field
+			name="approved" id="approved"
+			type="list" class="inputbox input-block-level"
+			label="COM_JCALPRO_APPROVED"
+			description="COM_JCALPRO_APPROVED_DESC"
+			default="1"
+			filter="intval"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field
+			name="featured" id="featured"
+			type="list" class="inputbox input-block-level"
+			label="COM_JCALPRO_FEATURED"
+			description="COM_JCALPRO_FEATURED_DESC"
+			default="0"
+			filter="intval"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<!-- 
+	
+	Hidden options fieldset
+	
+	-->
+	<fieldset
+		name="hidden"
+		label="COM_JCALPRO_HIDDEN"
+	>
+		<field
+			id="id" name="id"
+			type="hidden"
+			class="inputbox"
+			label="COM_JCALPRO_ID_LABEL"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="asset_id" name="asset_id"
+			type="hidden"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="rec_id" name="rec_id"
+			type="hidden"
+			class="inputbox"
+			label="COM_JCALPRO_REC_ID_LABEL"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="created_by" name="created_by"
+			type="hidden"
+			class="inputbox"
+			label="COM_JCALPRO_OWNER_ID_LABEL"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="detached_from_rec" name="detached_from_rec"
+			type="hidden"
+			class="inputbox"
+			label="COM_JCALPRO_DETACHED_FROM_REC_LABEL"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="previous_recur_type" name="previous_recur_type"
+			type="hidden"
+			class="inputbox"
+			label="COM_JCALPRO_PREVIOUS_RECUR_TYPE_LABEL"
+			default="0"
+			readonly="true"
+		/>
+	</fieldset>
+	
+	<fieldset
+		name="captcha"
+		label="COM_JCALPRO_EVENT_CAPTCHA_FIELDSET"
+	>
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_JCALPRO_EVENT_CAPTCHA"
+			description="COM_JCALPRO_EVENT_CAPTCHA_DESC"
+			validate="captcha"
+		/>
+	</fieldset>
+	
+	<fields name="metadata">
+		<fieldset
+			name="jmetadata"
+			label="JGLOBAL_FIELDSET_METADATA_OPTIONS"
+		>
+			<field name="tags" type="tag"
+				label="JTAG" description="JTAG_DESC"
+				class="inputbox" multiple="true"
+			/>
+		</fieldset>
+	</fields>
+</form>

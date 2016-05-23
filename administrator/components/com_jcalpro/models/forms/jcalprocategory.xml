@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="jcalpro">
+			<field
+				name="jcalpro_color"
+				type="color"
+				default="#545454"
+				label="COM_JCALPRO_CATEGORY_COLOR"
+				description="COM_JCALPRO_CATEGORY_COLOR_DESC"
+			/>
+			<field
+				name="jcalpro_theme"
+				type="jcaltheme"
+				default="-1"
+				label="COM_JCALPRO_CATEGORY_THEME"
+				description="COM_JCALPRO_CATEGORY_THEME_DESC"
+				inherit="true"
+			/>
+			<field
+				name="jcalpro_eventform"
+				type="jcalform"
+				default=""
+				label="COM_JCALPRO_CATEGORY_EVENT_FORM"
+				description="COM_JCALPRO_CATEGORY_EVENT_FORM_DESC"
+				formtype="0"
+			/>
+			<field
+				name="jcalpro_registrationform"
+				type="jcalform"
+				default=""
+				label="COM_JCALPRO_CATEGORY_REGISTRATION_FORM"
+				description="COM_JCALPRO_CATEGORY_REGISTRATION_FORM_DESC"
+				formtype="1"
+			/>
+			<field
+				name="jcalpro_registration"
+				type="list"
+				default=""
+				label="COM_JCALPRO_CATEGORY_REGISTRATION"
+				description="COM_JCALPRO_CATEGORY_REGISTRATION_DESC"
+			>
+				<option value="">COM_JCALPRO_FORM_OPTION_INHERIT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field
+				name="jcalpro_category_description"
+				type="list"
+				default=""
+				label="COM_JCALPRO_CATEGORY_DESCRIPTION"
+				description="COM_JCALPRO_CATEGORY_DESCRIPTION_DESC"
+			>
+				<option value="">COM_JCALPRO_FORM_OPTION_INHERIT</option>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

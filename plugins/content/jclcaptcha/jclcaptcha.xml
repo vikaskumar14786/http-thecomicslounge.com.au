@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+  <name>plg_content_jclcaptcha</name>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <creationDate>2015-04-21</creationDate>
+  <author>Anything Digital</author>
+  <authorEmail>admin@anything-digital.com</authorEmail>
+  <authorUrl>http://anything-digital.com</authorUrl>
+  <copyright>Copyright (c) 2006-2012 Anything-Digital.com</copyright>
+  <license>GNU/GPL</license>
+  <version>3.2.19.4081</version>
+  <description>PLG_CONTENT_JCLCAPTCHA_XML_DESCRIPTION</description>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.plg_content_jclcaptcha.sys.ini</language>
+    <language tag="pt-BR">pt-BR/pt-BR.plg_content_jclcaptcha.sys.ini</language>
+    <language tag="es-ES">es-ES/es-ES.plg_content_jclcaptcha.sys.ini</language>
+    <language tag="nl-NL">nl-NL/nl-NL.plg_content_jclcaptcha.sys.ini</language>
+    <language tag="sv-SE">sv-SE/sv-SE.plg_content_jclcaptcha.sys.ini</language>
+    <language tag="no-NO">no-NO/no-NO.plg_content_jclcaptcha.sys.ini</language>
+    <language tag="ro-RO">ro-RO/ro-RO.plg_content_jclcaptcha.sys.ini</language>
+    <language tag="de-DE">de-DE/de-DE.plg_content_jclcaptcha.sys.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.plg_content_jclcaptcha.sys.ini</language>
+    <language tag="da-DK">da-DK/da-DK.plg_content_jclcaptcha.sys.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.plg_content_jclcaptcha.sys.ini</language>
+    <language tag="pl-PL">pl-PL/pl-PL.plg_content_jclcaptcha.sys.ini</language>
+  </languages>
+  <files>
+    <filename plugin="jclcaptcha">jclcaptcha.php</filename>
+    <filename>index.html</filename>
+  </files>
+  <compatibility>
+    <version>2</version>
+    <version>3</version>
+  </compatibility>
+  <config>
+	</config>
+</extension>

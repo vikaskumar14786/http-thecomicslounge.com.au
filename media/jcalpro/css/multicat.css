@@ -1,0 +1,64 @@
+/**
+ * @package		JCalPro
+ * @subpackage	com_jcalpro
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+/* in the interest of keeping this element fully self-contained, add our own clearing element here */
+.jcalmulticatsclear {
+	clear: both;
+}
+/* the main container for our drag & drop section */
+.jcalmulticats {
+	width: 500px;
+	padding: 4px;
+	border: 1px solid inherit;
+	min-height: 120px;
+}
+/* our main repository elements share a lot of the same styles */
+.jcalmulticatsdroppable {
+	float: left;
+	width: 240px;
+	border: 1px solid #ccc;
+	padding: 2px;
+	padding: 2px !important;
+	min-height: 120px;
+	background: #F8F8F8;
+	margin: 0 2px 0 0;
+	margin: 0 2px 0 0 !important;
+}
+.jcalmulticatsdroppable li {
+	list-style-type: none;
+}
+/* clones get added to the body (ew?) */
+li.jcalmulticatclone {
+	list-style-type: none;
+	text-align: left;
+}
+/* a multicat element */
+.jcalmulticat {
+	border: 1px solid black;
+	line-height: 14px;
+	font-size: 12px;
+	font-weight: bold;
+	height: 18px;
+	padding: 2px;
+	text-indent: 16px;
+	background: #FAFAFA;
+	width: 236px;
+	cursor: move;
+	margin-bottom: 2px;
+	/* default 1.7 template kills this */
+	margin-bottom: 2px !important;
+}
+/* style the assigned items a bit different */
+.jcalmulticatassigned {
+	font-style: italic;
+	font-weight: normal;
+	cursor: default;
+}
+.jcalmulticatdisabled {
+	background-image: url(../images/icon-16-default.png);
+	background-repeat: no-repeat;
+	bacground-position: left center;
+}

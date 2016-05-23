@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id$ -->
+<extension version="2.5" type="plugin" group="jevents" method="upgrade">
+	<name>JEvents - Time Limits</name>
+	<author>Geraint Edwards</author>
+	<creationDate>November 2015</creationDate>
+	<copyright>(C) 2009-2015 GWE Systems Ltd. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl>www.gwesystems.com</authorUrl>
+	<version>3.4.0</version>
+	<description>Limits events displayed to a range of dates.  For example auto archiving expired events or blocking events more than a set time in the future.</description>
+	<scriptfile>install/scriptfile.php</scriptfile>
+	<files>
+		<filename plugin="jevtimelimit">jevtimelimit.php</filename>
+		<folder>filters</folder>
+		<folder>install</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_jevents_jevtimelimit.ini</language>
+   	</languages>	
+	<config>
+		<fields name="params">
+
+			<fieldset  name="basic" 
+				addfieldpath="/administrator/components/com_jevents/fields/" 
+			>
+				<field 
+					name="past" 
+					type="text" 
+					default="-1" 
+					label="PLG_JEVENTS_JEVTIMELIMIT_PAST_DAYS_LABEL" 
+					description="PLG_JEVENTS_JEVTIMELIMIT_PAST_DAYS_DESC" 
+				/>
+				
+				<field 
+					name="future" 
+					type="text" 
+					default="-1" 
+					label="PLG_JEVENTS_JEVTIMELIMIT_FUTURE_DAYS_LABEL" 
+					description="PLG_JEVENTS_JEVTIMELIMIT_FUTURE_DAYS_DESC" 
+				/>
+				
+				<field 
+					name="override" 
+					type="radio" 
+					default="0" 
+					label="PLG_JEVENTS_JEVTIMELIMIT_OVERRIDE_LABEL" 
+					description="PLG_JEVENTS_JEVTIMELIMIT_OVERRIDE_DESC"
+				>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field 
+					name="dateformat" 
+					type="list" 
+					default="yyyy-mm-dd" 
+					label="PLG_JEVENTS_JEVTIMELIMIT_FILTER_DATE_FORMAT_LABEL" 
+					description="PLG_JEVENTS_JEVTIMELIMIT_FILTER_DATE_FORMAT_DESC" 
+				>
+					<option value="Y-m-d">PLG_JEVENTS_JEVTIMELIMIT_FILTER_DATE_FORMAT_YMD_VALUE</option>
+					<option value="m/d/Y">PLG_JEVENTS_JEVTIMELIMIT_FILTER_DATE_FORMAT_MDY_VALUE</option>
+					<option value="d/m/Y">PLG_JEVENTS_JEVTIMELIMIT_FILTER_DATE_FORMAT_DMY_VALUE</option>
+					<option value="d.m.Y">PLG_JEVENTS_JEVTIMELIMIT_FILTER_DATE_FORMAT_EUROPEAN_VALUE</option>
+				</field>
+				
+				<field 
+					name="inputpopup" 
+					type="jevboolean" 
+					default="1" 
+					menu="hide" 
+					label="PLG_JEVENTS_JEVTIMELIMIT_INPUT_DATE_LABEL" 
+					description="PLG_JEVENTS_JEVTIMELIMIT_INPUT_DATE_DESC"
+				/>
+				
+				<field name="cats" type="category" default="" multiple="multiple" size="10" extension="com_jevents" label="JEV_TIMELIMIT_CATEGORIES_TO_CONSTRAIN" description="JEV_TIMELIMIT_CATEGORIES_TO_CONSTRAIN_DESC"  />				
+			</fieldset>
+
+		</fields>
+	</config>	
+</extension>

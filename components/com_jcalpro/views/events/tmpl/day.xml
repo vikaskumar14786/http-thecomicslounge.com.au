@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JCALPRO_EVENTS_DAY_VIEW" option="COM_JCALPRO_EVENTS_DAY_VIEW">
+		<message>
+			<![CDATA[COM_JCALPRO_EVENTS_DAY_VIEW_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JCALPRO_EVENTS_DAY_VIEW_LABEL</name>
+		<description>COM_JCALPRO_EVENTS_DAY_VIEW_DESCRIPTION</description>
+		<url />
+		<fields name="params" addfieldpath="/administrator/components/com_jcalpro/models/fields">
+			<fieldset name="jcalpro">
+				<field
+					name="filter_category" id="filter_category"
+					type="category"
+					label="COM_JCALPRO_FILTER_CATEGORY"
+					description="COM_JCALPRO_FILTER_CATEGORY_DESC"
+					extension="com_jcalpro"
+					show_root="true"
+					multiple="multiple"
+					size="6"
+				/>
+				<field
+					name="filter_category_invert"
+					id="filter_category_invert"
+					type="list"
+					label="COM_JCALPRO_FILTER_CATEGORY_INVERT"
+					description="COM_JCALPRO_FILTER_CATEGORY_INVERT_DESC"
+					default="0"
+				>
+					<option value="1">COM_JCALPRO_FILTER_CATEGORY_INVERT_OPTION_EXCLUDE</option>
+					<option value="0">COM_JCALPRO_FILTER_CATEGORY_INVERT_OPTION_INCLUDE</option>
+				</field>
+				<field
+					name="day_title_limit" id="day_title_limit"
+					type="text" class="inputbox"
+					label="COM_JCALPRO_CONFIG_DAY_TITLE_LIMIT"
+					description="COM_JCALPRO_CONFIG_DAY_TITLE_LIMIT_DESC"
+					default="0" size="5"
+				/>
+				<field
+					name="day_description" id="day_description"
+					type="radio" class="btn-group btn-group-yesno"
+					label="COM_JCALPRO_CONFIG_DAY_DESCRIPTION"
+					description="COM_JCALPRO_CONFIG_DAY_DESCRIPTION_DESC"
+					default="1"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="day_description_limit" id="day_description_limit"
+					type="text" class="inputbox"
+					label="COM_JCALPRO_CONFIG_DAY_DESCRIPTION_LIMIT"
+					description="COM_JCALPRO_CONFIG_DAY_DESCRIPTION_LIMIT_DESC"
+					default="0" size="5"
+				/>
+				<field
+					name="filter_location" id="filter_location"
+					type="jcallocationlist" class="inputbox"
+					label="COM_JCALPRO_CONFIG_FILTER_LOCATION"
+					description="COM_JCALPRO_CONFIG_FILTER_LOCATION_DESC"
+				>
+					<option value="0">COM_JCALPRO_FILTER_LOCATION_WITHOUT</option>
+					<option value="-1">COM_JCALPRO_FILTER_LOCATION_ALL</option>
+					<option value="-2">COM_JCALPRO_FILTER_LOCATION_WITH</option>
+				</field>
+			</fieldset>
+		</fields>
+	</state>
+</metadata>

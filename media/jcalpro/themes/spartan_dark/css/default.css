@@ -1,0 +1,460 @@
+/**
+ * @package		JCalPro
+ * @subpackage	jcaltheme_spartan_dark
+
+**********************************************
+JCal Pro
+Copyright (c) 2006-2012 Anything-Digital.com
+**********************************************
+JCalPro is a native Joomla! calendar component for Joomla!
+
+JCal Pro was once a fork of the existing Extcalendar component for Joomla!
+(com_extcal_0_9_2_RC4.zip from mamboguru.com).
+Extcal (http://sourceforge.net/projects/extcal) was renamed
+and adapted to become a Mambo/Joomla! component by
+Matthew Friedman, and further modified by David McKinnis
+(mamboguru.com) to repair some security holes.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This header must not be removed. Additional contributions/changes
+may be added to this header as long as no information is deleted.
+**********************************************
+Get the latest version of JCal Pro at:
+http://anything-digital.com/
+**********************************************
+
+ */
+
+#jcl_component a,
+#jcl_component a:link,
+#jcl_component a:visited,
+#jcl_component a:hover,
+#jcl_component a:active {
+	color: #E0E4E4;
+}
+
+/* Toolbar */
+#jcl_component .jcl_toolbar_catselect {
+	padding: 4px 0px 6px 0px;
+	display: inline-block;
+}
+
+/* Toolbar Buttons */
+#jcl_component .jcl_toolbar_button,
+#jcl_component .jcl_toolbar_button:link,
+#jcl_component .jcl_toolbar_button:visited,
+#jcl_component .jcl_toolbar_button:hover,
+#jcl_component .jcl_toolbar_button:active {
+	min-width: 25px;
+	padding-top: 25px;
+	font-size: 1px;
+	margin: 0 8px;
+	display: inline-block;
+	color: #655241;
+	text-indent: -999px;
+	overflow: hidden;
+}
+#jcl_component .jcl_toolbar_button:hover {
+	color: #655241;
+}
+
+#jcl_component .jcl_toolbar_button_month,
+#jcl_component .jcl_toolbar_button_month:link,
+#jcl_component .jcl_toolbar_button_month:visited,
+#jcl_component .jcl_toolbar_button_month:hover,
+#jcl_component .jcl_toolbar_button_month:active {
+	background: transparent url(../images/icon-month.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_flat,
+#jcl_component .jcl_toolbar_button_flat:link,
+#jcl_component .jcl_toolbar_button_flat:visited,
+#jcl_component .jcl_toolbar_button_flat:hover,
+#jcl_component .jcl_toolbar_button_flat:active {
+	background: transparent url(../images/icon-flat.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_week,
+#jcl_component .jcl_toolbar_button_week:link,
+#jcl_component .jcl_toolbar_button_week:visited,
+#jcl_component .jcl_toolbar_button_week:hover,
+#jcl_component .jcl_toolbar_button_week:active {
+	background: transparent url(../images/icon-week.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_day,
+#jcl_component .jcl_toolbar_button_day:link,
+#jcl_component .jcl_toolbar_button_day:visited,
+#jcl_component .jcl_toolbar_button_day:hover,
+#jcl_component .jcl_toolbar_button_day:active {
+	background: transparent url(../images/icon-day.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_categories,
+#jcl_component .jcl_toolbar_button_categories:link,
+#jcl_component .jcl_toolbar_button_categories:visited,
+#jcl_component .jcl_toolbar_button_categories:hover,
+#jcl_component .jcl_toolbar_button_categories:active {
+	background: transparent url(../images/icon-categories.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_search,
+#jcl_component .jcl_toolbar_button_search:link,
+#jcl_component .jcl_toolbar_button_search:visited,
+#jcl_component .jcl_toolbar_button_search:hover,
+#jcl_component .jcl_toolbar_button_search:active {
+	background: transparent url(../images/icon-search.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_ical,
+#jcl_component .jcl_toolbar_button_ical:link,
+#jcl_component .jcl_toolbar_button_ical:visited,
+#jcl_component .jcl_toolbar_button_ical:hover,
+#jcl_component .jcl_toolbar_button_ical:active {
+	background: transparent url(../images/icon-ical.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_print,
+#jcl_component .jcl_toolbar_button_print:link,
+#jcl_component .jcl_toolbar_button_print:visited,
+#jcl_component .jcl_toolbar_button_print:hover,
+#jcl_component .jcl_toolbar_button_print:active {
+	background: transparent url(../images/icon-print.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_add,
+#jcl_component .jcl_toolbar_button_add:link,
+#jcl_component .jcl_toolbar_button_add:visited,
+#jcl_component .jcl_toolbar_button_add:hover,
+#jcl_component .jcl_toolbar_button_add:active {
+	background: transparent url(../images/icon-add.gif) no-repeat center top;
+}
+#jcl_component .jcl_toolbar_button_register,
+#jcl_component .jcl_toolbar_button_register:link,
+#jcl_component .jcl_toolbar_button_register:visited,
+#jcl_component .jcl_toolbar_button_register:hover,
+#jcl_component .jcl_toolbar_button_register:active {
+	background: transparent url(../images/icon-register.gif) no-repeat center top;
+}
+
+/* common navigation */
+#jcl_component .jcl_navbar {
+	height: 22px;
+	line-height: 22px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #151515;
+	border: 1px solid #728080;
+	color: #515151;
+}
+
+#jcl_component .jcl_previous,
+#jcl_component .jcl_next {
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#jcl_component .jcl_current {
+	width: 34%;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#jcl_component .jcl_previous a,
+#jcl_component .jcl_previous a:link,
+#jcl_component .jcl_previous a:visited,
+#jcl_component .jcl_previous a:hover,
+#jcl_component .jcl_previous a:active {
+	background: url(../images/mini_arrowleft.gif) no-repeat left center;
+	padding-left: 8px;
+}
+
+#jcl_component .jcl_next a,
+#jcl_component .jcl_next a:link,
+#jcl_component .jcl_next a:visited,
+#jcl_component .jcl_next a:hover,
+#jcl_component .jcl_next a:active {
+	background: url(../images/mini_arrowright.gif) no-repeat right center;
+	padding-right: 8px;
+}
+
+#jcl_component .jcl_next a,
+#jcl_component .jcl_previous a {
+  color: #E0E4E4;
+  text-decoration: none;
+}
+
+#jcl_component .jcl_previous a:hover,
+#jcl_component .jcl_next a:hover {
+	color: #CCC;
+	text-decoration: none;
+}
+
+#jcl_component .jcl_month_week_number {
+	background-color: #333333;
+	border-left: 1px solid #728080;
+	margin: 0px;
+	color: #515151;
+	font-size: 11px;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+#jcl_component #jcl_layout_body .jcl_month_week_number {
+	border-top: 1px solid #728080;
+	color: #515151;
+}
+
+#jcl_component .jcl_month_week_number a {
+	color: #E0E4E4;
+	text-decoration: none;
+}
+
+#jcl_component .jcl_month_week_number a:hover {
+	color: #E0E4E4;
+	text-decoration: underline;
+}
+
+#jcl_component .jcl_month_add {
+	padding-top: 2px;
+	padding-right: 2px;
+}
+
+#jcl_component .jcl_row {
+	text-align: left;
+	color: #515151;
+	background-color: #151515;
+}
+
+/* Weekday Label Cells */
+
+#jcl_component .weekday {
+	background-color: #333333;
+}
+
+#jcl_component .weekdaytopclr, #jcl_component .sundaytopclr {
+  background: #333333;/* url(../images/tile.gif) repeat-x scroll center bottom;*/
+  border-left: 1px solid #728080;
+  border-right: 1px solid #728080;
+	margin: 0px;
+	color: #515151;
+	padding-top: 6px;
+	padding-right: 12px;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	font-size: 13px;
+}
+
+#jcl_component .sundaytopclr {
+}
+
+/* Day Cells */
+#jcl_component .weekdayclr {
+	background-color: #151515;
+	color: #515151;
+	font-size: 11px;
+	border-left: 1px solid #728080;
+	border-right: 1px solid #728080;
+	border-top: 1px solid #728080;
+}
+
+#jcl_component .todayclr {
+	background-color: #333333;
+	color: #515151;
+	font-size: 11px;
+	border-left: 1px solid #728080;
+	border-right: 1px solid #728080;
+	border-top: 1px solid #728080;
+}
+
+#jcl_component .sundayemptyclr {
+	background-color: #151515;
+	color: #515151;
+	font-size: 11px;
+	border-left: 1px solid #728080;
+	border-right: 1px solid #728080;
+	border-top: 1px solid #728080;
+}
+
+#jcl_component .weekdayemptyclr {
+	background-color: #555555;
+	color: #E0E4E4;
+	font-size: 11px;
+	border-left: 1px solid #728080;
+	border-right: 1px solid #728080;
+	border-top: 1px solid #728080;
+}
+
+#jcl_component .weekdayhover {
+	background-color: #151515;
+}
+
+#jcl_component .sundayhover {
+	background-color: #151515;
+}
+
+#jcl_component .todayhover {
+	background-color: #333333;
+}
+
+/* Monthly View classes */
+#jcl_component .eventstyle {
+	font-size: 11px;
+	padding: 3px;
+	border-bottom: 2px solid #555555;
+	text-align: left;
+}
+#jcl_component .eventstyle img {
+	margin-right: 3px;
+}
+
+#jcl_component .eventfull,
+#jcl_component .eventfullrepeat,
+#jcl_component .eventfullrepeatchild,
+#jcl_component .eventfullrepeatdetached {
+	margin-left: 3px;
+	margin-right: 3px;
+	border-top: 1px solid #D0D4D4;
+	border-left: 1px solid #D0D4D4;
+	border-bottom: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	background-color: #333333;
+	cursor: auto;
+}
+
+#jcl_component .eventstart,
+#jcl_component .eventstartrepeat,
+#jcl_component .eventstartrepeatchild,
+#jcl_component .eventstartrepeatdetached {
+	margin-left: 3px;
+	border-top: 1px solid #D0D4D4;
+	border-left: 1px solid #D0D4D4;
+	border-bottom: 1px solid #FFFFFF;
+	background-color: #333333;
+	cursor: auto;
+}
+
+#jcl_component .eventmiddle,
+#jcl_component .eventmiddlerepeat,
+#jcl_component .eventmiddlerepeatchild,
+#jcl_component .eventmiddlerepeatdetached {
+	border-top: 1px solid #D0D4D4;
+	border-bottom: 1px solid #FFFFFF;
+	background-color: #333333;
+	cursor: auto;
+}
+
+#jcl_component .eventend,
+#jcl_component .eventendrepeat,
+#jcl_component .eventendrepeatchild,
+#jcl_component .eventendrepeatdetached {
+	margin-right: 3px;
+	border-top: 1px solid #D0D4D4;
+	border-bottom: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+	background-color: #333333;
+	cursor: auto;
+}
+
+/* search form */
+#jcl_component .jcl_search_form h3 {
+	text-align: left;
+}
+
+/* base styles */
+#jcl_component a {
+	text-decoration: none;
+}
+
+#jcl_component a:hover {
+	text-decoration: underline;
+}
+
+#jcl_component .atomic {
+	font-size: 11px;
+	text-align: left;
+}
+
+#jcl_component .atomic span.label {
+	font-weight: bold;
+	float: left;
+	margin-right: 5px;
+}
+
+#jcl_component .atomic-custom ul {
+	padding-left: 25px;
+	clear: left;
+}
+
+#jcl_component .powered_by {
+  color: #CCCCCC;
+  text-align: center;
+  padding: 5px 0px 3px;
+}
+
+#jcl_component .jcl_subtitlebar {
+	color: #606F79;
+	font-size: 11px;
+	height: 26px;
+	padding-top: 8px;
+	padding-right: 12px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	font-weight: bold;
+}
+
+#jcl_component .jcl_header {
+  background: #333333;/* url(../images/tile.gif) repeat-x scroll center bottom;*/
+  border-left: 1px solid #728080;
+	border-right: 0px solid #728080;
+	margin: 0px;
+	color: #FFFFFF;
+	padding-top: 6px;
+	padding-right: 12px;
+	padding-bottom: 6px;
+	padding-left: 12px;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+}
+
+/* forms */
+#jcl_component .jcl_form_label {
+	width: 160px;
+	padding: 6px 11px;
+}
+
+#jcl_component div.jcl_form_element {
+	padding: 6px 11px;
+}
+
+#jcl_component .jcl_form_element {
+	border-left: 1px solid white;
+}
+
+/* categories legend */
+#jcl_component .jcal_categories {
+	background-color: #151515;
+	border-top: 1px solid #728080;
+	color: #333333;
+	padding: 3px 11px;
+}
+#jcl_component .jcal_category {
+	width: 24%;
+}
+#jcl_component .jcal_category .jcal_category_color {
+	width: 5px;
+}
+
+.jcl_month_table,
+.jcl_month_inner_row,
+.jcl_month_inner_row tr,
+.jcl_month_inner_row td {
+	border-collapse: collapse;
+}
+
+
+#jcl_component .jcl_event_body h2 {
+	font-size: 1.1em;
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="plugin" group="vmpayment" method="upgrade" >
+    <name>VM Payment - eWay</name>
+    <creationDate>Sep 12 2013</creationDate>
+    <author>virtuemart Australia</author>
+    <authorUrl>http://www.virtuemart.com.au</authorUrl>
+    <copyright>Copyright (C) 2013 virtuemartaustralia. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>1.0</version>
+    <description>VMPAYMENT_EWAY_DESC</description>
+    <element>eway</element>
+    <files>
+	<filename plugin="eway">eway.php</filename>
+	<folder>eway</folder>
+    </files>
+     <languages>
+	<language tag="en-GB">language/en-GB.plg_vmpayment_eway.ini</language>
+    </languages>
+    <vmconfig>
+
+<fields name='params'>
+    <fieldset name='basic' addfieldpath="/plugins/vmpayment/eway/eway/elements" >
+	<field type="text" name="EWAY_CUSTID" label="VMPAYMENT_EWAY_MYCUSTOMERID" description="VMPAYMENT_EWAY_MYCUSTOMERID"/>
+	<field type="radio" name="EWAY_TEST_REQUEST" default='0' label="VMPAYMENT_EWAY_TEST_REQUEST" description="VMPAYMENT_EWAY_TEST_REQUEST">
+	    <option value='0'>No</option>
+	    <option value='1'>Yes</option>
+	</field>
+	<field name="creditcards" type="ewaycreditcards" multiple="multiple" default="" label="VMPAYMENT_EWAY_CREDITCARDS" description="VMPAYMENT_EWAY_CREDITCARDS_DESC">
+	    <option value="Visa">VMPAYMENT_EWAY_VISA</option>
+	    <option value="Mastercard">VMPAYMENT_EWAY_MASTERCARD</option>
+	    <option value="AmericanExpress">VMPAYMENT_EWAY_AMERICANEXPRESS</option>
+	    <option value="Discover">VMPAYMENT_EWAY_DISCOVER</option>
+	    <option value="DinersClub">VMPAYMENT_EWAY_DINERSCLUB</option>
+	    <option value="JCB">VMPAYMENT_EWAY_JCB</option>
+	</field>
+	<field	name="payment_logos" type="vmfiles" label="VMPAYMENT_EWAY_LOGOS"
+		description="VMPAYMENT_EWAY_LOGOS_DESC"
+		directory="/images/stories/virtuemart/payment"
+		default="default" hide_default="1" hide_none="1"
+		stripext="0"  exclude="^_" />
+	<field	name="cvv_images" type="vmfiles" label="VMPAYMENT_EWAY_CVVIMAGES"
+		description="VMPAYMENT_EWAY_CVVIMAGES_DESC"
+		directory="/images/stories/virtuemart/payment"
+		default="default" hide_default="1" hide_none="1"
+		stripext="0"  exclude="^_" />
+	<field name="debug" type="radio" default="0" label="VMPAYMENT_EWAY_DEBUG" description="VMPAYMENT_EWAY_DEBUG_DESC" >
+	    <option value="0">COM_VIRTUEMART_NO</option>
+	    <option value="1">COM_VIRTUEMART_YES</option>
+	</field>
+	<field name="payment_approved_status" type="vmorderstate" scope="com_virtuemart" default="C" label="VMPAYMENT_EWAY_ORDERSTATUS_APPROVED" description="VMPAYMENT_EWAY_ORDERSTATUS_SUCCESS_DESC" />
+	<field name="payment_declined_status" type="vmorderstate" scope="com_virtuemart" default="X" label="VMPAYMENT_EWAY_ORDERSTATUS_DECLINED" description="VMPAYMENT_EWAY_ORDERSTATUS_INVALID_DESC" />
+	<field name="payment_held_status" type="vmorderstate" scope="com_virtuemart" default="P" label="VMPAYMENT_EWAY_ORDERSTATUS_HELD" description="VMPAYMENT_EWAY_ORDERSTATUS_CANCEL_DESC" />
+	<field name="countries" type="vmcountries"  scope="com_virtuemart" default="" label="VMPAYMENT_EWAY_COUNTRIES_DESC" description="VMPAYMENT_EWAY_COUNTRIES_DESC"/>
+	<field name="min_amount" type="text"  label="VMPAYMENT_EWAY_MIN_AMOUNT" description="VMPAYMENT_EWAY_MIN_AMOUNT_DESC" />
+	<field name="max_amount" type="text"  label="VMPAYMENT_EWAY_MAX_AMOUNT" description="VMPAYMENT_EWAY_MAX_AMOUNT_DESC" />
+	<field name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="VMPAYMENT_EWAY_TAX" description="VMPAYMENT_EWAY_TAX_DESC" />
+
+    </fieldset></fields>
+    </vmconfig>
+</extension>

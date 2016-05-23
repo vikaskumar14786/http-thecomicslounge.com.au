@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+  <name>COM_JCALPRO</name>
+  <creationDate>2015-04-21</creationDate>
+  <author>Anything Digital</author>
+  <authorEmail>admin@anything-digital.com</authorEmail>
+  <authorUrl>http://anything-digital.com</authorUrl>
+  <copyright>Copyright (c) 2006-2012 Anything-Digital.com</copyright>
+  <license>GNU/GPL</license>
+  <version>3.2.19.4081</version>
+  <description>COM_JCALPRO_DESCRIPTION</description>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+  <update>
+    <schemas>
+      <schemapath type="mysql">sql/updates/mysql</schemapath>
+    </schemas>
+  </update>
+  <scriptfile>jcalpro.install.php</scriptfile>
+  <files folder="site">
+    <filename>controller.php</filename>
+    <filename>index.html</filename>
+    <filename>jcalpro.php</filename>
+    <filename>router.php</filename>
+    <filename>controllers/index.html</filename>
+    <filename>controllers/events.php</filename>
+    <filename>controllers/search.php</filename>
+    <filename>controllers/event.json.php</filename>
+    <filename>controllers/event.php</filename>
+    <filename>controllers/media.php</filename>
+    <filename>controllers/registration.php</filename>
+    <filename>controllers/location.php</filename>
+    <filename>helpers/index.html</filename>
+    <filename>helpers/html/index.html</filename>
+    <filename>helpers/html/jcalpro.php</filename>
+    <filename>helpers/category.php</filename>
+    <filename>helpers/route.php</filename>
+    <filename>models/index.html</filename>
+    <filename>models/events.php</filename>
+    <filename>models/locations.php</filename>
+    <filename>models/search.php</filename>
+    <filename>models/event.php</filename>
+    <filename>models/category.php</filename>
+    <filename>models/registration.php</filename>
+    <filename>models/location.php</filename>
+    <filename>models/categories.php</filename>
+    <filename>views/index.html</filename>
+    <filename>views/category/tmpl/index.html</filename>
+    <filename>views/category/tmpl/default_category_events.php</filename>
+    <filename>views/category/tmpl/default_category_empty.php</filename>
+    <filename>views/category/tmpl/default.xml</filename>
+    <filename>views/category/tmpl/default_category.php</filename>
+    <filename>views/category/index.html</filename>
+    <filename>views/category/view.html.php</filename>
+    <filename>views/category/view.ical.php</filename>
+    <filename>views/category/metadata.xml</filename>
+    <filename>views/registration/tmpl/index.html</filename>
+    <filename>views/registration/tmpl/edit.php</filename>
+    <filename>views/registration/index.html</filename>
+    <filename>views/registration/view.html.php</filename>
+    <filename>views/event/tmpl/index.html</filename>
+    <filename>views/event/tmpl/default_event.php</filename>
+    <filename>views/event/tmpl/default_event_map.php</filename>
+    <filename>views/event/tmpl/default.xml</filename>
+    <filename>views/event/tmpl/default_event_tags.php</filename>
+    <filename>views/event/tmpl/default_event_registration.php</filename>
+    <filename>views/event/tmpl/edit.php</filename>
+    <filename>views/event/tmpl/edit.xml</filename>
+    <filename>views/event/index.html</filename>
+    <filename>views/event/view.json.php</filename>
+    <filename>views/event/view.html.php</filename>
+    <filename>views/event/view.ical.php</filename>
+    <filename>views/event/metadata.xml</filename>
+    <filename>views/event/baseview.php</filename>
+    <filename>views/common/tmpl/index.html</filename>
+    <filename>views/common/tmpl/default_filters.php</filename>
+    <filename>views/common/tmpl/default_debug.php</filename>
+    <filename>views/common/tmpl/default_bottom.php</filename>
+    <filename>views/common/tmpl/default_event_admin.php</filename>
+    <filename>views/common/tmpl/default_toolbar.php</filename>
+    <filename>views/common/tmpl/default.php</filename>
+    <filename>views/common/tmpl/default_middle.php</filename>
+    <filename>views/common/tmpl/modal_responsive.php</filename>
+    <filename>views/common/tmpl/default_search_form.php</filename>
+    <filename>views/common/tmpl/edit_debug.php</filename>
+    <filename>views/common/tmpl/default_top.php</filename>
+    <filename>views/common/tmpl/default_toolbar_button.php</filename>
+    <filename>views/common/tmpl/default_ajax.php</filename>
+    <filename>views/common/index.html</filename>
+    <filename>views/events/tmpl/flat.xml</filename>
+    <filename>views/events/tmpl/default_month_head.php</filename>
+    <filename>views/events/tmpl/default_week_body.php</filename>
+    <filename>views/events/tmpl/default_admin.php</filename>
+    <filename>views/events/tmpl/default_flat_body.php</filename>
+    <filename>views/events/tmpl/default_day.php</filename>
+    <filename>views/events/tmpl/default_flat.php</filename>
+    <filename>views/events/tmpl/default_categories.php</filename>
+    <filename>views/events/tmpl/week.xml</filename>
+    <filename>views/events/tmpl/default_week_head.php</filename>
+    <filename>views/events/tmpl/month.xml</filename>
+    <filename>views/events/tmpl/default_admin_body.php</filename>
+    <filename>views/events/tmpl/default_week.php</filename>
+    <filename>views/events/tmpl/default_day_head.php</filename>
+    <filename>views/events/tmpl/default_admin_head.php</filename>
+    <filename>views/events/tmpl/default_month_body.php</filename>
+    <filename>views/events/tmpl/admin.xml</filename>
+    <filename>views/events/tmpl/default_flat_head.php</filename>
+    <filename>views/events/tmpl/day.xml</filename>
+    <filename>views/events/tmpl/default_month.php</filename>
+    <filename>views/events/tmpl/default_day_body.php</filename>
+    <filename>views/events/tmpl/default_navbar.php</filename>
+    <filename>views/events/view.html.php</filename>
+    <filename>views/events/view.ical.php</filename>
+    <filename>views/events/view.feed.php</filename>
+    <filename>views/events/view.raw.php</filename>
+    <filename>views/events/metadata.xml</filename>
+    <filename>views/events/baseview.php</filename>
+    <filename>views/search/tmpl/index.html</filename>
+    <filename>views/search/tmpl/default_search_title.php</filename>
+    <filename>views/search/tmpl/default_search_empty.php</filename>
+    <filename>views/search/tmpl/default_search.php</filename>
+    <filename>views/search/tmpl/default.xml</filename>
+    <filename>views/search/tmpl/default_search_results.php</filename>
+    <filename>views/search/index.html</filename>
+    <filename>views/search/view.html.php</filename>
+    <filename>views/search/metadata.xml</filename>
+    <filename>views/location/tmpl/index.html</filename>
+    <filename>views/location/tmpl/default_location.php</filename>
+    <filename>views/location/tmpl/default_location_directions_form.php</filename>
+    <filename>views/location/tmpl/default_location_events.php</filename>
+    <filename>views/location/index.html</filename>
+    <filename>views/location/view.html.php</filename>
+    <filename>views/categories/tmpl/index.html</filename>
+    <filename>views/categories/tmpl/default_categories.php</filename>
+    <filename>views/categories/tmpl/default.xml</filename>
+    <filename>views/categories/index.html</filename>
+    <filename>views/categories/view.html.php</filename>
+    <filename>views/categories/metadata.xml</filename>
+  </files>
+  <media destination="jcalpro" folder="media">
+    <filename>index.html</filename>
+    <filename>css/index.html</filename>
+    <filename>css/multicat.css</filename>
+    <filename>css/map.css</filename>
+    <filename>css/module_debug.css</filename>
+    <filename>css/modal.css</filename>
+    <filename>css/formfield.css</filename>
+    <filename>css/admin.css</filename>
+    <filename>css/debug.css</filename>
+    <filename>css/common.css</filename>
+    <filename>css/field.css</filename>
+    <filename>css/default.css</filename>
+    <filename>css/keyval.css</filename>
+    <filename>css/event.css</filename>
+    <filename>css/print.css</filename>
+    <filename>css/config.css</filename>
+    <filename>images/index.html</filename>
+    <filename>images/icon-plus.gif</filename>
+    <filename>images/icon-edit.png</filename>
+    <filename>images/ajax-loader.gif</filename>
+    <filename>images/icon-48-emails.png</filename>
+    <filename>images/icon-32-cancel.png</filename>
+    <filename>images/fields/icon-checkbox.png</filename>
+    <filename>images/fields/index.html</filename>
+    <filename>images/fields/icon-email.png</filename>
+    <filename>images/fields/icon-folderlist.png</filename>
+    <filename>images/fields/icon-radio.png</filename>
+    <filename>images/fields/icon-text.png</filename>
+    <filename>images/fields/icon-filelist.png</filename>
+    <filename>images/fields/icon-checkboxes.png</filename>
+    <filename>images/fields/icon-unknown.png</filename>
+    <filename>images/fields/icon-file.png</filename>
+    <filename>images/icon-minus.gif</filename>
+    <filename>images/mini_arrowright.gif</filename>
+    <filename>images/icon-16-search.png</filename>
+    <filename>images/icon-month.gif</filename>
+    <filename>images/icon-16-fields.png</filename>
+    <filename>images/icon-48-about.png</filename>
+    <filename>images/icon-48-themes.png</filename>
+    <filename>images/icon-48-registration.png</filename>
+    <filename>images/txtboxbg.gif</filename>
+    <filename>images/icon-16-forms.png</filename>
+    <filename>images/icon-32-apply.png</filename>
+    <filename>images/spacer.gif</filename>
+    <filename>images/btn_bg.gif</filename>
+    <filename>images/icon-16-registration.png</filename>
+    <filename>images/icon-48-locations.png</filename>
+    <filename>images/icon-28-jcalpro.png</filename>
+    <filename>images/icon-16-locations.png</filename>
+    <filename>images/icon-48-help.png</filename>
+    <filename>images/mini_arrowleft.gif</filename>
+    <filename>images/icon-48-events.png</filename>
+    <filename>images/icon-16-emails.png</filename>
+    <filename>images/tile_back1.gif</filename>
+    <filename>images/icon-48-category.png</filename>
+    <filename>images/icon-48-forms.png</filename>
+    <filename>images/icon-delete.png</filename>
+    <filename>images/icon-16-default.png</filename>
+    <filename>images/jcal_logo_small.png</filename>
+    <filename>images/icon-16-help.png</filename>
+    <filename>images/jcalpro.png</filename>
+    <filename>images/icon-48-category-add.png</filename>
+    <filename>images/events/icon-event-enddate-detached.gif</filename>
+    <filename>images/events/index.html</filename>
+    <filename>images/events/icon-event-middate.gif</filename>
+    <filename>images/events/icon-event-enddate-child.gif</filename>
+    <filename>images/events/icon-event-enddate.gif</filename>
+    <filename>images/events/icon-event-middate-child.gif</filename>
+    <filename>images/events/icon-event-location.png</filename>
+    <filename>images/events/icon-event-startdate-detached.gif</filename>
+    <filename>images/events/icon-event-startdate.gif</filename>
+    <filename>images/events/icon-event-onedate-child.gif</filename>
+    <filename>images/events/icon-event-onedate.gif</filename>
+    <filename>images/events/icon-event-middate-detached.gif</filename>
+    <filename>images/events/icon-event-private.gif</filename>
+    <filename>images/events/icon-event-startdate-child.gif</filename>
+    <filename>images/events/icon-event-onedate-detached.gif</filename>
+    <filename>images/events/icon-event-featured.png</filename>
+    <filename>images/icon-30-jcalpro.png</filename>
+    <filename>images/icon-print.gif</filename>
+    <filename>images/icon-flat.gif</filename>
+    <filename>images/icon-28-jcalpro-light.png</filename>
+    <filename>images/icon-16-links.png</filename>
+    <filename>images/addsign_a.gif</filename>
+    <filename>images/icon-add.gif</filename>
+    <filename>images/icon-categories.gif</filename>
+    <filename>images/icon-register.gif</filename>
+    <filename>images/icon-ical.gif</filename>
+    <filename>images/jcal_logo.png</filename>
+    <filename>images/addsign.gif</filename>
+    <filename>images/icon-32-save.png</filename>
+    <filename>images/icon-week.gif</filename>
+    <filename>images/icon-publish.png</filename>
+    <filename>images/icon-day.gif</filename>
+    <filename>images/tile_sub.gif</filename>
+    <filename>images/icon-48-jcalpro.png</filename>
+    <filename>images/icon-search.gif</filename>
+    <filename>images/icon-approve.png</filename>
+    <filename>images/icon-16-events.png</filename>
+    <filename>images/icon-32-new.png</filename>
+    <filename>images/icon-48-fields.png</filename>
+    <filename>images/icon-48-categories.png</filename>
+    <filename>images/icon-30-jcalpro-light.png</filename>
+    <filename>images/icon-16-about.png</filename>
+    <filename>js/jcalpro.js</filename>
+    <filename>js/ajax.js</filename>
+    <filename>js/index.html</filename>
+    <filename>js/map.js</filename>
+    <filename>js/modal.js</filename>
+    <filename>js/updatecheck.js</filename>
+    <filename>js/keyval.js</filename>
+    <filename>js/migration.js</filename>
+    <filename>js/imagemanager.js</filename>
+    <filename>js/event.js</filename>
+    <filename>js/formtype.js</filename>
+    <filename>js/events.js</filename>
+    <filename>js/catselect.js</filename>
+    <filename>js/field.js</filename>
+    <filename>js/formfield.js</filename>
+    <filename>js/categories.js</filename>
+    <filename>js/month.js</filename>
+    <filename>libs/jscolor/index.html</filename>
+    <filename>libs/jscolor/jscolor.js</filename>
+    <filename>libs/jscolor/cross.gif</filename>
+    <filename>libs/jscolor/arrow.gif</filename>
+    <filename>libs/jscolor/hs.png</filename>
+    <filename>libs/jscolor/hv.png</filename>
+    <filename>libs/index.html</filename>
+    <filename>modules/index.html</filename>
+    <filename>plugins/index.html</filename>
+    <filename>qrcodes/index.html</filename>
+    <filename>themes/index.html</filename>
+    <filename>uploads/index.html</filename>
+  </media>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.com_jcalpro.ini</language>
+    <language tag="pt-BR">pt-BR/pt-BR.com_jcalpro.ini</language>
+    <language tag="es-ES">es-ES/es-ES.com_jcalpro.ini</language>
+    <language tag="nl-NL">nl-NL/nl-NL.com_jcalpro.ini</language>
+    <language tag="sv-SE">sv-SE/sv-SE.com_jcalpro.ini</language>
+    <language tag="no-NO">no-NO/no-NO.com_jcalpro.ini</language>
+    <language tag="ro-RO">ro-RO/ro-RO.com_jcalpro.ini</language>
+    <language tag="de-DE">de-DE/de-DE.com_jcalpro.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.com_jcalpro.ini</language>
+    <language tag="da-DK">da-DK/da-DK.com_jcalpro.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.com_jcalpro.ini</language>
+    <language tag="pl-PL">pl-PL/pl-PL.com_jcalpro.ini</language>
+  </languages>
+  <administration>
+    <menu img="../media/jcalpro/images/jcalpro.png">COM_JCALPRO</menu>
+    <submenu>
+      <!--
+				Note that all & must be escaped to &amp; for the file to be valid
+				XML and be parsed by the installer
+			-->
+      <menu link="option=com_jcalpro&amp;view=events" view="events" img="../media/jcalpro/images/icon-16-events.png" alt="JCalPro/Events">COM_JCALPRO_EVENTS</menu>
+      <menu link="option=com_categories&amp;extension=com_jcalpro" view="categories" img="class:category" alt="JCalPro/Categories">COM_JCALPRO_CATEGORIES</menu>
+      <menu link="option=com_jcalpro&amp;view=locations" view="locations" img="../media/jcalpro/images/icon-16-locations.png" alt="JCalPro/Fields">COM_JCALPRO_LOCATIONS</menu>
+      <menu link="option=com_jcalpro&amp;view=registrations" view="registrations" img="../media/jcalpro/images/icon-16-registration.png" alt="JCalPro/Fields">COM_JCALPRO_REGISTRATIONS</menu>
+      <menu link="option=com_jcalpro&amp;view=forms" view="forms" img="../media/jcalpro/images/icon-16-forms.png" alt="JCalPro/Forms">COM_JCALPRO_FORMS</menu>
+      <menu link="option=com_jcalpro&amp;view=fields" view="fields" img="../media/jcalpro/images/icon-16-fields.png" alt="JCalPro/Fields">COM_JCALPRO_FIELDS</menu>
+      <menu link="option=com_jcalpro&amp;view=emails" view="fields" img="../media/jcalpro/images/icon-16-emails.png" alt="JCalPro/Emails">COM_JCALPRO_EMAILS</menu>
+      <menu link="option=com_jcalpro&amp;view=about" view="about" img="../media/jcalpro/images/icon-16-about.png" alt="JCalPro/Help">COM_JCALPRO_ABOUT</menu>
+      <menu link="option=com_jcalpro&amp;view=help" view="help" img="../media/jcalpro/images/icon-16-help.png" alt="JCalPro/Help">COM_JCALPRO_HELP</menu>
+    </submenu>
+    <files folder="admin">
+      <filename>access.xml</filename>
+      <filename>jcalpro.php</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <filename>index.html</filename>
+      <filename>controllers/email.php</filename>
+      <filename>controllers/index.html</filename>
+      <filename>controllers/events.php</filename>
+      <filename>controllers/forms.php</filename>
+      <filename>controllers/locations.php</filename>
+      <filename>controllers/install.json.php</filename>
+      <filename>controllers/emails.php</filename>
+      <filename>controllers/field.php</filename>
+      <filename>controllers/event.json.php</filename>
+      <filename>controllers/event.php</filename>
+      <filename>controllers/media.php</filename>
+      <filename>controllers/registration.php</filename>
+      <filename>controllers/location.php</filename>
+      <filename>controllers/fields.php</filename>
+      <filename>controllers/registrations.php</filename>
+      <filename>controllers/form.php</filename>
+      <filename>helpers/index.html</filename>
+      <filename>helpers/mail.php</filename>
+      <filename>helpers/module.php</filename>
+      <filename>helpers/path.php</filename>
+      <filename>helpers/url.php</filename>
+      <filename>helpers/log.php</filename>
+      <filename>helpers/access.php</filename>
+      <filename>helpers/theme.php</filename>
+      <filename>helpers/toolbar.php</filename>
+      <filename>helpers/jcalpro.php</filename>
+      <filename>helpers/array.php</filename>
+      <filename>helpers/tags.php</filename>
+      <filename>helpers/ical.php</filename>
+      <filename>helpers/date.php</filename>
+      <filename>helpers/filter.php</filename>
+      <filename>helpers/form.php</filename>
+      <filename>libraries/index.html</filename>
+      <filename>libraries/fields/index.html</filename>
+      <filename>libraries/fields/jcalpromedia.php</filename>
+      <filename>libraries/net.php</filename>
+      <filename>libraries/tables/asset.php</filename>
+      <filename>libraries/views/baseviewlist.php</filename>
+      <filename>libraries/views/index.html</filename>
+      <filename>libraries/views/basevieweventjson.php</filename>
+      <filename>libraries/views/baseviewitem.php</filename>
+      <filename>libraries/views/baseviewjson.php</filename>
+      <filename>libraries/views/fieldview.php</filename>
+      <filename>libraries/views/baseview.php</filename>
+      <filename>libraries/models/index.html</filename>
+      <filename>libraries/models/basemodelregistration.php</filename>
+      <filename>libraries/models/basemodeladmin.php</filename>
+      <filename>libraries/models/basemodelevents.php</filename>
+      <filename>libraries/models/basemodelcustomform.php</filename>
+      <filename>libraries/models/basemodelevent.php</filename>
+      <filename>libraries/models/basemodellocations.php</filename>
+      <filename>libraries/models/basemodel.php</filename>
+      <filename>libraries/models/basemodellist.php</filename>
+      <filename>libraries/controllers/basecontroller.php</filename>
+      <filename>libraries/controllers/basecontrollerpresave.php</filename>
+      <filename>libraries/controllers/basecontrollerlocation.php</filename>
+      <filename>libraries/controllers/basecontrollerevent.php</filename>
+      <filename>libraries/controllers/basecontrollerlocations.php</filename>
+      <filename>libraries/controllers/basecontrollerform.php</filename>
+      <filename>libraries/controllers/basecontrolleradmin.php</filename>
+      <filename>libraries/controllers/basecontrollerevents.php</filename>
+      <filename>libraries/controllers/basecontrollereventjson.php</filename>
+      <filename>libraries/form.php</filename>
+      <filename>models/email.php</filename>
+      <filename>models/index.html</filename>
+      <filename>models/fields/jcallocationlist.php</filename>
+      <filename>models/fields/jcalformtype.php</filename>
+      <filename>models/fields/index.html</filename>
+      <filename>models/fields/jcalusertext.php</filename>
+      <filename>models/fields/jcalformfields.php</filename>
+      <filename>models/fields/jcaldatetime.php</filename>
+      <filename>models/fields/jcaleditorbuttons.php</filename>
+      <filename>models/fields/jcalkeyval.php</filename>
+      <filename>models/fields/jcalfieldtype.php</filename>
+      <filename>models/fields/jcalpublished.php</filename>
+      <filename>models/fields/modal/index.html</filename>
+      <filename>models/fields/modal/jcallocation.php</filename>
+      <filename>models/fields/modal/jcalevent.php</filename>
+      <filename>models/fields/modal/jcalcategory.php</filename>
+      <filename>models/fields/jcaltimezone.php</filename>
+      <filename>models/fields/jcaladdress.php</filename>
+      <filename>models/fields/jcaluseremail.php</filename>
+      <filename>models/fields/jcaldateformat.php</filename>
+      <filename>models/fields/jcalmulticat.php</filename>
+      <filename>models/fields/jcalemailcontext.php</filename>
+      <filename>models/fields/jcalform.php</filename>
+      <filename>models/fields/jcalfields.php</filename>
+      <filename>models/fields/jcalcolor.php</filename>
+      <filename>models/fields/jcaltheme.php</filename>
+      <filename>models/events.php</filename>
+      <filename>models/forms.php</filename>
+      <filename>models/locations.php</filename>
+      <filename>models/emails.php</filename>
+      <filename>models/field.php</filename>
+      <filename>models/event.php</filename>
+      <filename>models/media.php</filename>
+      <filename>models/registration.php</filename>
+      <filename>models/install.php</filename>
+      <filename>models/location.php</filename>
+      <filename>models/forms/registrations.xml</filename>
+      <filename>models/forms/forms.xml</filename>
+      <filename>models/forms/location.xml</filename>
+      <filename>models/forms/email.xml</filename>
+      <filename>models/forms/fields.xml</filename>
+      <filename>models/forms/form.xml</filename>
+      <filename>models/forms/field.xml</filename>
+      <filename>models/forms/jcalprocategory.xml</filename>
+      <filename>models/forms/event.xml</filename>
+      <filename>models/forms/registration.xml</filename>
+      <filename>models/forms/locations.xml</filename>
+      <filename>models/fields.php</filename>
+      <filename>models/registrations.php</filename>
+      <filename>models/form.php</filename>
+      <filename>sql/index.html</filename>
+      <filename>sql/uninstall.mysql.utf8.sql</filename>
+      <filename>sql/updates/index.html</filename>
+      <filename>sql/updates/mysql/index.html</filename>
+      <filename>sql/updates/mysql/3.2.5.sql</filename>
+      <filename>sql/updates/mysql/3.1.1.sql</filename>
+      <filename>sql/updates/mysql/3.2.1.sql</filename>
+      <filename>sql/updates/mysql/3.2.5-2.sql</filename>
+      <filename>sql/updates/mysql/3.2.2.sql</filename>
+      <filename>sql/updates/mysql/3.2.12-2.sql</filename>
+      <filename>sql/updates/mysql/3.2.12.sql</filename>
+      <filename>sql/updates/mysql/3.0.2.sql</filename>
+      <filename>sql/updates/mysql/3.2.9-3.sql</filename>
+      <filename>sql/updates/mysql/3.0.1.sql</filename>
+      <filename>sql/updates/mysql/3.2.9.sql</filename>
+      <filename>sql/updates/mysql/3.1.0.sql</filename>
+      <filename>sql/updates/mysql/3.0.0.sql</filename>
+      <filename>sql/updates/mysql/3.2.0.sql</filename>
+      <filename>sql/updates/mysql/3.2.12-3.sql</filename>
+      <filename>sql/updates/mysql/3.2.9-2.sql</filename>
+      <filename>sql/install.mysql.utf8.sql</filename>
+      <filename>tables/email.php</filename>
+      <filename>tables/index.html</filename>
+      <filename>tables/field.php</filename>
+      <filename>tables/event.php</filename>
+      <filename>tables/registration.php</filename>
+      <filename>tables/location.php</filename>
+      <filename>tables/form.php</filename>
+      <filename>views/index.html</filename>
+      <filename>views/email/tmpl/edit_legacy.php</filename>
+      <filename>views/email/tmpl/index.html</filename>
+      <filename>views/email/tmpl/default.php</filename>
+      <filename>views/email/tmpl/edit_form.php</filename>
+      <filename>views/email/tmpl/edit.php</filename>
+      <filename>views/email/index.html</filename>
+      <filename>views/email/view.html.php</filename>
+      <filename>views/email/view.raw.php</filename>
+      <filename>views/fields/tmpl/index.html</filename>
+      <filename>views/fields/tmpl/default.php</filename>
+      <filename>views/fields/tmpl/default_head.php</filename>
+      <filename>views/fields/tmpl/default_body.php</filename>
+      <filename>views/fields/tmpl/default_empty.php</filename>
+      <filename>views/fields/tmpl/default_permissions.php</filename>
+      <filename>views/fields/index.html</filename>
+      <filename>views/fields/view.html.php</filename>
+      <filename>views/registration/tmpl/edit_legacy.php</filename>
+      <filename>views/registration/tmpl/index.html</filename>
+      <filename>views/registration/tmpl/edit_form.php</filename>
+      <filename>views/registration/tmpl/edit.php</filename>
+      <filename>views/registration/index.html</filename>
+      <filename>views/registration/view.html.php</filename>
+      <filename>views/field/tmpl/edit_legacy.php</filename>
+      <filename>views/field/tmpl/index.html</filename>
+      <filename>views/field/tmpl/edit_form.php</filename>
+      <filename>views/field/tmpl/edit.php</filename>
+      <filename>views/field/index.html</filename>
+      <filename>views/field/view.html.php</filename>
+      <filename>views/about/tmpl/index.html</filename>
+      <filename>views/about/tmpl/default.php</filename>
+      <filename>views/about/index.html</filename>
+      <filename>views/about/view.html.php</filename>
+      <filename>views/install/tmpl/index.html</filename>
+      <filename>views/install/tmpl/default_info.php</filename>
+      <filename>views/install/tmpl/default.php</filename>
+      <filename>views/install/tmpl/default_info_legacy.php</filename>
+      <filename>views/install/index.html</filename>
+      <filename>views/install/view.json.php</filename>
+      <filename>views/install/view.html.php</filename>
+      <filename>views/install/view.raw.php</filename>
+      <filename>views/dashboard/tmpl/index.html</filename>
+      <filename>views/dashboard/tmpl/default_common_event_list.php</filename>
+      <filename>views/dashboard/tmpl/default_panes.php</filename>
+      <filename>views/dashboard/tmpl/default.php</filename>
+      <filename>views/dashboard/tmpl/default_button.php</filename>
+      <filename>views/dashboard/tmpl/default_feed.php</filename>
+      <filename>views/dashboard/index.html</filename>
+      <filename>views/dashboard/view.html.php</filename>
+      <filename>views/event/tmpl/edit_legacy.php</filename>
+      <filename>views/event/tmpl/index.html</filename>
+      <filename>views/event/tmpl/default.php</filename>
+      <filename>views/event/tmpl/edit_form.php</filename>
+      <filename>views/event/tmpl/edit.php</filename>
+      <filename>views/event/tmpl/modal.php</filename>
+      <filename>views/event/index.html</filename>
+      <filename>views/event/view.json.php</filename>
+      <filename>views/event/view.html.php</filename>
+      <filename>views/common/tmpl/index.html</filename>
+      <filename>views/common/tmpl/default_filters.php</filename>
+      <filename>views/common/tmpl/default_debug.php</filename>
+      <filename>views/common/tmpl/default_submenu.php</filename>
+      <filename>views/common/tmpl/modal_responsive.php</filename>
+      <filename>views/common/tmpl/edit_debug.php</filename>
+      <filename>views/common/tmpl/default_foot.php</filename>
+      <filename>views/common/tmpl/default_filter.php</filename>
+      <filename>views/common/index.html</filename>
+      <filename>views/events/tmpl/index.html</filename>
+      <filename>views/events/tmpl/default.php</filename>
+      <filename>views/events/tmpl/default_head.php</filename>
+      <filename>views/events/tmpl/default_body.php</filename>
+      <filename>views/events/tmpl/default_import.php</filename>
+      <filename>views/events/tmpl/default_empty.php</filename>
+      <filename>views/events/tmpl/default_import_legacy.php</filename>
+      <filename>views/events/tmpl/button.php</filename>
+      <filename>views/events/tmpl/modal.php</filename>
+      <filename>views/events/tmpl/default_import_form.php</filename>
+      <filename>views/events/index.html</filename>
+      <filename>views/events/view.html.php</filename>
+      <filename>views/location/tmpl/edit_legacy.php</filename>
+      <filename>views/location/tmpl/index.html</filename>
+      <filename>views/location/tmpl/edit_form.php</filename>
+      <filename>views/location/tmpl/edit.php</filename>
+      <filename>views/location/tmpl/.edit.php.swp</filename>
+      <filename>views/location/index.html</filename>
+      <filename>views/location/view.html.php</filename>
+      <filename>views/form/tmpl/edit_legacy.php</filename>
+      <filename>views/form/tmpl/index.html</filename>
+      <filename>views/form/tmpl/edit_form.php</filename>
+      <filename>views/form/tmpl/edit.php</filename>
+      <filename>views/form/index.html</filename>
+      <filename>views/form/view.html.php</filename>
+      <filename>views/registrations/tmpl/index.html</filename>
+      <filename>views/registrations/tmpl/default.php</filename>
+      <filename>views/registrations/tmpl/default_head.php</filename>
+      <filename>views/registrations/tmpl/default_body.php</filename>
+      <filename>views/registrations/tmpl/default_empty.php</filename>
+      <filename>views/registrations/tmpl/default_permissions.php</filename>
+      <filename>views/registrations/index.html</filename>
+      <filename>views/registrations/view.html.php</filename>
+      <filename>views/registrations/view.csv.php</filename>
+      <filename>views/emails/tmpl/index.html</filename>
+      <filename>views/emails/tmpl/default.php</filename>
+      <filename>views/emails/tmpl/default_head.php</filename>
+      <filename>views/emails/tmpl/default_body.php</filename>
+      <filename>views/emails/tmpl/default_empty.php</filename>
+      <filename>views/emails/index.html</filename>
+      <filename>views/emails/view.html.php</filename>
+      <filename>views/locations/tmpl/index.html</filename>
+      <filename>views/locations/tmpl/default.php</filename>
+      <filename>views/locations/tmpl/default_head.php</filename>
+      <filename>views/locations/tmpl/default_body.php</filename>
+      <filename>views/locations/tmpl/default_empty.php</filename>
+      <filename>views/locations/tmpl/modal_toolbar.php</filename>
+      <filename>views/locations/tmpl/modal.php</filename>
+      <filename>views/locations/tmpl/default_permissions.php</filename>
+      <filename>views/locations/index.html</filename>
+      <filename>views/locations/view.html.php</filename>
+      <filename>views/forms/tmpl/index.html</filename>
+      <filename>views/forms/tmpl/default.php</filename>
+      <filename>views/forms/tmpl/default_head.php</filename>
+      <filename>views/forms/tmpl/default_body.php</filename>
+      <filename>views/forms/tmpl/default_empty.php</filename>
+      <filename>views/forms/tmpl/default_permissions.php</filename>
+      <filename>views/forms/index.html</filename>
+      <filename>views/forms/view.html.php</filename>
+      <filename>views/media/tmpl/index.html</filename>
+      <filename>views/media/tmpl/list.php</filename>
+      <filename>views/media/tmpl/default.php</filename>
+      <filename>views/media/tmpl/list_image.php</filename>
+      <filename>views/media/tmpl/list_folder.php</filename>
+      <filename>views/media/index.html</filename>
+      <filename>views/media/view.html.php</filename>
+    </files>
+    <languages folder="language">
+      <language tag="en-GB">en-GB/admin/en-GB.com_jcalpro.ini</language>
+      <language tag="en-GB">en-GB/admin/en-GB.com_jcalpro.emails.ini</language>
+      <language tag="en-GB">en-GB/admin/en-GB.com_jcalpro.event.ini</language>
+      <language tag="en-GB">en-GB/admin/en-GB.com_jcalpro.sys.ini</language>
+      <language tag="pt-BR">pt-BR/admin/pt-BR.com_jcalpro.emails.ini</language>
+      <language tag="es-ES">es-ES/admin/es-ES.com_jcalpro.emails.ini</language>
+      <language tag="nl-NL">nl-NL/admin/nl-NL.com_jcalpro.emails.ini</language>
+      <language tag="sv-SE">sv-SE/admin/sv-SE.com_jcalpro.emails.ini</language>
+      <language tag="no-NO">no-NO/admin/no-NO.com_jcalpro.emails.ini</language>
+      <language tag="ro-RO">ro-RO/admin/ro-RO.com_jcalpro.emails.ini</language>
+      <language tag="de-DE">de-DE/admin/de-DE.com_jcalpro.emails.ini</language>
+      <language tag="ru-RU">ru-RU/admin/ru-RU.com_jcalpro.emails.ini</language>
+      <language tag="da-DK">da-DK/admin/da-DK.com_jcalpro.emails.ini</language>
+      <language tag="fr-FR">fr-FR/admin/fr-FR.com_jcalpro.emails.ini</language>
+      <language tag="pl-PL">pl-PL/admin/pl-PL.com_jcalpro.emails.ini</language>
+      <language tag="pt-BR">pt-BR/admin/pt-BR.com_jcalpro.ini</language>
+      <language tag="es-ES">es-ES/admin/es-ES.com_jcalpro.ini</language>
+      <language tag="nl-NL">nl-NL/admin/nl-NL.com_jcalpro.ini</language>
+      <language tag="sv-SE">sv-SE/admin/sv-SE.com_jcalpro.ini</language>
+      <language tag="no-NO">no-NO/admin/no-NO.com_jcalpro.ini</language>
+      <language tag="ro-RO">ro-RO/admin/ro-RO.com_jcalpro.ini</language>
+      <language tag="de-DE">de-DE/admin/de-DE.com_jcalpro.ini</language>
+      <language tag="ru-RU">ru-RU/admin/ru-RU.com_jcalpro.ini</language>
+      <language tag="da-DK">da-DK/admin/da-DK.com_jcalpro.ini</language>
+      <language tag="fr-FR">fr-FR/admin/fr-FR.com_jcalpro.ini</language>
+      <language tag="pl-PL">pl-PL/admin/pl-PL.com_jcalpro.ini</language>
+      <language tag="pt-BR">pt-BR/admin/pt-BR.com_jcalpro.event.ini</language>
+      <language tag="es-ES">es-ES/admin/es-ES.com_jcalpro.event.ini</language>
+      <language tag="nl-NL">nl-NL/admin/nl-NL.com_jcalpro.event.ini</language>
+      <language tag="sv-SE">sv-SE/admin/sv-SE.com_jcalpro.event.ini</language>
+      <language tag="no-NO">no-NO/admin/no-NO.com_jcalpro.event.ini</language>
+      <language tag="ro-RO">ro-RO/admin/ro-RO.com_jcalpro.event.ini</language>
+      <language tag="de-DE">de-DE/admin/de-DE.com_jcalpro.event.ini</language>
+      <language tag="ru-RU">ru-RU/admin/ru-RU.com_jcalpro.event.ini</language>
+      <language tag="da-DK">da-DK/admin/da-DK.com_jcalpro.event.ini</language>
+      <language tag="fr-FR">fr-FR/admin/fr-FR.com_jcalpro.event.ini</language>
+      <language tag="pl-PL">pl-PL/admin/pl-PL.com_jcalpro.event.ini</language>
+      <language tag="pt-BR">pt-BR/admin/pt-BR.com_jcalpro.sys.ini</language>
+      <language tag="es-ES">es-ES/admin/es-ES.com_jcalpro.sys.ini</language>
+      <language tag="nl-NL">nl-NL/admin/nl-NL.com_jcalpro.sys.ini</language>
+      <language tag="sv-SE">sv-SE/admin/sv-SE.com_jcalpro.sys.ini</language>
+      <language tag="no-NO">no-NO/admin/no-NO.com_jcalpro.sys.ini</language>
+      <language tag="ro-RO">ro-RO/admin/ro-RO.com_jcalpro.sys.ini</language>
+      <language tag="de-DE">de-DE/admin/de-DE.com_jcalpro.sys.ini</language>
+      <language tag="ru-RU">ru-RU/admin/ru-RU.com_jcalpro.sys.ini</language>
+      <language tag="da-DK">da-DK/admin/da-DK.com_jcalpro.sys.ini</language>
+      <language tag="fr-FR">fr-FR/admin/fr-FR.com_jcalpro.sys.ini</language>
+      <language tag="pl-PL">pl-PL/admin/pl-PL.com_jcalpro.sys.ini</language>
+    </languages>
+  </administration>
+  <compatibility>
+    <version>2</version>
+    <version>3</version>
+  </compatibility>
+</extension>

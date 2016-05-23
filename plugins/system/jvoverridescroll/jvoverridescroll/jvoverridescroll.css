@@ -1,0 +1,184 @@
+.jvs-panel{ position: relative;}
+.jvs-content{top: 0; left:0; right: 0px; bottom: 0px; overflow: hidden; position: absolute;}
+
+/* Vertical css*/
+.jvs-ver{    width: 18px;    display: block; position: absolute;    top: 0;    right: 0;    bottom: 0px;}
+
+
+.jvs-btnUp,.jvs-btnDown{ position: absolute;  left: 0; width: 100%; height: 18px;  background:url(black-ver.png); z-index:5; }
+.jvs-btnUp span,.jvs-btnDown span{background:url(black-ver.png) -147px 0px ; width: 100%; height: 100%; display: block;}
+.jvs-btnDown span{background-position: -147px -23px;}
+.jvs-btnUp { background-position:-127px 0; top:0; }
+.jvs-btnDown { background-position:-127px bottom; bottom:0 }
+
+.jvs-ver-slide{position: absolute; width: 100%; top: 28px; bottom: 28px; background:url(black-ver.png) repeat-y -168px 0;}
+.jvs-ver-slide-bottom,.jvs-ver-slide-top{position: absolute; width: 100%; height: 10px; top: -10px; left: 0; background:url(black-ver.png) no-repeat -105px -15px;}
+.jvs-ver-slide-bottom {bottom: -10px; top: auto; background-position: -105px bottom;}
+.jvs-btnMid{   position: absolute;    top:0;    left: 0;    width: 100%; overflow: visible !important;  }
+.jvs-btnMid  span { position:absolute;  background:url(black-ver.png) repeat-y; width:100%; z-index: 1; }
+.jvs-btnMid .jvs-mid-top { height:8px; top:-8px; background-position:-21px -1px; }
+.jvs-btnMid .jvs-mid-bottom { height:8px; bottom:-8px; background-position:-21px bottom; }
+.jvs-btnMid .jvs-mid-mid {  background-position:-61px 0; top:0; bottom:0; }
+.jvs-btnMid .jvs-mid-mid span { height:22px; background-position:-81px 0; top:50%; margin-top:-11px;}
+              
+
+
+.jvs-btnPos-top .jvs-btnDown { top: 18px; bottom:auto; background-position: -127px -10px; }
+.jvs-btnPos-top .jvs-ver-slide{top: 46px; bottom: 11px;}
+.jvs-btnPos-top .jvs-ver-slide-bottom{background-position: 0 bottom; height: 11px; bottom: -11px;}
+
+.jvs-btnPos-bottom .jvs-btnUp { bottom:18px; top: auto; background-position: -127px -10px;}
+.jvs-btnPos-bottom .jvs-ver-slide{top: 11px; bottom: 46px}
+.jvs-btnPos-bottom .jvs-ver-slide-top{background-position: 0 -1px; height: 11px; top: -11px;}
+
+
+
+.jvs-btnPos-none .jvs-btnUp,.jvs-btnPos-none .jvs-btnDown{display: none;}
+
+.jvs-btnPos-none .jvs-ver-slide{top: 11px; bottom: 11px;}
+.jvs-btnPos-none .jvs-ver-slide-top{background-position: 0 -1px; height: 11px; top: -11px;}
+.jvs-btnPos-none .jvs-ver-slide-bottom{background-position: 0 -28px; height: 11px; bottom: -11px;} 
+
+.default-nonbtn .jvs-btnUp{background: none; }
+.default-nonbtn .jvs-btnDown{background: none; }
+
+.default-nonbtn .jvs-ver-slide{top: 11px; bottom: 11px;}
+.default-nonbtn .jvs-ver-slide-top{background-position: 0 -1px; height: 11px; top: -11px;}
+.default-nonbtn .jvs-ver-slide-bottom{background-position: 0 -28px; height: 11px; bottom: -11px;}
+.default-nonbtn .jvs-btnMid{z-index: 10;}
+
+
+
+.visible-y .jvs-content{right: 18px}
+.visible-x .jvs-ver{bottom: 18px;}
+
+/*Horizontal Css*/
+.jvs-hor{ height: 18px;  display: block; position: absolute; left: 0; right: 0; bottom: 0;}
+.jvs-btnLeft, .jvs-btnRight{ position: absolute;  top: 0; height: 100%; width: 18px;  background:url(black-hor.png); z-index:5; }
+.jvs-btnLeft span,.jvs-btnRight span{background:url(black-hor.png) 3px -147px; height: 100%; width: 100%; display: block;}
+.jvs-btnRight span{background-position: -21px -147px;}
+.jvs-btnLeft { background-position: 0 -127px; left:0; }
+.jvs-btnRight { background-position:right -127px ; right:0 }
+
+.jvs-hor-slide{position: absolute; height: 100%; left: 28px; right: 28px; background:url(black-hor.png) repeat-x 0 -168px;}
+.jvs-hor-slide-left,.jvs-hor-slide-right{position: absolute; height : 100%; width: 10px; left: -10px; top: 0; background:url(black-hor.png) no-repeat 0 -105px;}
+.jvs-hor-slide-right {right: -10px; left: auto; background-position: -14px -105px ;}
+.jvs-btnCent{   position: absolute; left:0; top: 0; height : 100%; overflow: visible !important;  }
+.jvs-btnCent  span { position:absolute;  background:url(black-hor.png) repeat-x; height:100%; z-index: 1; }
+.jvs-btnCent .jvs-cent-left { width:8px; left:-8px; background-position:0 -21px ; }
+.jvs-btnCent .jvs-cent-right { width:8px; right:-8px; background-position:right -21px ; }
+.jvs-btnCent .jvs-cent-cent {  background-position: 0 -61px; left:0; right:0; }
+.jvs-btnCent .jvs-cent-cent span { width:22px; background-position: 0 -81px; left:50%; margin-left:-11px;}
+              
+
+
+.jvs-btnPos-left .jvs-btnRight { left: 18px; right :auto; background-position: -10px -127px ; }
+.jvs-btnPos-left .jvs-hor-slide{left: 46px; right: 11px;}
+.jvs-btnPos-left .jvs-hor-slide-right{background-position: right 0; width: 11px; right: -11px;}
+
+.jvs-btnPos-right .jvs-btnLeft { right:18px; left: auto; background-position:-10px -127px ;}
+.jvs-btnPos-right .jvs-hor-slide{left: 11px; right: 46px}
+.jvs-btnPos-right .jvs-hor-slide-left{background-position: 0 0; width: 10px; left: -10px;}
+
+
+
+.jvs-btnPos-none .jvs-btnLeft,.jvs-btnPos-none .jvs-btnRight{display: none;}
+.jvs-btnPos-none .jvs-hor-slide{left: 11px; right: 11px;}
+.jvs-btnPos-none .jvs-hor-slide-left{background-position: 0 0; width: 10px; left: -10px;}
+.jvs-btnPos-none .jvs-hor-slide-right{background-position: right 0; width: 11px; right: -11px;}
+
+
+.default-nonbtn .jvs-btnLeft{background: none; }
+.default-nonbtn .jvs-btnRight{background: none; }
+
+.default-nonbtn .jvs-hor-slide{left: 11px; right: 11px;}
+.default-nonbtn .jvs-hor-slide-left{background-position: 0 0; width: 10px; left: -10px;}
+.default-nonbtn .jvs-hor-slide-right{background-position: right 0; width: 11px; right: -11px;}
+.default-nonbtn .jvs-btnCent{z-index: 10;}
+
+
+
+.visible-x .jvs-content{bottom: 18px}
+.visible-y .jvs-hor{right: 18px;}
+
+
+/*-------*/
+.black-1 .jvs-ver { width: 21px;}
+
+.black-1 .jvs-ver *{background-image: url(black-1-y.png);}
+
+.black-1 .jvs-ver-slide-top{height: 32px; top: -32px; background-position: 0 0;}
+.black-1 .jvs-ver-slide-bottom{height: 32px; bottom: -32px; background-position: left bottom;}
+
+.black-1 .jvs-ver-slide{background-position: -21px 0; top: 32px; bottom: 32px;}
+.black-1 .jvs-btnUp{background-position: -64px 1px;  height: 28px;}
+.black-1 .jvs-btnUp span{background-position: -69px -30px; background-repeat: no-repeat; width: 11px; height: 11px; top: 10px; left: 5px; position: absolute;}
+.black-1 .jvs-btnDown{background-position: -42px -39px; height: 28px;}
+.black-1 .jvs-btnDown span{background-position: -48px -3px; background-repeat: no-repeat;   width: 11px; height: 11px; top: 10px; left: 5px; position: absolute}
+
+.black-1 .jvs-btnMid{background-image: none;}
+.black-1 .jvs-mid-mid{background-position: -109px 0;}
+.black-1 .jvs-mid-mid span{background-position: -131px center;}
+.black-1 .jvs-mid-top{height: 9px; background-position:-86px 0; top: 0; top: -9px;}
+.black-1 .jvs-mid-bottom{height: 9px; background-position: -86px -55px; bottom: -9px;}
+
+
+.black-1 .jvs-btnPos-top .jvs-btnUp{ background-position: -264px 1px; height: 22px;}
+.black-1 .jvs-btnPos-top .jvs-btnDown{ background-position: -264px -21px; height: 23px; top: 23px;}
+.black-1 .jvs-btnPos-top .jvs-btnDown span{top: 3px;}
+.black-1 .jvs-btnPos-top .jvs-ver-slide-bottom{height: 10px; bottom: -10px;}
+.black-1 .jvs-btnPos-top .jvs-ver-slide-top{top: -49px; height: 49px;}
+.black-1 .jvs-btnPos-top .jvs-ver-slide{top: 49px}
+
+.black-1 .jvs-btnPos-bottom .jvs-btnUp{ background-position: -242px 1px; height: 23px; bottom: 23px;}
+.black-1 .jvs-btnPos-bottom .jvs-btnDown{ background-position: -242px -21px; height: 22px; }
+.black-1 .jvs-btnPos-bottom .jvs-btnDown span{top: 3px;}
+.black-1 .jvs-btnPos-bottom .jvs-ver-slide-bottom{bottom: -51px; height: 51px;}
+.black-1 .jvs-btnPos-bottom .jvs-ver-slide-top{height: 10px; top: -10px; }
+.black-1 .jvs-btnPos-bottom .jvs-ver-slide{bottom: 50px; top: 10px;}
+
+.black-1 .jvs-btnPos-none .jvs-ver-slide-bottom{bottom: -10px; height: 10px;}
+.black-1 .jvs-btnPos-none .jvs-ver-slide-top{height: 10px; top: -10px; }
+.black-1 .jvs-btnPos-none .jvs-ver-slide{bottom: 1px; top: 10px;}
+
+
+/*-------*/
+.black-1 .jvs-hor { height: 21px;}
+
+.black-1 .jvs-hor *{background-image: url(black-1-x.png);}
+
+.black-1 .jvs-hor-slide-left{width: 32px; left: -32px; background-position: 0 0;}
+.black-1 .jvs-hor-slide-right{width: 32px; right: -32px; background-position: right 0;}
+
+.black-1 .jvs-hor-slide{background-position: 0 -21px; left: 32px; right: 32px;}
+.black-1 .jvs-btnLeft{background-position: 1px -42px;  width: 28px;}
+.black-1 .jvs-btnLeft span{background-position: -54px -48px; background-repeat: no-repeat; height: 11px; width: 11px; left: 10px; top: 5px; position: absolute;}
+.black-1 .jvs-btnRight{background-position: -39px -64px ; width: 28px;}
+.black-1 .jvs-btnRight span{background-position: -26px -69px; background-repeat: no-repeat;   height: 11px; width: 11px; left: 10px; top: 5px; position: absolute}
+
+.black-1 .jvs-btnCent{background-image: none;}
+.black-1 .jvs-cent-cent{background-position:  0 -109px;}
+.black-1 .jvs-cent-cent span{background-position:  center -131px;}
+.black-1 .jvs-cent-left{width: 9px; background-position:-1px -86px ; left: 0; left: -9px;}
+.black-1 .jvs-cent-right{width: 9px; background-position:  -57px -86px; right: -9px;}
+
+
+.black-1 .jvs-btnPos-left .jvs-btnLeft{ background-position:  -22px -242px; width: 22px;}
+.black-1 .jvs-btnPos-left .jvs-btnRight{ background-position: -43px -242px ; width: 23px; left: 23px;}
+.black-1 .jvs-btnPos-left .jvs-btnRight span{left: 3px;}
+.black-1 .jvs-btnPos-left .jvs-hor-slide-right{width: 10px; right: -10px;}
+.black-1 .jvs-btnPos-left .jvs-hor-slide-left{left: -49px; width: 49px;}
+.black-1 .jvs-btnPos-left .jvs-hor-slide{left: 49px}
+
+.black-1 .jvs-btnPos-right .jvs-btnLeft{ background-position: -23px -264px; width: 23px; right: 23px;}
+.black-1 .jvs-btnPos-right .jvs-btnRight{ background-position:  -44px -264px; width: 22px; }
+.black-1 .jvs-btnPos-right .jvs-btnRight span{left: 3px;}
+.black-1 .jvs-btnPos-right .jvs-hor-slide-right{right: -51px; width: 51px;}
+.black-1 .jvs-btnPos-right .jvs-hor-slide-left{width: 10px; left: -10px; }
+.black-1 .jvs-btnPos-right .jvs-hor-slide{right: 50px; left: 10px;}
+
+.black-1 .jvs-btnPos-none .jvs-hor-slide-right{right: -10px; width: 10px;}
+.black-1 .jvs-btnPos-none .jvs-hor-slide-left{width: 10px; left: -10px; }
+.black-1 .jvs-btnPos-none .jvs-hor-slide{right: 1px; left: 10px;}
+
+#main{width: 2000px;}

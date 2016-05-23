@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Hire Comedian Forms</name>
+    <author>Glen Greenwood</author>
+    <version>1.0.0</version>
+    <description>Module for displaying hire comedian form.</description>
+    <files>
+        <filename>mod_hireform.xml</filename>
+        <filename module="mod_hireform">mod_hireform.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+		<filename>tmpl/formsuccess.php</filename>
+    </files>
+    <config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" label=" Module Class Suffix"
+					description="Please enter Module Class Suffix"
+				/>
+			</fieldset>
+			
+			<fieldset name="basic">
+				<field name="pretext" type="textarea" label="Pretext"
+					description="Text to show before module"
+					cols="30" rows="5"
+				/>
+			</fieldset>
+		</fields>
+    </config>
+</extension>

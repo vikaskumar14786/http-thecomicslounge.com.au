@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - JV Override Scroll</name>
+    <author>JoomlaVi! Project</author>
+    <creationDate>Match 2012</creationDate>
+    <copyright>Copyright (C) JoomlaVi. All rights reserved</copyright>
+    <license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL or later</license>
+    <authorEmail>info@joomlavi.com</authorEmail>
+    <authorUrl>www.joomlavi.com</authorUrl>
+    <version>1.0.2</version>
+	<files>
+		<filename plugin="jvoverridescroll">jvoverridescroll.php</filename>
+        <filename plugin="jvoverridescroll">jvoverridescroll.xml</filename>
+        <filename>index.htm</filename>
+		<folder>jvoverridescroll</folder>
+	</files>
+    <config>
+        <fields name="params">
+          <fieldset name="basic">
+            <field name="configs" type="jvcustom" xmlpath="plugins/system/jvoverridescroll/jvoverridescroll.xml"/>
+          </fieldset> 
+        </fields> 
+    </config>
+    <params>
+    <param name="configs" type="jvcustom" xmlpath="plugins/system/jvoverridescroll.xml"/>
+    </params>   
+    <jvcustoms>  
+        <params>
+            <configs><![CDATA[
+                {
+                    field: 'multi',
+                    label: 'Config to plugin',
+                    item: {
+                        field: 'group', 
+                        titlefield: 'selector',
+                        item: {
+                            selector: {
+                                field: 'input',
+                                label: 'Add to selector'
+                            },
+                            panelWidth: {
+                                field: 'input',
+                                label: 'Fix width'
+                            },
+                            panelHeight: {
+                                field: 'input',
+                                label: 'Fix height'
+                            },
+                            prefix: {
+                                field: 'select',
+                                label: 'Select style',
+                                item: {
+                                    '': 'Default',
+                                    'default-nonbtn': 'Default none button',
+                                    'black-1': 'Black 1',
+                                    'other': 'Other'
+                                }
+                            },
+                            prefixOther:{
+                                field: 'input',
+                                label: 'Class css(if select style other)'
+                            },
+                            showWith: {
+                                field: 'select',
+                                label: 'Show with',
+                                item:{
+                                    alway: 'Alway',
+                                    hover: 'Hover'
+                                }
+                            },
+                            priority: {
+                                field: 'select',
+                                label: 'Mouse wheel Priority',
+                                value: 'vertical',
+                                item:{
+                                    vertical: 'Vertical',
+                                    horizontal: 'Horizontal'
+                                }
+                            },
+                            horizontal: {
+                                field: 'panel',
+                                label: 'Horizontal',
+                                filter: true,
+                                item: {
+                                    size: {
+                                        field: 'input',
+                                        label: 'Size scroll'
+                                    },
+                                    btnPos: {
+                                        field: 'select',
+                                        label: 'Buttons position',
+                                        item:{
+                                            auto: 'Auto',
+                                            left: 'Left',
+                                            right: 'Right',
+                                            none: 'None'
+                                        }
+                                    },
+                                    minsizebtn:{
+                                        field: 'input',
+                                        label: 'Min width button scroll',
+                                        datatype: 'int',
+                                        value: 0
+                                    }
+                                }
+                            },
+                            vertical:{
+                                field: 'panel',
+                                label: 'vertical',
+                                filter: true,
+                                item: {
+                                    size: {
+                                        field: 'input',
+                                        label: 'Size scroll'
+                                    },
+                                    btnPos: {
+                                        field: 'select',
+                                        label: 'Buttons position',
+                                        item:{
+                                            auto: 'Auto',
+                                            top: 'Top',
+                                            bottom: 'Bottom',
+                                            none: 'None'
+                                        }
+                                    },
+                                    minsizebtn:{
+                                        field: 'input',
+                                        label: 'Min height button scroll',
+                                        datatype: 'int',
+                                        value: 0
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ]]></configs>
+        </params>
+    </jvcustoms> 
+</extension>

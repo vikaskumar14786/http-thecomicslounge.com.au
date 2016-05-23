@@ -1,0 +1,144 @@
+.ct-btn{width: 14px; height: 14px; background: url(icons.png) no-repeat; display:block; margin:3px; float: right;}
+.ct-btn:hover{background-position: left 14px;}
+.ct-multi-btnDelete{background-position: 0px 0px; }
+.ct-multi-btnDelete:hover{background-position: -14px 0px; }
+
+.ct-multi-line-btnFilter{background-position: 0 -120px; }
+.ct-multi-line-btnFilter:hover{background-position: -14px -120px; }
+.ct-multi-line-controlers .ct-btn{}
+
+.ct-checked > .ct-multi-line-controler .ct-multi-line-btnFilter{background-position: 0 -90px; }
+.ct-checked > .ct-multi-line-controler .ct-multi-line-btnFilter:hover{background-position: -14px -90px; }
+
+
+.ct-filter{border: 1px solid #137AAF;}
+.ct-filter-head{cursor: pointer; background:#137AAF; height: 22px; line-height: 22px; padding-left: 10px;}
+.ct-filter-head span{line-height: 22px; float: left;}
+.ct-filter-head select{float: right; width: 50%; margin: 1px 2px 0 0 !important;}
+
+
+.ct-group{background:#F3F3F3; border: 1px solid #CCCCCC;}
+.ct-group-head{cursor: pointer; background:url("button.png") repeat-x scroll 0 -28px transparent; height: 22px; line-height: 22px; padding-left: 7px;}
+
+.ct-panel{border: 1px solid #137AAF; padding: 10px; background: #F3F3F3; position: relative;}
+.ct-panel-head{position: absolute; top: -8px; left:5%; background: #F3F3F3; padding: 0px 7px;}
+.ct-panel-body > .ct-panel{margin-top: 7px;}
+
+.ct-group > *{border:none}
+.ct-group > .ct-panel > .ct-panel-head{display: none;}
+
+.ct-input,.ct-textarea,.ct-select,.ct-range,.ct-slider-head label{display: block; overflow: hidden; margin: 0 !important;  min-width: inherit !important;max-width: inherit !important; float: none !important; padding: 3px !important;}
+.ct > span{float: left; width: 34%;}
+.ct > .ui-combobox{float: right; width: 65%; position: relative; height: 20px;}
+
+
+.ct-range > div,.ct-input input,.ct-textarea textarea,.ct-select select,.ct-slider-head input{float: right;  margin: 0 !important; width: 63%; padding-left: 4px;}
+.ct-input span,.ct-input input,.ct-select span,.ct-select select,.ct-filter-head span,.ct-filter-head select,.ct-slider-head span, .ct-slider-head input{ display: inline-block; min-width: inherit !important;max-width: inherit !important; margin: 0 ;}
+.ct-textarea textarea,.ct-textarea span{width: 100%; display: block; padding: 0; resize: none}
+.ct-textarea textarea {height: 35px; font-size: 12px;}
+.ct-input [type=button]{
+    width: 0px;
+    height: 0px;
+    border: none;
+}
+
+.ct-tabs-panel{padding: 0; overflow: hidden; background: #F3F3F3;}
+.ct-tabs-panel > label > span,.ct-tabs-panel > .ct-multi > .ct-multi-head {display:none;}
+.ct-tabs-panel > label > input,.ct-tabs-panel > label > select {width:100%; }
+
+.ct-multi{border: 1px solid #137AAF;background:white;}
+.ct-multi-head{cursor: pointer; background:#137AAF; height: 22px;line-height: 22px; padding-left: 10px;}
+.ct-multi-body{overflow: hidden;}
+
+.ct-multi-line{ position: relative; border: 1px solid #CCCCCC; margin: 3px 0px; background:#F3F3F3;}
+.ct-multi-line.ui-sortable-placeholder{background:#ccc9c9 !important; visibility:visible !important;}
+.ct-multi-line-head{width: 20px; top:0px; bottom:0px; left:0px; position: absolute; z-index:10; cursor:move; line-height: 22px; display: none;}
+.ct-multi-items{padding: 10px;}
+.ct-multi-line-controler{position:absolute; top:0px; right:0; display:none; cursor:auto;}
+.mouseenter .ct-multi-line-controler{display:block;}
+.ct-multi-line.mouseenter > .ct-multi-line-head{background-image: url(drag-handle.png);}
+.ct-multi-btnAdd {float: right; margin: 0 10px 3px 0px; font-weight: bold;}
+
+.ui-sortable>.ct-multi-line>.ct-multi-line-head{display: block; border-right: 1px solid #137AAF;}
+.ui-sortable>.ct-multi-line{padding-left : 20px;}
+
+.ct-multi-line-body > *{border:none}
+.ct-tabs-panel > * {border:none}
+.ct-filter-body > .ct-multi > .ct-multi-head{display: none;}
+.ct-filter-body > .ct-multi,.ct-filter-body > .ct-panel{border: none;}
+.ct-filter-body > label > span{ display: none;}
+.ct-filter-body > label > input,.ct-filter-body > label > select{width: 99%;}
+.ct-filter-body > .ct-panel > .ct-panel-head{display: none;}
+.ct-filter-body > .ct-multi > .ct-multi-body{display: block !important;}
+
+.ct-autocomplete-item{border: 1px solid #4b94e4; background: #c1cedd; padding: 2px; position: relative; width: auto !important; padding-right: 12px; margin: 1px !important;}
+.ct-autocomplete-items{width: 99% !important; border: 1px solid silver ; background: #FFFFFF; padding: 2px;} 
+.ct-autocomplete-item-btndelete{border: 1px solid red; color: red; font-size: 10px; height: 7px; line-height: 5px; padding: 1px; position: absolute; right: 1px; top: 1px; width: 5px; }
+
+.ct-input > .ui-autocomplete-input{float: left !important; width: auto !important; border: none !important; background: #FFF !important; padding: 0; height: 22px; line-height: 22px;}
+.ct-autocomplete-item-btndelete:hover{text-decoration: none !important;}
+.ct-filter-body > label > .ct-autocomplete-items{display: block;}
+#module-sliders.pane-sliders{position: static !important;}
+
+/* ui custom*/
+
+.ui-autocomplete .ui-menu-item{position: relative;}
+.ui-menu-item .jvui-icon{position: absolute; right: 0; top:0; height: 100%; width: auto;}
+.mceLayout{width: auto !important;}
+.ct label:hover{background:#d4d1d1}
+
+/*1.5*/
+.jpane-slider.content{ height: auto !important;}
+
+.ct-panel-filter{margin-top: 1px;}
+
+.ct-tabs-panel > .ct-multi > .ct-multi-body{display: block !important;}
+  
+.ct-multi-line,.ct,.ct>input,.ct > textarea, .ct > select, .ct-filter-head > select{
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.ct-panel{overflow: visible;}
+.ui-combobox{position: relative; height: 21px; min-width: 50px; display: block;}
+.ui-combobox > span, .ui-numericbox-input{position: absolute; left: 0; top: 0; bottom: 0; right: 2.2em;  border: 1px solid #D3D3D3; background: #E6E6E6;}
+.ui-combobox input{width: 100%; height: 100%; background: none !important; border: none !important; margin: 0; padding-left: 5px; padding-top: 0;}
+.ui-combobox > a{position: absolute; right: 0; height: auto; top: 0; bottom: 0;}
+
+
+.ct-filter-head > .ui-combobox{float: right; width: 65%;}
+
+.ui-checkbox{display: block; width: 55px; height: 16px; background: #9ca9b1; float: right; position: relative;}
+.ui-checkbox > .ui-button{ display: block; position: absolute;  background: #eaeaea; left: -3%; right: 50%; top: -1px; bottom:-1px; padding: 0;}
+.ui-checkbox.checked{background:#0199ef;}
+.ui-checkbox .checked{left: 50%; right: -3%; }
+
+.ui-checkbox-on,.ui-checkbox-off{
+    font-size: 11px;
+    font-weight: bold;
+    width: 50%;
+    height: 99%;
+    background: none;
+    padding-top: 1px;
+}
+.ct-separate span{display: block; padding: 0 5px; margin-top: -15px; margin-left: 15px; background: #F3F3F3; width: auto;}
+.ct-range > div{position: relative; padding: 0; width: 65%; height: 20px;}
+.ct-range .ui-slider{position: absolute; left: 70px; right: 7px; top: 50%; margin-top: -6px;}
+.ct-range .ui-numericbox{width: 60px; position: absolute; left: 0;}
+.ui-numericbox{display: block; position: relative; height: 20px;}
+.ui-numericbox-controls{position: absolute; right: 0; top: 0; bottom: 0; width: 20px;}
+.ui-numericbox-up,.ui-numericbox-down{position: absolute; left: 0; right: 0;}
+.ui-numericbox-up{top: 0; bottom: 50%;}
+.ui-numericbox-down{top: 50%; bottom: 0;}
+.ui-numericbox-controls > span > .ui-icon{left: 50%; margin-left: -8px;}
+.ui-numericbox-input{right: 10px; padding-left: 4px;}
+.ui-numericbox-input input{display: block; width: 100%; height: 100%; border: none; margin: 0; background: none;}
+.ui-numericbox-input input:focus{background: none;}
+
+.ct-notification{float: right; display: block; width: 15px; height: 15px; background: #F03D25; line-height: 15px; text-align: center; margin-top: 3px; margin-right: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; position: relative; z-index: 100; color: white; text-decoration: none; border: 1px solid #D83722; border-bottom: 1px solid #C0311E; border-top: 1px solid #E23923;}
+.ct-notification:hover{text-decoration: none;}
+.ct-notification > span{width:15px; height: 15px; line-height: 15px; font-weight: bold;}
+.errors > span{color: red; font-weight:bold;}
+.errors > input{ border: 1px solid red;}
+.validate-success>span{left: -20px;}

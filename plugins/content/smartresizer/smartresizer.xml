@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content"	method="upgrade">
+	<name>smartresizer</name>
+	<author>igort</author>
+	<creationDate>June 2013</creationDate>
+	<copyright>Copyright (C) 2009-2013 IPrice web solutions. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>support@iprice-web.ru</authorEmail>
+	<authorUrl>www.iprice-web.ru</authorUrl>
+	<version>1.18 J25-30</version>
+	<description>SMARTRESIZER_DESCRIPTION</description>
+	<files>
+		<filename plugin="smartresizer">smartresizer.php</filename>
+		<filename>index.html</filename>
+		<folder>smartresizer</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_smartresizer.ini</language>
+		<language tag="en-GB">en-GB.plg_content_smartresizer.sys.ini</language>
+		<language tag="ru-RU">ru-RU.plg_content_smartresizer.ini</language>
+		<language tag="ru-RU">ru-RU.plg_content_smartresizer.sys.ini</language>
+		<language tag="fr-FR">fr-FR.plg_content_smartresizer.ini</language>
+		<language tag="fr-FR">fr-FR.plg_content_smartresizer.sys.ini</language>
+		<language tag="de-DE">de-DE.plg_content_smartresizer.ini</language>
+		<language tag="de-DE">de-DE.plg_content_smartresizer.sys.ini</language>
+		<language tag="es-ES">es-ES.plg_content_smartresizer.ini</language>
+		<language tag="es-ES">es-ES.plg_content_smartresizer.sys.ini</language>
+   	</languages>	
+	
+<config>	
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="" type="spacer" />	
+			<field name="thumb_width" type="text" default="" label="Thumbnail_width_for_blogs" description="THUMBNAIL_WIDTH_FOR_BLOGS_DESC" />
+			<field name="thumb_height" type="text" default="" label="Thumbnail_height_for_blogs" description="THUMBNAIL_HEIGHT_FOR_BLOGS_DESC" />
+			
+			<field name="spacer0" type="spacer"	hr="true" />	
+			
+			<field name="thumb_medium_width" type="text" default="" label="Default_thumbnail_width_for_articles" description="DEFAULT_THUMBNAIL_WIDTH_FOR_ARTICLES_DESC" />
+			<field name="thumb_medium_height" type="text" default="" label="Default_thumbnail_height_for_articles" description="DEFAULT_THUMBNAIL_HEIGHT_FOR_ARTICLES_DESC" />
+			
+			<field name="spacer1" type="spacer"	hr="true" />	
+			
+			<field name="thumb_other_width" type="text" default="" label="Default_thumbnail_width_for_others" description="DEFAULT_THUMBNAIL_WIDTH_FOR_OTHERS_DESC" />
+			<field name="thumb_other_height" type="text" default="" label="Default_thumbnail_height_for_others" description="DEFAULT_THUMBNAIL_HEIGHT_FOR_OTHERS_DESC" />
+			
+			<field name="spacer2" type="spacer"	hr="true" />	
+
+			<field name="uselargethumb" type="radio" class="btn-group" default="0" label="USE_LARGE_THUMBNAIL" description="USE_LARGE_THUMBNAIL_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="thumb_large_width" type="text" default="" label="Default_thumbnail_width_for_large" />
+			<field name="thumb_large_height" type="text" default="" label="Default_thumbnail_height_for_large" />
+		</fieldset>
+		<fieldset name="advanced">
+			<field name="processall" type="radio" class="btn-group" default="0" label="Create_thumb_for_all_images" description="CREATE_THUMB_FOR_ALL_IMAGES_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="ignoreindividual" type="radio" class="btn-group" default="0" label="Ignore_individual_image_size" description="IGNORE_INDIVIDUAL_IMAGE_SIZE_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="readmorelink" type="radio" class="btn-group" default="1" label="Create_link_on_article_in_blogs" description="Create_link_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="spacer1" type="spacer"	hr="true" />
+			
+			<field name="imgstyleblog" type="text" size="60" default="" label="Image_style_for_blog" description="Image_style_DESC" />
+			<field name="imgstylearticle" type="text" size="60" default="" label="Image_style_for_article" description="Image_style_DESC" />
+			<field name="imgstyleother" type="text" size="60" default="" label="Image_style_for_other_content" description="Image_style_DESC" />
+			
+			<field name="spacer2" type="spacer"	hr="true" />	
+	
+			<field name="croporfit" type="list" default="0" label="Resizing_method_of_thumbnails" >
+				<option value="0">crop</option>
+				<option value="1">fit</option>
+			</field>			
+	
+			<field name="openstyle" type="list" default="0" label="Full_image_display_style" description="full_image_display_style">
+				<option value="0">Popup_window</option>
+				<option value="1">Joomla SqweezBox</option>
+				<option value="2">Highslide effects</option>
+			</field>
+			<field name="storethumb" type="list" default="1" label="Store_thumbnails_in" description="Store_thumbnails_in">
+				<option value="0">same_folder_as_original</option>
+				<option value="2">smart_thumbs_subfolder_of_original_folder</option>
+				<option value="1">cache_folder</option>
+			</field>
+	
+			<field name="thumb_quality" type="text" default="90" label="Thumbnail_quality" description="THUMBNAIL_QUALITY_DESC" />
+	
+			<field name="thumb_ext" type="text" default="_thumb" label="Thumbnail_Extension" description="THUMBNAIL_EXTENSION_DESC" />
+			
+			<field name="spacer4" type="spacer"	hr="true" />				
+			<field name="createcaptart" type="radio" class="btn-group" default="0" label="CREATE_IMAGE_CAPTION_ARTICLE">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="createcaptblog" type="radio" class="btn-group" default="0" label="CREATE_IMAGE_CAPTION_BLOG">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="createcaptother" type="radio" class="btn-group" default="0" label="CREATE_IMAGE_CAPTION_OTHER">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="captpos" type="radio" default="0" label="CAPTION_POSITION">
+				<option value="0">UNDER_IMAGE</option>
+				<option value="1">ABOVE_IMAGE</option>
+			</field>
+			<field name="captstyle" type="textarea" cols="60" rows="4" default="line-height:20px; font-size:10px;" label="style_for_caption"/>
+			
+		</fieldset>
+	</fields>
+</config>	
+	
+</extension>

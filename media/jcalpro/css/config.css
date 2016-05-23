@@ -1,0 +1,16 @@
+/**
+ * @package		JCalPro
+ * @subpackage	com_jcalpro
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+.btn-group-yesno-alt .btn-danger:hover,
+.btn-group-yesno-alt .btn-danger:focus,
+.btn-group-yesno-alt .btn-danger:active,
+.btn-group-yesno-alt .btn-danger.active,
+.btn-group-yesno-alt .btn-danger.disabled,
+.btn-group-yesno-alt .btn-danger[disabled] {
+  background-color: #17568C;
+  border-color: #17568C #17568C #1A3867;
+  color: #FFFFFF;
+}

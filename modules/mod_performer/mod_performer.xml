@@ -1,0 +1,23 @@
+<?xml version="3.0" encoding="utf-8"?>
+<extension type="module" version="3.3.0" method="upgrade" client="site">
+  <name>mod_performer</name>
+  <authore>Vivek Gupta</authore>
+  <creationDate>2011-12-06</creationDate>
+  <copyright>© 2011. All rights reserved.</copyright>
+  <license>GNU/GPL</license>
+  <authorEmail></authorEmail>
+  <authoreUrl></authoreUrl>
+  <version>3.0</version>
+  <description>Performer Modules</description>
+  <files>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename module="mod_performer">mod_performer.php</filename>
+    <filename>tmpl/mod_performer.xml</filename>
+	<filename>tmpl/index.xml</filename>
+  </files>
+  <languages>
+    <language tag="en-GB">language/en-GB.mod_performer.ini</language>
+    
+  </languages>
+</extension>

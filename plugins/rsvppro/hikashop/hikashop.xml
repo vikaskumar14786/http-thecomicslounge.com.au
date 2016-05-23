@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5"  type="plugin" group="rsvppro" method="upgrade">	
+	<name>RSVP Pro - HikaShop</name>
+	<author>Geraint Edwards</author>
+	<creationDate>November 2015</creationDate>
+	<copyright>(C) 2010-2015 GWE Systems Ltd. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail></authorEmail>
+	<authorUrl>www.gwesystems.com</authorUrl>
+	<version>3.4.2</version>
+	<description>RSVP_HIKASHOP_GATEWAY_DESC</description>
+	<files>
+		<filename plugin="hikashop">hikashop.php</filename>
+		<folder>fields</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_rsvppro_hikashop.ini</language>
+	</languages>
+	<template  name="Hikashop">
+		<form>
+			<fields>
+				<fieldset addfieldpath="/plugins/rsvppro/hikashop/fields/" ></fieldset>
+				<fieldset name="Hikashop"  addfieldpath="/administrator/components/com_rsvppro/fields/" >
+					<field name="hikacategory" type="jevhkcategory" default='0'   label='Special Hika Shop Category'  labelclass="control-label" description='Special category with transaction id custom field created'  />
+					<field name="hikataxcategory" type="jevhktaxcategory" default='0'   label='Hika Shop Tax Category'  labelclass="control-label" description='Tax Category for product'  />
+					<field name="hsnotifyppay" type="list" default="1" label='JEV_NOTIFY_HIKASHOP_PAYMENT'    labelclass="control-label" description='JEV_NOTIFY_HIKASHOP_PAYMENT_DESC'   >
+						<option value="0">JNO</option>
+						<option value="1">JEV_AFTER_PAYMENT_CONFIRMED</option>
+						<option value="2">JEV_AFTER_REGISTRATION</option>
+					</field>
+					<field name="hspaysubject" type="jevtextarea" default='JEV_HIKASHOP_PAYMENT_CONFIRMATION_SUBJECT'  rows="1" cols="60" label='JEV_HIKASHOP_PAYMENT_CONFIRMATION_SUBJECT_LABEL'    labelclass="control-label" description='JEV_HIKASHOP_PAYMENT_CONFIRMATION_MESSAGE_DESC'  />
+					<field name="hspaymessage" type="jevhtml" default='JEV_HIKASHOP_PAYMENT_CONFIRMATION_MESSAGE'  rows="6" cols="60" label='JEV_HIKASHOP_PAYMENT_CONFIRMATION_MESSAGE_LABEL'    labelclass="control-label" description='JEV_HIKASHOP_PAYMENT_CONFIRMATION_MESSAGE_DESC'  />
+				</fieldset>
+			</fields>
+		</form>
+	</template>
+	
+	<config>
+		<fields name="params">
+			<fieldset addfieldpath="/plugins/rsvppro/hikashop/fields/" ></fieldset>
+			<fieldset name="basic"   addfieldpath="/administrator/components/com_rsvppro/fields/" >
+				<field name="hikacategory" type="jevhkcategory" default='0'   label='Special Hika Shop Category'  labelclass="control-label" description='Special category with transaction id custom field created'  />
+				<field name="hikataxcategory" type="jevhktaxcategory" default='0'   label='Hika Shop Tax Category'  labelclass="control-label" description='Tax Category for product'  />
+				<field name="hsnotifyppay" type="list" default="1" label='JEV_NOTIFY_HIKASHOP_PAYMENT'    labelclass="control-label" description='JEV_NOTIFY_HIKASHOP_PAYMENT_DESC'   >
+					<option value="0">JNO</option>
+					<option value="1">JEV_AFTER_PAYMENT_CONFIRMED</option>
+					<option value="2">JEV_AFTER_REGISTRATION</option>
+				</field>
+				<field name="hspaysubject" type="jevtextarea" default='JEV_HIKASHOP_PAYMENT_CONFIRMATION_SUBJECT'  rows="1" cols="60" label='JEV_HIKASHOP_PAYMENT_CONFIRMATION_SUBJECT_LABEL'    labelclass="control-label" description='JEV_HIKASHOP_PAYMENT_CONFIRMATION_MESSAGE_DESC'  />
+				<field name="hspaymessage" type="jevhtml" default='JEV_HIKASHOP_PAYMENT_CONFIRMATION_MESSAGE'  rows="6" cols="60" label='JEV_HIKASHOP_PAYMENT_CONFIRMATION_MESSAGE_LABEL'    labelclass="control-label" description='JEV_HIKASHOP_PAYMENT_CONFIRMATION_MESSAGE_DESC'  />
+			</fieldset>
+		</fields>
+	</config>
+
+
+</extension>
+

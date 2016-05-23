@@ -1,0 +1,17 @@
+/**
+ * @package		JCalPro
+ * @subpackage	com_jcalpro
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+.jcalpro_module_debug {
+	width: auto;
+	display: block;
+	clear: both;
+}
+
+.jcalpro_module_debug pre {
+	width: 100%;
+	max-height: 120px;
+	overflow: scroll;
+}

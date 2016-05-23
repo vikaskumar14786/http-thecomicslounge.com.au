@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+  <name>mod_jcalpro_events</name>
+  <author>Anything Digital</author>
+  <authorEmail>admin@anything-digital.com</authorEmail>
+  <authorUrl>http://anything-digital.com</authorUrl>
+  <creationDate>2015-04-21</creationDate>
+  <copyright>Copyright (c) 2006-2012 Anything-Digital.com</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>3.2.19.4081</version>
+  <description>MOD_JCALPRO_EVENTS_XML_DESCRIPTION</description>
+  <files>
+    <filename module="mod_jcalpro_events">mod_jcalpro_events.php</filename>
+    <folder>tmpl</folder>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename>mod_jcalpro_events.xml</filename>
+  </files>
+  <media destination="jcalpro/modules/events" folder="media">
+    <folder>css</folder>
+    <filename>index.html</filename>
+  </media>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.mod_jcalpro_events.ini</language>
+    <language tag="en-GB">en-GB/en-GB.mod_jcalpro_events.sys.ini</language>
+    <language tag="pt-BR">pt-BR/pt-BR.mod_jcalpro_events.ini</language>
+    <language tag="es-ES">es-ES/es-ES.mod_jcalpro_events.ini</language>
+    <language tag="nl-NL">nl-NL/nl-NL.mod_jcalpro_events.ini</language>
+    <language tag="sv-SE">sv-SE/sv-SE.mod_jcalpro_events.ini</language>
+    <language tag="no-NO">no-NO/no-NO.mod_jcalpro_events.ini</language>
+    <language tag="ro-RO">ro-RO/ro-RO.mod_jcalpro_events.ini</language>
+    <language tag="de-DE">de-DE/de-DE.mod_jcalpro_events.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.mod_jcalpro_events.ini</language>
+    <language tag="da-DK">da-DK/da-DK.mod_jcalpro_events.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.mod_jcalpro_events.ini</language>
+    <language tag="pl-PL">pl-PL/pl-PL.mod_jcalpro_events.ini</language>
+    <language tag="pt-BR">pt-BR/pt-BR.mod_jcalpro_events.sys.ini</language>
+    <language tag="es-ES">es-ES/es-ES.mod_jcalpro_events.sys.ini</language>
+    <language tag="nl-NL">nl-NL/nl-NL.mod_jcalpro_events.sys.ini</language>
+    <language tag="sv-SE">sv-SE/sv-SE.mod_jcalpro_events.sys.ini</language>
+    <language tag="no-NO">no-NO/no-NO.mod_jcalpro_events.sys.ini</language>
+    <language tag="ro-RO">ro-RO/ro-RO.mod_jcalpro_events.sys.ini</language>
+    <language tag="de-DE">de-DE/de-DE.mod_jcalpro_events.sys.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.mod_jcalpro_events.sys.ini</language>
+    <language tag="da-DK">da-DK/da-DK.mod_jcalpro_events.sys.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.mod_jcalpro_events.sys.ini</language>
+    <language tag="pl-PL">pl-PL/pl-PL.mod_jcalpro_events.sys.ini</language>
+  </languages>
+  <compatibility>
+    <version>2</version>
+    <version>3</version>
+  </compatibility>
+  <config addfieldpath="/administrator/components/com_jcalpro/models/fields">
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="featured" type="list" label="MOD_JCALPRO_EVENTS_FEATURED" description="MOD_JCALPRO_EVENTS_FEATURED_DESC" default="1">
+          <option value="0">MOD_JCALPRO_EVENTS_FEATURED_OPTION_IGNORE</option>
+          <option value="1">MOD_JCALPRO_EVENTS_FEATURED_OPTION_HIGHLIGHT</option>
+          <option value="2">MOD_JCALPRO_EVENTS_FEATURED_OPTION_ONLY</option>
+        </field>
+        <field name="filter_date_range" type="list" label="MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE" description="MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_DESC" default="2">
+          <option value="0">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_NO_FILTER</option>
+          <option value="14">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_ONGOING</option>
+          <option value="1">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_PAST_EVENTS</option>
+          <option value="22">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_PAST_END_EVENTS</option>
+          <option value="2">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_UPCOMING_EVENTS</option>
+          <option value="23">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_UPCOMING_END_EVENTS</option>
+          <option value="9">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_TODAY</option>
+          <option value="10">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_TOMORROW</option>
+          <option value="11">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_YESTERDAY</option>
+          <option value="3">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_THIS_WEEK</option>
+          <option value="4">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_LAST_WEEK</option>
+          <option value="5">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_NEXT_WEEK</option>
+          <option value="15">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_NEXT_2_WEEKS</option>
+          <option value="16">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_NEXT_3_WEEKS</option>
+          <option value="6">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_THIS_MONTH</option>
+          <option value="7">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_LAST_MONTH</option>
+          <option value="8">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_NEXT_MONTH</option>
+          <option value="17">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_NEXT_2_MONTHS</option>
+          <option value="18">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_NEXT_3_MONTHS</option>
+          <option value="19">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_THIS_YEAR</option>
+          <option value="20">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_LAST_YEAR</option>
+          <option value="21">MOD_JCALPRO_EVENTS_FILTER_DATE_RANGE_OPTION_NEXT_YEAR</option>
+        </field>
+        <field name="filter_category" id="filter_category" type="category" label="MOD_JCALPRO_EVENTS_FILTER_CATEGORY" description="MOD_JCALPRO_EVENTS_FILTER_CATEGORY_DESC" extension="com_jcalpro" show_root="true" multiple="multiple" size="6"/>
+        <field name="filter_category_invert" id="filter_category_invert" type="radio" label="MOD_JCALPRO_EVENTS_FILTER_CATEGORY_INVERT" description="MOD_JCALPRO_EVENTS_FILTER_CATEGORY_INVERT_DESC" default="0" class="btn-group btn-group-yesno btn-group-yesno-alt">
+          <option value="1">MOD_JCALPRO_EVENTS_FILTER_CATEGORY_INVERT_OPTION_EXCLUDE</option>
+          <option value="0">MOD_JCALPRO_EVENTS_FILTER_CATEGORY_INVERT_OPTION_INCLUDE</option>
+        </field>
+        <field name="list_limit" id="list_limit" type="text" label="MOD_JCALPRO_EVENTS_LIST_LIMIT" description="MOD_JCALPRO_EVENTS_LIST_LIMIT_DESC" default="5" size="3" filter="integer"/>
+        <field name="display_date" id="display_date" type="radio" label="MOD_JCALPRO_EVENTS_DISPLAY_DATE" description="MOD_JCALPRO_EVENTS_DISPLAY_DATE_DESC" default="1" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="display_time" id="display_time" type="list" label="MOD_JCALPRO_EVENTS_DISPLAY_TIME" description="MOD_JCALPRO_EVENTS_DISPLAY_TIME_DESC" default="1">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+          <option value="2">MOD_JCALPRO_EVENTS_DISPLAY_TIME_OPTION_START_ONLY</option>
+        </field>
+        <field name="date_format" id="date_format" type="jcaldateformat" label="MOD_JCALPRO_EVENTS_DATE_FORMAT" description="MOD_JCALPRO_EVENTS_DATE_FORMAT_DESC" default="D. j M, Y"/>
+        <field name="time_format" id="time_format" type="text" label="MOD_JCALPRO_EVENTS_TIME_FORMAT" description="MOD_JCALPRO_EVENTS_TIME_FORMAT_DESC" default=""/>
+        <field name="display_category" id="display_category" type="radio" label="MOD_JCALPRO_EVENTS_DISPLAY_CATEGORY" description="MOD_JCALPRO_EVENTS_DISPLAY_CATEGORY_DESC" default="1" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="display_description" id="display_description" type="radio" label="MOD_JCALPRO_EVENTS_DISPLAY_DESCRIPTION" description="MOD_JCALPRO_EVENTS_DISPLAY_DESCRIPTION_DESC" default="1" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="display_title" id="display_title" type="radio" label="MOD_JCALPRO_EVENTS_DISPLAY_TITLE" description="MOD_JCALPRO_EVENTS_DISPLAY_TITLE_DESC" default="1" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="show_months" id="show_months" type="radio" label="MOD_JCALPRO_EVENTS_SHOW_MONTHS" description="MOD_JCALPRO_EVENTS_SHOW_MONTHS_DESC" default="0" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="filter_location" id="filter_location" type="jcallocationlist" label="MOD_JCALPRO_EVENTS_FILTER_LOCATION" description="MOD_JCALPRO_EVENTS_FILTER_LOCATION_DESC" multiple="multiple" size="6">
+          <option value="0">MOD_JCALPRO_EVENTS_FILTER_LOCATION_WITHOUT</option>
+          <option value="-1">MOD_JCALPRO_EVENTS_FILTER_LOCATION_ALL</option>
+          <option value="-2">MOD_JCALPRO_EVENTS_FILTER_LOCATION_WITH</option>
+        </field>
+        <field name="display_location" id="display_location" type="radio" label="MOD_JCALPRO_EVENTS_DISPLAY_LOCATION" description="MOD_JCALPRO_EVENTS_DISPLAY_LOCATION_DESC" default="0" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="display_location_text" id="display_location_text" type="radio" label="MOD_JCALPRO_EVENTS_DISPLAY_LOCATION_TEXT" description="MOD_JCALPRO_EVENTS_DISPLAY_LOCATION_TEXT_DESC" default="0" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="eventids" id="eventids" type="text" label="MOD_JCALPRO_EVENTS_EVENTIDS" description="MOD_JCALPRO_EVENTS_EVENTIDS_DESC" default=""/>
+        <field name="limit_title" id="limit_title" type="text" label="MOD_JCALPRO_EVENTS_LIMIT_TITLE" description="MOD_JCALPRO_EVENTS_LIMIT_TITLE_DESC" default="0" size="5" filter="integer"/>
+        <field name="limit_description" id="limit_description" type="text" label="MOD_JCALPRO_EVENTS_LIMIT_DESCRIPTION" description="MOD_JCALPRO_EVENTS_LIMIT_DESCRIPTION_DESC" default="0" size="5" filter="integer"/>
+        <field name="filter_description" id="filter_description" type="radio" label="MOD_JCALPRO_EVENTS_FILTER_DESCRIPTION" description="MOD_JCALPRO_EVENTS_FILTER_DESCRIPTION_DESC" default="1" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="display_add" id="display_add" type="radio" label="MOD_JCALPRO_EVENTS_DISPLAY_ADD" description="MOD_JCALPRO_EVENTS_DISPLAY_ADD_DESC" default="1" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="display_events_link" id="display_events_link" type="radio" label="MOD_JCALPRO_EVENTS_DISPLAY_EVENTS_LINK" description="MOD_JCALPRO_EVENTS_DISPLAY_EVENTS_LINK_DESC" default="0" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="display_readmore" id="display_readmore" type="radio" label="MOD_JCALPRO_EVENTS_DISPLAY_READMORE" description="MOD_JCALPRO_EVENTS_DISPLAY_READMORE_DESC" default="1" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="top_fields" id="top_fields" type="jcalfields" label="MOD_JCALPRO_EVENTS_TOP_FIELDS" description="MOD_JCALPRO_EVENTS_TOP_FIELDS_DESC" default="" formtype="event"/>
+        <field name="bottom_fields" id="bottom_fields" type="jcalfields" label="MOD_JCALPRO_EVENTS_BOTTOM_FIELDS" description="MOD_JCALPRO_EVENTS_BOTTOM_FIELDS_DESC" default="" formtype="event"/>
+        <field name="itemid" type="text" label="MOD_JCALPRO_EVENTS_ITEMID" description="MOD_JCALPRO_EVENTS_ITEMID_DESC"/>
+        <field name="empty_html" id="empty_html" type="textarea" label="MOD_JCALPRO_EVENTS_EMPTY_HTML" description="MOD_JCALPRO_EVENTS_EMPTY_HTML_DESC" default="" filter="JComponentHelper::filterText" asset_id="com_jcalpro"/>
+        <field name="debug" id="debug" type="radio" label="MOD_JCALPRO_EVENTS_DEBUG" description="MOD_JCALPRO_EVENTS_DEBUG_DESC" default="0" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+        <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+        <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+        <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+        <field name="cachemode" type="hidden" default="static">
+          <option value="static"/>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

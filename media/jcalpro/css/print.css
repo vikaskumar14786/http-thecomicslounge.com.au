@@ -1,0 +1,658 @@
+/**
+ * @package		JCalPro
+ * @subpackage	com_jcalpro
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+#jcl_component .jcl_center {
+  padding: 15px;
+}
+
+#jcl_component .jcl_print_title {
+  padding: 5px;
+}
+#jcl_component .jcl_print_title h1 {
+  margin: auto;
+  width:50%;
+  text-align: center;
+  display:inline;
+}
+
+#jcl_component .jcl_print_button {
+  display: inline;
+  float: right;
+}
+
+#jcl_component td,#jcl_component tr,#jcl_component p,#jcl_component div {
+  font-size: 11px;
+  color: #000000;
+}
+
+#jcl_component select {
+  color: inherit;
+}
+
+#jcl_component strong {
+  color: inherit;
+}
+
+#jcl_component h2.title {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background-image: url(images/box_left_icon.gif);
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 13px;
+  font-size: 11px;
+  margin: 0px;
+  color: #606F79;
+}
+
+#jcl_component p {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  margin: 2px 0px;
+}
+
+#jcl_component hr {
+  color: #000000;
+  height: 1px;
+}
+
+#jcl_component .textinput {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #686868;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #000000;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #000000;
+  padding-right: 3px;
+  padding-left: 3px;
+  background-image: url(images/txtboxbg.gif);
+}
+
+
+#jcl_component .textarea {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #686868;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #000000;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #000000;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #000000;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #000000;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+#jcl_component table.toolbar {
+  width: 100%;  
+}
+
+
+#jcl_component .listbox {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  border: groove 1px;
+}
+
+#jcl_component .button {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: #404F59;
+  background-image: url(images/btn_bg.gif);
+  padding: 2px;
+}
+
+#jcl_component a {
+  color: #000000;
+  text-decoration: none;
+}
+
+#jcl_component .apptitle {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#jcl_component .appdesc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+#jcl_component td.buttontext {
+  padding: 0 10px;
+}
+
+#jcl_component .buttontext a {
+  font-size: 9px;
+  color: #000000;
+  text-decoration: none;
+}
+
+
+#jcl_component .previousmonth,#jcl_component .previousday,#jcl_component .previousweek
+  {
+  font-size: 0px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+/*  background-color: #D8E0E4; */
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  text-align: center;
+}
+
+#jcl_component .previousday a, #jcl_component .previousmonth a, #jcl_component .previousweek a {
+  /* background: url(images/mini_arrowleft.gif) no-repeat left center; */
+  padding-left: 14px;
+  color:#000000;
+}
+
+#jcl_component .nextday a, #jcl_component .nextmonth a, #jcl_component .nextweek a {
+  /* background: url(images/mini_arrowright.gif) no-repeat right center; */
+  padding-right: 14px;
+  color:#000000;
+}
+
+#jcl_component .previousmonth a {
+  color:#000000;
+  text-decoration: none;
+}
+
+#jcl_component .previousmonth, #jcl_component .nextmonth, #jcl_component .previousweek, #jcl_component .nextweek, #jcl_component .previousday, #jcl_component .nextday {
+  width: 33%;
+  height: 22px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #000000;
+}
+
+#jcl_component .currentmonth {
+  border-bottom: 1px solid #000000;
+}
+
+#jcl_component .miniarrow {
+  vertical-align: middle;
+  margin: 0 5px 0 5px;
+}
+
+
+#jcl_component .nextmonth,#jcl_component .nextday,#jcl_component .nextweek {
+  font-size: 0px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
+/*  background-color: #D8E0E4; */
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+}
+
+#jcl_component .nextmonth a {
+  color:#000000;
+  text-decoration: none;
+}
+
+#jcl_component .currentmonth,#jcl_component .currentday,#jcl_component .currentweek
+  {
+  font-size: 12px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+/*  background-color: #EEF0F0; */
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  /*font-style: normal;
+  text-transform: uppercase;
+  text-align: center;*/
+}
+
+#jcl_component .currentmonthtoday,#jcl_component .currentdaytoday,#jcl_component .currentweektoday {
+
+/*  background-color: #D0E6F6; */
+} 
+
+#jcl_component .currentmonth,#jcl_component .currentday,#jcl_component .currentweek
+  {
+  width: 34%;
+  height: 22px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #000000;
+}
+
+#jcl_component .tablev1 {
+/*  background-color: #708088; */
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 0px solid #000000;
+  border-bottom: 0px solid #000000;
+  margin: 0px;
+  color: #000000;
+  padding-top: 12px;
+  padding-right: 2px;
+  padding-bottom: 12px;
+  padding-left: 2px;
+  font-size: 9px;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+#jcl_component .tablev1 a {
+  color: #000000;
+  text-decoration: none;
+}
+
+#jcl_component .searchlink {
+  font-size: 10px;
+  color: #000000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
+#jcl_component .searchdesc {
+  font-size: 10px;
+  color: #000000;
+}
+
+#jcl_component .eventtitle {
+  font-size: 10px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+#jcl_component .eventdesc {
+  font-size: 10px;
+  color: #000000;
+}
+
+#jcl_component .eventdesclarge {
+  font-size: 12px;
+  color: #000000;
+  line-height: 18px;
+}
+
+div.eventdescription {
+  clear: both;
+  padding-bottom: 18px;
+}
+
+#jcl_component .cattitle,#jcl_component .usertitle,#jcl_component .grouptitle
+  {
+  font-size: 11px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#jcl_component .catdesc,#jcl_component .userdesc,#jcl_component .groupdesc {
+  font-size: 10px;
+  color: #000000;
+}
+
+#jcl_component .titlehighlight {
+  color: #000000;
+  text-decoration: underline;
+}
+
+#jcl_component .highlight {
+  color: #000000;
+  text-decoration: underline;
+}
+
+#jcl_component .tableh1 {
+  color: #000000;
+  font-size: 11px;
+  height: 26px;
+/*  background-image: url(images/tile_back1.gif); */
+  background-position: top;
+  background-repeat: repeat-x;
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+#jcl_component #shajaxProgressPrevMonth, #jcl_component #shajaxProgressNextMonth {
+  vertical-align: middle;
+  border: 0;
+  margin: 0 5px;
+}
+
+
+#jcl_component .tableh2 {
+/*  background: #708088 url(images/tile_sub.gif) repeat-x center bottom; */
+  border-left: 1px solid #000000;
+  border-right: 0px solid #000000;
+  margin: 0px;
+  color: #000000;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#jcl_component .jcl_cat .tableh2, #jcl_component .jcl_cats .tableh2 {
+/*  background: #708088 url(images/tile_sub.gif) repeat-x center bottom; */
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #000000;
+}
+
+#jcl_component .tableh2 span.jcsearch_results, #jcl_component .tableh2 span.jcdate, #jcl_component .tableh2 span.jccat {
+  font-weight: bold;
+}
+
+#jcl_component .tableh2_nobackground {
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#jcl_component .jcl_flat td.tableh2, #jcl_component .jcl_week td.tableh2, #jcl_component .jcl_cat td.tableh2, #jcl_component .jcl_cats td.tableh2 {
+  border-top: 1px solid #000000;
+  font-size: 140%;
+  margin: 0 0 0 -5px;
+  background: #bbbbbb;
+}
+
+
+#jcl_component .rightAuto {
+  float: right;
+  width: auto;
+}
+
+#jcl_component .tableb {
+  color: #000000;
+/*  background-color: #E4E8E8; */
+  padding-top: 6px;
+  padding-right: 10px;
+  padding-bottom: 6px;
+  padding-left: 30px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+#jcl_component td.tableb {
+  font-weight: normal;
+}
+
+#jcl_component td.tableb span.noevents {
+  font-weight: normal;
+}
+
+#jcl_component .tablec {
+  color: #000000;
+/*  background-color: #D8E0E4; */
+  padding-top: 3px;
+  padding-right: 10px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+}
+
+#jcl_component .maintable {
+  border: 1px solid #000000;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#jcl_component table.jcl_add_event {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  border: 0;
+}
+
+#jcl_component .jcl_center {
+  text-align: center;
+}
+
+#jcl_component table.jcl_basetable {
+  width: 100%;
+  padding: 0;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  border: 0;
+}
+
+#jcl_component .error {
+  color: Red;
+  font-weight: bold;
+}
+
+#jcl_component .today {
+  font-size: 9px;
+  color: #606F79;
+  font-weight: bold;
+}
+
+#jcl_component .atomic {
+  font-size: 9px;
+}
+
+#jcl_component .atomic span.label {
+  font-weight: bold;
+}
+#jcl_component .atomic_colored {
+  color: #CCCCCC;
+}
+
+#jcl_component .atomic span.jcfooter {
+  font-weight: bold;
+}
+
+#jcl_component .legend {
+  letter-spacing: 0.4pt;
+  font-size: 11px;
+}
+
+#jcl_component td.legend-color-borders {
+ border: 1px solid #000000;
+}
+
+/* Weekday Label Cells */
+#jcl_component .caldaydigits {
+  font-size: 9px;
+}
+
+#jcl_component td.caldaydigits {
+  font-weight: bold;
+}
+
+#jcl_component .weekdaytopclr, #jcl_component .sundaytopclr {
+  background: #BBBBBB;
+  border-left: 1px solid #000000;
+  border-right: 0px solid #000000;
+  margin: 0px;
+/*  color: #000000; */
+  color: #000000;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+#jcl_component .sundaytopclr {
+  font-size: 120%;
+/*  background-color: #708094; */
+}
+
+/* Day Cells */
+#jcl_component .weekdayclr {
+/*  background-color: #EEF0F0; */
+  color: #C0C4C8;
+  font-size: 10px;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+}
+
+#jcl_component .todayclr {
+/*  background-color: #D0E6F6; */
+  color: #C0C4C8;
+  font-size: 10px;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+}
+
+#jcl_component .sundayemptyclr {
+/*  background-color: #DDE0E0; */
+  color: #C0C4C8;
+  font-size: 10px;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+}
+
+#jcl_component .weekdayemptyclr {
+/*  background-color: #E4E8E8; */
+  color: #C0C4C8;
+  font-size: 10px;
+  border-left: 1px solid #000000;
+  border-top: 1px solid #000000;
+}
+
+/* Text Editor classes */
+#jcl_component .tdBtn {
+  padding-left: 3px;
+  padding-top: 3px;
+}
+
+#jcl_component .btnOut {
+  border: 1px solid;
+  border-color: #E4E8E8;
+  /* background-color: #E4E8E8; */
+}
+
+#jcl_component .btnOver {
+  border: 1px solid;
+  border-top-color: #000000;
+  border-left-color: #000000;
+  border-right-color: #000000;
+  border-bottom-color: #000000;
+  /* background-color: #E4E8E8; */
+  cursor: auto;
+}
+
+#jcl_component .btnDown {
+  border: 1px solid;
+  border-top-color: #000000;
+  border-left-color: #000000;
+  border-right-color: #000000;
+  border-bottom-color: #000000;
+  /* background-color: #D4D8D8; */
+  cursor: auto;
+}
+
+#jcl_component a.flatButton img {
+  border: 1px solid #000000;
+  border-color: #000000;
+}
+
+/* Monthly View classes */
+#jcl_component .eventstyle {
+  font-size: 9px;
+  padding: 1px;
+  text-align: left;
+}
+
+#jcl_component .eventfull,#jcl_component .eventfullrepeat,#jcl_component .eventfullrepeatchild,#jcl_component .eventfullrepeatdetached
+  {
+  margin: 0 0 0 15px;
+  /* background-color: #E4E8E8; */
+  cursor: auto;
+  font-weight: bold;
+}
+
+#jcl_component .eventstart,#jcl_component .eventstartrepeat,#jcl_component .eventstartrepeatchild,#jcl_component .eventstartrepeatdetached
+  {
+  margin-left: 3px;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  /* background-color: #E4E8E8; */
+  cursor: auto;
+}
+
+#jcl_component .eventmiddle,#jcl_component .eventmiddlerepeat,#jcl_component .eventmiddlerepeatchild,#jcl_component .eventmiddlerepeatdetached
+  {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  /* background-color: #E4E8E8; */
+  cursor: auto;
+}
+
+#jcl_component .eventend,#jcl_component .eventendrepeat,#jcl_component .eventendrepeatchild,#jcl_component .eventendrepeatdetached
+  {
+  margin-right: 3px;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-right: 1px solid #000000;
+  /* background-color: #E4E8E8; */
+  cursor: auto;
+}
+
+#jcl_component .imagecell {
+  /* background-color: #C8D2D8; */
+  padding: 8px;
+}
+
+#jcl_component .imagecell img {
+  border: 1px solid;
+  border-top-color: #000000;
+  border-left-color: #000000;
+  border-right-color: #000000;
+  border-bottom-color: #000000;
+  cursor: auto;
+}
+
+/* @end */

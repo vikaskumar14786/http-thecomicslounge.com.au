@@ -1,0 +1,420 @@
+/**
+ * @package		JCalPro
+ * @subpackage	com_jcalpro
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+.icon-48-jcalpro {
+	background-image: url(../images/icon-48-jcalpro.png);
+}
+.icon-48-jcalpro-emails, .icon-48-jcalpro-email {
+	background-image: url(../images/icon-48-emails.png);
+}
+.icon-48-jcalpro-events, .icon-48-jcalpro-event {
+	background-image: url(../images/icon-48-events.png);
+}
+.icon-48-jcalpro-forms, .icon-48-jcalpro-form {
+	background-image: url(../images/icon-48-forms.png);
+}
+.icon-48-jcalpro-fields, .icon-48-jcalpro-field {
+	background-image: url(../images/icon-48-fields.png);
+}
+.icon-48-jcalpro-locations, .icon-48-jcalpro-location {
+	background-image: url(../images/icon-48-locations.png);
+}
+.icon-48-jcalpro-registrations, .icon-48-jcalpro-registration {
+	background-image: url(../images/icon-48-registration.png);
+}
+.icon-48-jcalpro-about {
+	background-image: url(../images/icon-48-about.png);
+}
+.icon-48-jcalpro-help {
+	background-image: url(../images/icon-48-help.png);
+}
+.icon-wrapper .icon-48-categories {
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.jcal-empty {
+	text-align: center;
+	font-size: 1.1em;
+}
+
+/* we need to force the admin filter bar to be a little taller */
+.jcl_event_component fieldset#filter-bar {
+	height: 75px;
+}
+/* but only in 2.5 */
+.jcl_event_component.jcl_bootstrap fieldset#filter-bar {
+	height: auto;
+}
+
+/* this is to correct any formfields that need to NOT be floating */
+.jcalnofloat * {
+	float: none;
+}
+/* argh, default template screws this up in admin */
+#jform_duration_type label {
+	min-width: 1px;
+	display: block;
+	/* IE Hack */
+	float: none\9
+}
+#jform_recur_end_type label,
+#jform_recur_type label {
+	display: block;
+	/* IE Hack */
+	float: none\9
+}
+
+#jform_end_date_array-lbl {
+	float: none !important;
+}
+
+#jform_end_days,
+#jform_end_hours,
+#jform_end_minutes,
+#jform_duration_type label.hasTip,
+#jform_duration_type label.hasTooltip {
+	float: left;
+}
+
+#jform_duration_type input.jcalradio,
+#jform_rec_monthly_type input.jcalradio,
+#jform_rec_yearly_type input.jcalradio,
+#jform_recur_type input {
+	clear: both;
+}
+#jform_rec_weekly_on_sunday,
+#jform_rec_weekly_on_monday,
+#jform_rec_weekly_on_tuesday,
+#jform_rec_weekly_on_wednesday,
+#jform_rec_weekly_on_thursday,
+#jform_rec_weekly_on_friday,
+#jform_rec_weekly_on_saturday,
+#jform_recur_type0,
+#jform_recur_type1,
+#jform_recur_type2,
+#jform_recur_type3,
+#jform_recur_type4,
+#jform_registration0,
+#jform_registration1,
+#jform_recur_end_type0,
+input.jcalradio {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	/* IE Hack */
+	border-width: 0px\9
+}
+#jform_recur_type {
+	margin: 0 20px 5px 0;
+	min-width: 25%;
+}
+#jform_recur_end_type1 {
+	clear: both;
+	margin-top: 5px !important;
+	margin-bottom: 0px !important;
+	/* IE Hack */
+	border-width: 0px\9
+}
+#jcl_rec_daily_options input,
+#jcl_rec_weekly_options input,
+#jcl_rec_monthly_options input,
+#jcl_rec_yearly_options input,
+#jcl_rec_monthly_options select,
+#jcl_rec_yearly_options select {
+	float: none;
+}
+#jcl_rec_daily_options label,
+#jcl_rec_weekly_options label,
+#jcl_rec_monthly_options label,
+#jcl_rec_yearly_options label {
+	float: none;
+	display: inline;
+	clear: none;
+}
+#jform_registration_until_event label {
+	float: none;
+	clear: none;
+}
+#jcl_component .jcl_clear {
+	clear: both;
+}
+#jcl_component .jcl_block {
+	clear: both;
+	display: block;
+	min-height: 1px;
+	min-width: 1px;
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+#jcl_component .subcats {
+	padding-left: 10px;
+	margin: 3px 0;
+}
+#jcl_component .subcats, #jcl_component .subcats li {
+	text-align: left;
+	font-size: 0.9em;
+}
+
+.importform {
+	clear: both;
+	display: block;
+}
+
+.importform .adminformlist label {
+	min-width: 260px !important;
+}
+
+#jcl_registration_on_options {
+	clear: left;
+}
+
+#jcl_dashboard_feed {
+	padding: 10px;
+	max-height: 200px;
+	overflow: scroll;
+}
+
+/**
+ * fixes for Joomla! 3.0
+ */
+
+/* icons */
+.cpanel div.icon-wrapper, #cpanel div.icon-wrapper, #jcl_component div.icon-wrapper {
+  height: auto !important;
+  width: auto !important;
+  display: block !important;
+}
+.cpanel div.icon, #cpanel div.icon, #jcl_component div.icon {
+  float: left;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  text-align: center;
+  height: auto !important;
+  width: auto !important;
+}
+.cpanel div.icon a, #cpanel div.icon a, #jcl_component div.icon a {
+  -moz-transition-duration: 0.8s;
+  -moz-transition-property: background-position, -moz-border-radius-bottomleft, -moz-box-shadow;
+  background-color: #FFFFFF;
+  background-position: -30px center;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px 5px 5px 5px;
+  color: #565656;
+  display: block;
+  float: left;
+  height: 97px;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 108px;
+}
+#cpanel img, .cpanel img {
+  margin: 0 auto;
+  padding: 10px 0;
+}
+#cpanel span, .cpanel span {
+  display: block;
+  text-align: center;
+}
+
+#jcl_component .width-40  {width:40%}
+#jcl_component .width-60  {width:60%}
+#jcl_component .width-100 {width:100%}
+#jcl_component .fltlft {float:left}
+#jcl_component .fltrgt {float:right}
+#jcl_debug {width:100%;clear:both;display:block}
+
+ul.jcl_email_tags {list-style-type: none}
+ul.jcl_email_tags li {display: block; clear: both}
+ul.jcl_email_tags strong, ul.jcl_email_tags div {float: left}
+ul.jcl_email_tags strong {display: block; width: 180px; cursor: pointer;}
+
+div.jcl_email_tags .row-fluid {
+	padding-bottom: 3px;
+}
+div.jcl_email_tags .row-fluid:nth-child(odd) {
+	background: #eee;
+}
+div.jcl_email_tags .row-fluid:nth-child(even) {
+	background: #ccc;
+}
+
+.jcl_bootstrap ul.adminformlist {
+	list-style-type: none;
+}
+.jcl_bootstrap ul.adminformlist>li {
+	float: left;
+	list-style-type: none;
+	padding-bottom: 4px;
+}
+.jcl_bootstrap ul.adminformlist>li.jcl_form_label {
+	clear: left;
+}
+.jcl_bootstrap ul.adminformlist>li.jcl_form_label label {
+	display: block;
+	width: 150px;
+}
+.jcl_form_editor {
+	clear: both;
+	display: block;
+}
+
+#locations-permissions-form, #registrations-permissions-form {
+	width: 100%;
+	clear: both;
+}
+
+/* no more styles for this in 3.0 */
+.jcl_bootstrap .button2-left {
+	float: left;
+	padding: 4px 4px 4px 8px;
+}
+
+#jform_end_days,
+#jform_end_hours,
+#jform_end_minutes {
+	width: auto;
+	width: auto !important;
+}
+
+/* fix header in 3.0 admin */
+body.com_jcalpro.view-Dashboard h1.page-title {
+	background: transparent url(../images/icon-28-jcalpro-light.png) no-repeat left top;
+	min-width: 150px;
+	min-height: 30px;
+}
+
+/* fix secondary categories in 3.0 */
+body.com_jcalpro #jform_cat ul {
+	list-style-type: none;
+	margin: 0;
+}
+body.com_jcalpro #jform_cat label {
+	display: inline;
+	padding: 0 0 0 4px;
+}
+
+
+.jcaldatetime_at {
+	display: block;
+	clear: left;
+}
+
+/* fix table columns for responsive layouts in 3.0 */
+
+/* desktop */
+@media only screen and (min-width: 801px) {
+	#jcl_component .hidden-desktop {display: none;}
+	#jcl_component td.hidden-tablet,
+	#jcl_component td.hidden-phone,
+	#jcl_component th.hidden-tablet,
+	#jcl_component th.hidden-phone {display: table-cell !important;}
+	body.com_jcalpro .adminformlist {margin-left: 5px !important}
+}
+
+/* tablet */
+@media only screen and (max-width: 800px) {
+	#jcl_component .hidden-tablet {display: none;}
+	#jcl_component td.hidden-desktop,
+	#jcl_component th.hidden-desktop {display: table-cell !important;}
+}
+
+/* phone */
+@media only screen and (max-width: 640px) {
+	#jcl_component .hidden-phone {display: none;}
+	#jcl_component td.hidden-desktop
+	#jcl_component th.hidden-desktop {display: table-cell !important;}
+	body.com_jcalpro.view-Dashboard h1.page-title {
+		margin: 0 auto;
+		min-width: 99%;
+		background: transparent url(../images/icon-28-jcalpro-light.png) no-repeat center top;
+	}
+	body.com_jcalpro #toolbar-edit,
+	body.com_jcalpro #toolbar-publish,
+	body.com_jcalpro #toolbar-unpublish,
+	body.com_jcalpro #toolbar-checkin,
+	body.com_jcalpro #toolbar-trash {display: none}
+	body.com_jcalpro .adminformlist {margin: 0 !important}
+	div.jcl_email_tags .row-fluid .span4 {text-align: center}
+}
+
+/* tinymce fix */
+@media (max-width: 801px) {
+	/* force the widths of the main elements to 100% */
+	table.mceLayout, textarea.tinyMCE {
+		width: 100% !important;
+	}
+	/* force the toolbar to be smaller */
+	table.mceToolbar td {
+		display: inline;
+		float: left;
+	}
+}
+
+.adminlist th a {
+	white-space: nowrap;
+}
+
+/* for legacy update alerts */
+.jcl_legacy .alert {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.jcl_legacy .alert,
+.jcl_legacy .alert h4 {
+	color: #c09853;
+}
+.jcl_legacy .alert h4 {
+	margin: 0;
+}
+.jcl_legacy .alert .close {
+	position: relative;
+	top: -2px;
+	right: -21px;
+	line-height: 18px;
+}
+.jcl_legacy .alert-success {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #468847;
+}
+.jcl_legacy .alert-success h4 {
+	color: #468847;
+}
+.jcl_legacy .alert-danger,
+.jcl_legacy .alert-error {
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+}
+.jcl_legacy .alert-danger h4,
+.jcl_legacy .alert-error h4 {
+	color: #b94a48;
+}
+.jcl_legacy .alert-info {
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	color: #3a87ad;
+}
+.jcl_legacy .alert-info h4 {
+	color: #3a87ad;
+}
+.jcl_legacy .alert-block {
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+.jcl_legacy .alert-block > p,
+.jcl_legacy .alert-block > ul {
+	margin-bottom: 0;
+}
+.jcl_legacy .alert-block p + p {
+	margin-top: 5px;
+}

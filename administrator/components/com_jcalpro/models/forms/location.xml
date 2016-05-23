@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldpath="/administrator/components/com_jcalpro/models/fields">
+	<!-- 
+	
+	Main "field" fieldset
+	
+	-->
+	<fieldset
+		name="location"
+		label="COM_JCALPRO_LOCATION"
+	>
+		<field
+			id="title" name="title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="JFIELD_TITLE_DESC"
+			class="inputbox"
+			size="24"
+			required="true"
+		/>
+		<field
+			id="alias" name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			class="inputbox"
+		/>
+		<field
+			id="address" name="address"
+			type="textarea"
+			label="COM_JCALPRO_LOCATION_ADDRESS"
+			description="COM_JCALPRO_LOCATION_ADDRESS"
+			class="inputbox"
+			cols="25" rows="2"
+		/>
+		<field
+			id="city" name="city"
+			type="text"
+			label="COM_JCALPRO_LOCATION_CITY"
+			description="COM_JCALPRO_LOCATION_CITY_DESC"
+			default=""
+			class="inputbox"
+		/>
+		<field
+			id="state" name="state"
+			type="text"
+			label="COM_JCALPRO_LOCATION_STATE"
+			description="COM_JCALPRO_LOCATION_STATE_DESC"
+			default=""
+			class="inputbox"
+		/>
+		<field
+			id="country" name="country"
+			type="text"
+			label="COM_JCALPRO_LOCATION_COUNTRY"
+			description="COM_JCALPRO_LOCATION_COUNTRY_DESC"
+			default=""
+			class="inputbox"
+		/>
+		<field
+			id="postal_code" name="postal_code"
+			type="text"
+			label="COM_JCALPRO_LOCATION_POSTAL_CODE"
+			description="COM_JCALPRO_LOCATION_POSTAL_CODE_DESC"
+			default=""
+			class="inputbox"
+		/>
+		<field
+			id="latitude" name="latitude"
+			type="text"
+			label="COM_JCALPRO_LOCATION_LATITUDE"
+			description="COM_JCALPRO_LOCATION_LATITUDE_DESC"
+			class="inputbox"
+			default="0.0"
+		/>
+		<field
+			id="longitude" name="longitude"
+			type="text"
+			label="COM_JCALPRO_LOCATION_LONGITUDE"
+			description="COM_JCALPRO_LOCATION_LONGITUDE_DESC"
+			class="inputbox"
+			default="0.0"
+		/>
+	</fieldset>
+	<!-- 
+	
+	Location details
+	
+	-->
+	<fieldset
+		name="details"
+		label="COM_JCALPRO_FORM_DETAILS"
+	>
+		<field
+			id="published" name="published"
+			type="jcalpublished"
+			label="COM_JCALPRO_PUBLISHED"
+			description="COM_JCALPRO_PUBLISHED_DESC"
+			class="inputbox"
+			default="1"
+		/>
+	</fieldset>
+	<!-- 
+	
+	Hidden options fieldset
+	
+	-->
+	<fieldset
+		name="hidden"
+		label="COM_JCALPRO_HIDDEN"
+	>
+		<field
+			id="id" name="id"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_ID_LABEL"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="asset_id" name="asset_id"
+			type="hidden"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="created" name="created"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_CREATED_LABEL"
+			default=""
+			readonly="true"
+		/>
+		<field
+			id="created_by" name="created_by"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_CREATED_BY_LABEL"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="modified" name="modified"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_MODIFIED_LABEL"
+			default=""
+			readonly="true"
+		/>
+		<field
+			id="modified_by" name="modified_by"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_MODIFIED_BY_LABEL"
+			default="0"
+			readonly="true"
+		/>
+	</fieldset>
+</form>

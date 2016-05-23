@@ -1,0 +1,327 @@
+/**
+ * @package		JCalPro
+ * @subpackage	jcaltheme_inspired
+
+**********************************************
+JCal Pro
+Copyright (c) 2006-2012 Anything-Digital.com
+**********************************************
+JCalPro is a native Joomla! calendar component for Joomla!
+
+JCal Pro was once a fork of the existing Extcalendar component for Joomla!
+(com_extcal_0_9_2_RC4.zip from mamboguru.com).
+Extcal (http://sourceforge.net/projects/extcal) was renamed
+and adapted to become a Mambo/Joomla! component by
+Matthew Friedman, and further modified by David McKinnis
+(mamboguru.com) to repair some security holes.
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This header must not be removed. Additional contributions/changes
+may be added to this header as long as no information is deleted.
+**********************************************
+Get the latest version of JCal Pro at:
+http://anything-digital.com/
+**********************************************
+
+*/
+
+/* MOBILE STYLES - mobile-first baby! */
+
+
+/* global stuff */
+#jcl_component {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* overridding some aggressive non-standard Bootstrap css from Protostar */
+.jcl_header .page-header {
+	margin: 0;
+	padding: 0;
+}
+/* Override some strange Bootstrap defaults */
+.jcl_navbar [class^="icon-"],
+.jcl_navbar [class*=" icon-"] {
+	width: auto;
+}
+/* override some ugly Bootstrap defaults */
+#jcl_component .label {
+	text-shadow: none;
+	padding: 3px;
+	line-height: 25px;
+}
+#jcl_component .label.dark {
+	color: #3A3A3A;
+	border: 1px solid #DFDFDF;
+}
+.jcl_toolbar .navbar-search {
+	margin: 5px 15px;
+}
+.jcl_toolbar .btn-group + .btn-group {
+	margin-left: 0;
+}
+/* make the toolbar tiny on mobile */
+.jcl_toolbar .jcl_views span {
+	display: none;
+}
+/* Protostar's spacing is too small */
+.jcl_toolbar .btn-group {
+	margin: 7px 0;
+}
+/* Let's correct some basic table styling as it doesn't look like a table now*/
+#jcl_component table {
+	border-width: 0 0 1px 0 !important;
+}
+#jcl_component .table-bordered td {
+	border-right: 1px solid #ddd;
+}
+#jcl_component .table-striped tbody tr:nth-child(odd) td,
+#jcl_component .table-striped tbody tr:nth-child(odd) th {
+	background-color: transparent !important;
+}
+/* fixes for form elements on frontend */
+#jcl_component .jcl_toolbar_catselect {
+	padding-left: 1em;
+}
+#jcl_component .form-vertical .control-label {
+  clear: both;
+}
+#jform_end_days, #jform_end_days-lbl,
+#jform_end_hours, #jform_end_hours-lbl,
+#jform_end_minutes, #jform_end_minutes-lbl {
+	display: inline;
+}
+#jform_recur_end_type input,
+#jform_recur_end_type label,
+#jform_recur_end_type button,
+#jform_recur_end_type .input-append {
+	float: left;
+}
+#jform_recur_end_type0,
+#jform_recur_end_type1 {
+	clear: both;
+}
+.jcaldatetime_at {
+	display: block;
+}
+/* responsive layout - make a table not look like a table on small screens */
+#jcl_component .table th {
+	text-align: left;
+}
+#jcl_component .table tr {
+	display: block;
+}
+#jcl_component .table td,
+#jcl_component .table th {
+	display: none;
+}
+#jcl_component .table .cell_events {
+	display: block;
+}
+#jcl_component .table ul {
+	display: block;
+	list-style: none;
+	margin: 0 1.25em 0 0;
+	padding: 0;
+}
+#jcl_component .table li {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	height: 1.25em;
+}
+#jcl_component .table li a {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#jcl_component .calendar-weekday-top {
+	padding: 0 1em;
+}
+#jcl_component .calendar-events {
+	clear:both;
+}
+/* week view styles */
+.list-item {
+	border-top: 1px solid #eee;
+	padding: 1em 0 0;
+}
+
+/* event view styles */
+.jcl_event_detail {
+	padding: 0 0 .25em 0;
+	margin: 0 0 .5em 0;
+	border-top: 1px solid #e5e5e5;
+}
+.jcl_event_detail .labels {
+	display: inline-block;
+	background: #fff;
+	padding: .75em 1em;
+	margin: 0 1.5em 1.5em 0;
+	border: 1px solid #e5e5e5;
+	border-width:0 1px 1px;
+}
+.jcl_view_event .jcl_event_map,
+.jcl_view_event .jcl_event_body {
+	margin-top: 0.5em;
+}
+/* fix multiline labels in month layout */
+#jcl_component .calendar-events .label {
+	white-space: normal;
+	display: inline-block;
+	position: relative
+}
+#jcl_component .calendar-events .label img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#jcl_component .calendar-events .label small {
+	font-weight: normal;
+}
+
+/* FOR TINY SCREENS */
+@media (max-width: 360px) {
+	/* text is too long */
+	#jform_timezone {
+		font-size: 11px;
+	}
+}
+
+@media (max-width: 481px) {
+	/* force the widths of the main elements to 100% */
+	table.mceLayout, textarea.tinyMCE {
+		width: 100% !important;
+	}
+	/* force the toolbar to be smaller */
+	table.mceToolbar td {
+		display: inline;
+		float: left;
+	}
+}
+
+@media (min-width: 480px) {
+	.jcl_navbar {
+		float: right;
+	}
+}
+
+@media (min-width: 600px) {
+	.jcaldatetime_at {
+		display: inline;
+	}
+}
+
+/* FOR LARGER SCREENS */
+@media (min-width: 768px) {
+
+	/* bring the toolbar text back */
+	.jcl_toolbar .jcl_views span {
+		display: inherit;
+	}
+	/* align header elements */
+	.jcl_header h1 {
+		margin-right: 24px;
+		display: inline-block;
+		float: left;
+	}
+	.jcl_header h2 {
+		display: inline-block;
+		float: right;
+	}
+}
+
+
+/* FOR EVEN LARGER SCREENS */
+@media (min-width: 801px) {
+	/* Let's make it look like a table again */
+	#jcl_component .table tr {
+		display: table-row;
+	}
+	#jcl_component .table th,
+	#jcl_component .table td {
+		display: table-cell !important;
+		margin: 0;
+		width: 14.2857%;
+		vertical-align: top;
+		padding: 10px 0;
+		text-align: center;
+	}
+	#jcl_component .table td {
+		height: 4em;
+	}
+	#jcl_component .table td .day {
+		display: block;
+		float: right;
+		margin: 0;
+		font-weight: normal;
+	}
+	#jcl_component .table td:before { display: none; }
+	#jcl_component .table td .suffix { display: none; }
+
+	/*restore Bootstrap table styles */
+	#jcl_component table {
+		border-width: 1px !important;
+		table-layout: fixed;
+	}
+	#jcl_component .calendar-events {
+		padding: 4px 5px 1px 5px;
+		overflow: hidden;
+	}
+	#jcl_component .table-bordered td {
+		border-right: none;
+	}
+	#jcl_component .table-striped tbody tr:nth-child(odd) td,
+	#jcl_component .table-striped tbody tr:nth-child(odd) th {
+		background-color: #f9f9f9 !important;
+	}
+	/* month view styles */
+	.disabled {
+		color: #ccc;
+	}
+
+}
+@media only screen and (min-width: 980px) {
+
+	/* make tds a bit more regular */
+	#jcl_component .table td {
+		height: 6em;
+	}
+
+}
+
+#jcl_component #jcl_event_map {
+	width: 100%;
+	height: 180px;
+	display: block;
+}
+#jcl_component #jcl_event_map img {
+	max-width: none !important;
+}
+#jform_end_date_array-lbl {
+	float: left;
+	margin-right: 4px;
+}
+#jform_duration_type label {
+	margin-bottom: 0px !important;
+}
+
+#jcl_component dt.tabs {
+	width: auto;
+	clear: none;
+}
+/* some spacing for directions */
+#jcl_location_directions {
+	margin-bottom: 24px;
+}

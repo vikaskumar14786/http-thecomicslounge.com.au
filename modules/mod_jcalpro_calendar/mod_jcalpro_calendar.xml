@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+  <name>mod_jcalpro_calendar</name>
+  <author>Anything Digital</author>
+  <authorEmail>admin@anything-digital.com</authorEmail>
+  <authorUrl>http://anything-digital.com</authorUrl>
+  <creationDate>2015-04-21</creationDate>
+  <copyright>Copyright (c) 2006-2012 Anything-Digital.com</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>3.2.19.4081</version>
+  <description>MOD_JCALPRO_CALENDAR_XML_DESCRIPTION</description>
+  <files>
+    <filename module="mod_jcalpro_calendar">mod_jcalpro_calendar.php</filename>
+    <folder>tmpl</folder>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename>mod_jcalpro_calendar.xml</filename>
+  </files>
+  <media destination="jcalpro/modules/calendar" folder="media">
+    <folder>css</folder>
+    <folder>js</folder>
+    <filename>index.html</filename>
+  </media>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.mod_jcalpro_calendar.ini</language>
+    <language tag="en-GB">en-GB/en-GB.mod_jcalpro_calendar.sys.ini</language>
+    <language tag="pt-BR">pt-BR/pt-BR.mod_jcalpro_calendar.ini</language>
+    <language tag="es-ES">es-ES/es-ES.mod_jcalpro_calendar.ini</language>
+    <language tag="nl-NL">nl-NL/nl-NL.mod_jcalpro_calendar.ini</language>
+    <language tag="sv-SE">sv-SE/sv-SE.mod_jcalpro_calendar.ini</language>
+    <language tag="no-NO">no-NO/no-NO.mod_jcalpro_calendar.ini</language>
+    <language tag="ro-RO">ro-RO/ro-RO.mod_jcalpro_calendar.ini</language>
+    <language tag="de-DE">de-DE/de-DE.mod_jcalpro_calendar.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.mod_jcalpro_calendar.ini</language>
+    <language tag="da-DK">da-DK/da-DK.mod_jcalpro_calendar.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.mod_jcalpro_calendar.ini</language>
+    <language tag="pl-PL">pl-PL/pl-PL.mod_jcalpro_calendar.ini</language>
+    <language tag="pt-BR">pt-BR/pt-BR.mod_jcalpro_calendar.sys.ini</language>
+    <language tag="es-ES">es-ES/es-ES.mod_jcalpro_calendar.sys.ini</language>
+    <language tag="nl-NL">nl-NL/nl-NL.mod_jcalpro_calendar.sys.ini</language>
+    <language tag="sv-SE">sv-SE/sv-SE.mod_jcalpro_calendar.sys.ini</language>
+    <language tag="no-NO">no-NO/no-NO.mod_jcalpro_calendar.sys.ini</language>
+    <language tag="ro-RO">ro-RO/ro-RO.mod_jcalpro_calendar.sys.ini</language>
+    <language tag="de-DE">de-DE/de-DE.mod_jcalpro_calendar.sys.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.mod_jcalpro_calendar.sys.ini</language>
+    <language tag="da-DK">da-DK/da-DK.mod_jcalpro_calendar.sys.ini</language>
+    <language tag="fr-FR">fr-FR/fr-FR.mod_jcalpro_calendar.sys.ini</language>
+    <language tag="pl-PL">pl-PL/pl-PL.mod_jcalpro_calendar.sys.ini</language>
+  </languages>
+  <compatibility>
+    <version>2</version>
+    <version>3</version>
+  </compatibility>
+  <config addfieldpath="/administrator/components/com_jcalpro/models/fields">
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="filter_category" id="filter_category" type="category" label="MOD_JCALPRO_CALENDAR_FILTER_CATEGORY" description="MOD_JCALPRO_CALENDAR_FILTER_CATEGORY_DESC" extension="com_jcalpro" show_root="true" multiple="multiple" size="6"/>
+        <field name="filter_category_invert" id="filter_category_invert" type="radio" label="MOD_JCALPRO_CALENDAR_FILTER_CATEGORY_INVERT" description="MOD_JCALPRO_CALENDAR_FILTER_CATEGORY_INVERT_DESC" default="0" class="btn-group btn-group-yesno">
+          <option value="1">MOD_JCALPRO_CALENDAR_FILTER_CATEGORY_INVERT_OPTION_EXCLUDE</option>
+          <option value="0">MOD_JCALPRO_CALENDAR_FILTER_CATEGORY_INVERT_OPTION_INCLUDE</option>
+        </field>
+        <field name="header_date_format" id="header_date_format" type="jcaldateformat" label="MOD_JCALPRO_CALENDAR_HEADER_DATE_FORMAT" description="MOD_JCALPRO_CALENDAR_HEADER_DATE_FORMAT_DESC" default="F Y"/>
+        <field name="tooltip_date_format" id="tooltip_date_format" type="jcaldateformat" label="MOD_JCALPRO_CALENDAR_TOOLTIP_DATE_FORMAT" description="MOD_JCALPRO_CALENDAR_TOOLTIP_DATE_FORMAT_DESC" default="l, F d, Y"/>
+        <field name="display_mode" id="display_mode" type="list" label="MOD_JCALPRO_CALENDAR_DISPLAY_MODE" description="MOD_JCALPRO_CALENDAR_DISPLAY_MODE_DESC" default="0">
+          <option value="default">MOD_JCALPRO_CALENDAR_DISPLAY_MODE_OPTION_DEFAULT</option>
+          <option value="horizontal">MOD_JCALPRO_CALENDAR_DISPLAY_MODE_OPTION_HORIZONTAL</option>
+        </field>
+        <field name="display_add" id="display_add" type="radio" label="MOD_JCALPRO_CALENDAR_DISPLAY_ADD" description="MOD_JCALPRO_CALENDAR_DISPLAY_ADD_DESC" default="1" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="display_events_link" id="display_events_link" type="radio" label="MOD_JCALPRO_CALENDAR_DISPLAY_EVENTS_LINK" description="MOD_JCALPRO_CALENDAR_DISPLAY_EVENTS_LINK_DESC" default="0" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="display_tooltip" id="display_tooltip" type="radio" label="MOD_JCALPRO_CALENDAR_DISPLAY_TOOLTIP" description="MOD_JCALPRO_CALENDAR_DISPLAY_TOOLTIP_DESC" default="1" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+        <field name="tooltip_length" type="text" label="MOD_JCALPRO_CALENDAR_TOOLTIP_LENGTH" description="MOD_JCALPRO_CALENDAR_TOOLTIP_LENGTH_DESC"/>
+        <field name="itemid" type="text" label="MOD_JCALPRO_CALENDAR_ITEMID" description="MOD_JCALPRO_CALENDAR_ITEMID_DESC"/>
+        <field name="debug" id="debug" type="radio" label="MOD_JCALPRO_CALENDAR_DEBUG" description="MOD_JCALPRO_CALENDAR_DEBUG_DESC" default="0" class="btn-group btn-group-yesno">
+          <option value="1">JYES</option>
+          <option value="0">JNO</option>
+        </field>
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+        <field name="cache" type="radio" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" class="btn-group btn-group-yesno">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+        <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+        <field name="cachemode" type="hidden" default="static" class="chzn-done">
+          <option value="static"/>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

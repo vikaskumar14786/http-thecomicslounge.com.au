@@ -1,0 +1,18 @@
+/**
+ * @package		JCalPro
+ * @subpackage	mod_jcalpro_flex
+Copyright (c) 2006-2012 Anything-Digital.com
+ */
+
+.jcalpro_flex_horizontal>ul {
+	list-style-type: none;
+}
+
+.jcalpro_flex_horizontal .jcalpro_flex_pane {
+	display: inline-block;
+	float: left;
+}
+
+.jcalpro_flex_horizontal .jcalpro_calendar {
+	max-width: 300px;
+}

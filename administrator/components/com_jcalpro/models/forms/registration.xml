@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldpath="/administrator/components/com_jcalpro/models/fields">
+	<!-- 
+	
+	Main "registration" fieldset
+	
+	-->
+	<fieldset
+		name="registration"
+		label="COM_JCALPRO_REGISTRATION"
+	>
+		<field
+			id="event_id" name="event_id"
+			type="modal_jcalevent"
+			label="COM_JCALPRO_EVENT_SELECT"
+			description="COM_JCALPRO_EVENT_SELECT_DESC"
+			class="inputbox"
+			required="true"
+			filters="&amp;filter_registration=1"
+			reload="registration"
+		/>
+		<field
+			id="user_name" name="user_name"
+			type="jcalusertext"
+			label="COM_JCALPRO_ALTNAME"
+			description="COM_JCALPRO_ALTNAME_DESC"
+			class="inputbox"
+			column="name|username"
+			field="user_id"
+			required="true"
+		/>
+		<field
+			id="user_email" name="user_email"
+			type="jcaluseremail"
+			label="COM_JCALPRO_EMAIL"
+			description="COM_JCALPRO_EMAIL_DESC"
+			class="inputbox"
+			field="user_id"
+			required="true"
+		/>
+	</fieldset>
+	<!--
+	
+	Admin options fieldset
+	
+	-->
+	<fieldset
+		name="admin"
+		label="COM_JCALPRO_ADMIN"
+	>
+		<field
+			id="user_id" name="user_id"
+			type="user"
+			label="COM_JCALPRO_REGISTERED_USER"
+			description="COM_JCALPRO_REGISTERED_USER_DESC"
+			default="0"
+		/>
+		<field
+			id="confirmed" name="confirmed"
+			type="jcalpublished"
+			label="COM_JCALPRO_CONFIRMED"
+			description="COM_JCALPRO_CONFIRMED_DESC"
+			class="inputbox"
+			default="1"
+		/>
+	</fieldset>
+	<!-- 
+	
+	Hidden options fieldset
+	
+	-->
+	<fieldset
+		name="hidden"
+		label="COM_JCALPRO_HIDDEN"
+	>
+		<field
+			id="id" name="id"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_ID_LABEL"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="created" name="created"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_CREATED_LABEL"
+			default=""
+			readonly="true"
+		/>
+		<field
+			id="created_by" name="created_by"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_CREATED_BY_LABEL"
+			default="0"
+			readonly="true"
+		/>
+		<field
+			id="checked_out" name="checked_out"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_CHECKED_OUT_LABEL"
+			default=""
+			readonly="true"
+		/>
+		<field
+			id="checked_out_time" name="checked_out_time"
+			type="hidden"
+			class="readonly"
+			label="COM_JCALPRO_CHECKED_OUT_TIME_LABEL"
+			default=""
+			readonly="true"
+		/>
+	</fieldset>
+</form>
